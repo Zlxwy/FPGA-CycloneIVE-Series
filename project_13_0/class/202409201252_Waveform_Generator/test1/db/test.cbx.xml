@@ -1,7 +1,0 @@
-<?xml version="1.0" ?>
-<LOG_ROOT>
-	<PROJECT NAME="test">
-		<CBX_INST_ENTRY INSTANCE_NAME="|test|LPM_ROM:inst3|altrom:srom|altsyncram:rom_block" CBX_FILE_NAME="altsyncram_g201.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|test|counter:inst|lpm_counter:LPM_COUNTER_component" CBX_FILE_NAME="cntr_eph.tdf"/>
-	</PROJECT>
-</LOG_ROOT>

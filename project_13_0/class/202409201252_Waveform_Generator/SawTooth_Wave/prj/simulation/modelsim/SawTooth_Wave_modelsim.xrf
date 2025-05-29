@@ -1,6 +1,0 @@
-vendor_name = ModelSim
-source_file = 1, D:/DATAFiles/QuartusII/class/202409201252_Waveform_Generator/SawTooth_Wave/tb/tb_SawTooth_Wave.v
-source_file = 1, D:/DATAFiles/QuartusII/class/202409201252_Waveform_Generator/SawTooth_Wave/rtl/SawTooth_Wave.v
-source_file = 1, D:/DATAFiles/QuartusII/class/202409201252_Waveform_Generator/SawTooth_Wave/prj/db/SawTooth_Wave.cbx.xml
-design_name = SawTooth_Wave
-instance = comp, \clk~input , clk~input, SawTooth_Wave, 1
