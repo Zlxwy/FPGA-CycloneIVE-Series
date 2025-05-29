@@ -1,0 +1,14 @@
+vendor_name = ModelSim
+source_file = 1, D:/DATAFiles/QuartusII/ZiJiTuoZhan/decoder_2_4/rtl/decoder_2_4.v
+source_file = 1, D:/DATAFiles/QuartusII/ZiJiTuoZhan/decoder_2_4/quartus_prj/db/decoder_2_4.cbx.xml
+design_name = decoder_2_4
+instance = comp, \out_0~output , out_0~output, decoder_2_4, 1
+instance = comp, \out_1~output , out_1~output, decoder_2_4, 1
+instance = comp, \out_2~output , out_2~output, decoder_2_4, 1
+instance = comp, \out_3~output , out_3~output, decoder_2_4, 1
+instance = comp, \in_1~input , in_1~input, decoder_2_4, 1
+instance = comp, \in_0~input , in_0~input, decoder_2_4, 1
+instance = comp, \out_0~0 , out_0~0, decoder_2_4, 1
+instance = comp, \out_1~0 , out_1~0, decoder_2_4, 1
+instance = comp, \out_1~1 , out_1~1, decoder_2_4, 1
+instance = comp, \out_1~2 , out_1~2, decoder_2_4, 1

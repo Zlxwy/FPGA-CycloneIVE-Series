@@ -1,0 +1,61 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/FPGA_Software/ModelSim_SE_10_5/examples
+T_opt
+!s110 1741501286
+VXOnRgg<XElLOOTkzBn8393
+04 17 4 work i2c_write_read_tb fast 0
+=1-38d57ae36083-67cd3365-32f-2a78
+o-quiet -auto_acc_if_foreign -work work +acc
+Z0 tCvgOpt 0
+n@_opt
+OL;O;10.5;63
+vi2c_write_read
+!s110 1741500704
+!i10b 1
+!s100 QP6RZOCKgD2Z_P5>aYdE91
+I2lj]zfEADmz3YL>9_d8aJ0
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/Users/ZLXWY/Desktop/i2c_at24c02_rw/sim
+w1741500697
+8C:\Users\ZLXWY\Desktop\i2c_at24c02_rw\rtl\i2c_write_read.v
+FC:\Users\ZLXWY\Desktop\i2c_at24c02_rw\rtl\i2c_write_read.v
+L0 2
+Z3 OL;L;10.5;63
+r1
+!s85 0
+31
+!s108 1741500704.000000
+!s107 C:\Users\ZLXWY\Desktop\i2c_at24c02_rw\rtl\i2c_write_read.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:\Users\ZLXWY\Desktop\i2c_at24c02_rw\rtl\i2c_write_read.v|
+!i113 0
+Z4 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R0
+vi2c_write_read_tb
+!s110 1741500651
+!i10b 1
+!s100 P0N]1h95VPTJ=PaL]l^?32
+IV;W4j^h9jB^^LVDJ=nZWj0
+R1
+R2
+w1741433586
+8C:/Users/ZLXWY/Desktop/i2c_at24c02_rw/sim/i2c_write_read_tb.v
+FC:/Users/ZLXWY/Desktop/i2c_at24c02_rw/sim/i2c_write_read_tb.v
+L0 2
+R3
+r1
+!s85 0
+31
+!s108 1741500651.000000
+!s107 C:/Users/ZLXWY/Desktop/i2c_at24c02_rw/sim/i2c_write_read_tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/ZLXWY/Desktop/i2c_at24c02_rw/sim/i2c_write_read_tb.v|
+!i113 0
+R4
+R0

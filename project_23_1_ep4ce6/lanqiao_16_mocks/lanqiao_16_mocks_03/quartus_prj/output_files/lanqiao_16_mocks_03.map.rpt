@@ -1,0 +1,796 @@
+Analysis & Synthesis report for lanqiao_16_mocks_03
+Wed Apr  9 20:05:45 2025
+Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Inverted Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: key:key1_inst
+ 13. Parameter Settings for User Entity Instance: key:key2_inst
+ 14. Parameter Settings for User Entity Instance: key:key3_inst
+ 15. Parameter Settings for User Entity Instance: key:key4_inst
+ 16. Parameter Settings for User Entity Instance: num_cnt:num_cnt_inst
+ 17. Parameter Settings for User Entity Instance: bit_to_caseg:bit_to_caseg_inst
+ 18. Parameter Settings for User Entity Instance: uart_send_11bytes:uart_send_11bytes_inst
+ 19. Parameter Settings for User Entity Instance: uart_send_11bytes:uart_send_11bytes_inst|uart_ctrler:uart_ctrler
+ 20. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod1
+ 21. Parameter Settings for Inferred Entity Instance: lpm_divide:Div1
+ 22. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0
+ 23. Parameter Settings for Inferred Entity Instance: lpm_divide:Div0
+ 24. Port Connectivity Checks: "uart_send_11bytes:uart_send_11bytes_inst|uart_ctrler:uart_ctrler"
+ 25. Port Connectivity Checks: "uart_send_11bytes:uart_send_11bytes_inst"
+ 26. Port Connectivity Checks: "bit_to_caseg:bit_to_caseg_inst"
+ 27. Post-Synthesis Netlist Statistics for Top Partition
+ 28. Elapsed Time Per Partition
+ 29. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2024  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                        ;
++------------------------------------+------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Apr  9 20:05:45 2025          ;
+; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
+; Revision Name                      ; lanqiao_16_mocks_03                            ;
+; Top-level Entity Name              ; top_module                                     ;
+; Family                             ; Cyclone IV E                                   ;
+; Total logic elements               ; 1,301                                          ;
+;     Total combinational functions  ; 1,291                                          ;
+;     Dedicated logic registers      ; 559                                            ;
+; Total registers                    ; 559                                            ;
+; Total pins                         ; 24                                             ;
+; Total virtual pins                 ; 0                                              ;
+; Total memory bits                  ; 0                                              ;
+; Embedded Multiplier 9-bit elements ; 0                                              ;
+; Total PLLs                         ; 0                                              ;
++------------------------------------+------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                               ;
++------------------------------------------------------------------+--------------------+---------------------+
+; Option                                                           ; Setting            ; Default Value       ;
++------------------------------------------------------------------+--------------------+---------------------+
+; Device                                                           ; EP4CE6E22C8        ;                     ;
+; Top-level entity name                                            ; top_module         ; lanqiao_16_mocks_03 ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V           ;
+; Use smart compilation                                            ; Off                ; Off                 ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                  ;
+; Enable compact report table                                      ; Off                ; Off                 ;
+; Restructure Multiplexers                                         ; Auto               ; Auto                ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                 ;
+; Preserve fewer node names                                        ; On                 ; On                  ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable              ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001        ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993           ;
+; State Machine Processing                                         ; Auto               ; Auto                ;
+; Safe State Machine                                               ; Off                ; Off                 ;
+; Extract Verilog State Machines                                   ; On                 ; On                  ;
+; Extract VHDL State Machines                                      ; On                 ; On                  ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                 ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000                ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                 ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                  ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                  ;
+; Parallel Synthesis                                               ; On                 ; On                  ;
+; DSP Block Balancing                                              ; Auto               ; Auto                ;
+; NOT Gate Push-Back                                               ; On                 ; On                  ;
+; Power-Up Don't Care                                              ; On                 ; On                  ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                 ;
+; Remove Duplicate Registers                                       ; On                 ; On                  ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                 ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                 ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                 ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                 ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                 ;
+; Ignore SOFT Buffers                                              ; On                 ; On                  ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                 ;
+; Optimization Technique                                           ; Balanced           ; Balanced            ;
+; Carry Chain Length                                               ; 70                 ; 70                  ;
+; Auto Carry Chains                                                ; On                 ; On                  ;
+; Auto Open-Drain Pins                                             ; On                 ; On                  ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                 ;
+; Auto ROM Replacement                                             ; On                 ; On                  ;
+; Auto RAM Replacement                                             ; On                 ; On                  ;
+; Auto DSP Block Replacement                                       ; On                 ; On                  ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto                ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto                ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                  ;
+; Strict RAM Replacement                                           ; Off                ; Off                 ;
+; Allow Synchronous Control Signals                                ; On                 ; On                  ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                 ;
+; Auto RAM Block Balancing                                         ; On                 ; On                  ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                 ;
+; Auto Resource Sharing                                            ; Off                ; Off                 ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                 ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                 ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                 ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                  ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                 ;
+; Timing-Driven Synthesis                                          ; On                 ; On                  ;
+; Report Parameter Settings                                        ; On                 ; On                  ;
+; Report Source Assignments                                        ; On                 ; On                  ;
+; Report Connectivity Checks                                       ; On                 ; On                  ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                 ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                   ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation  ;
+; HDL message level                                                ; Level2             ; Level2              ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                 ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000                ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000                ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                 ;
+; Clock MUX Protection                                             ; On                 ; On                  ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                 ;
+; Block Design Naming                                              ; Auto               ; Auto                ;
+; SDC constraint protection                                        ; Off                ; Off                 ;
+; Synthesis Effort                                                 ; Auto               ; Auto                ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                  ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                 ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium              ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto                ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                  ;
++------------------------------------------------------------------+--------------------+---------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 16          ;
+;                            ;             ;
+; Average used               ; 1.01        ;
+; Maximum used               ; 16          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.1%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
+;     Processor 5            ;   0.0%      ;
+;     Processor 6            ;   0.0%      ;
+;     Processor 7            ;   0.0%      ;
+;     Processor 8            ;   0.0%      ;
+;     Processors 9-16        ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                           ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                       ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------+---------+
+; ../rtl/uart_send_11bytes.v       ; yes             ; User Verilog HDL File        ; C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/uart_send_11bytes.v                ;         ;
+; ../rtl/uart_ctrler.v             ; yes             ; User Verilog HDL File        ; C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/uart_ctrler.v                      ;         ;
+; ../rtl/top_module.v              ; yes             ; User Verilog HDL File        ; C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/top_module.v                       ;         ;
+; ../rtl/num_cnt.v                 ; yes             ; User Verilog HDL File        ; C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/num_cnt.v                          ;         ;
+; ../rtl/key.v                     ; yes             ; User Verilog HDL File        ; C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/key.v                              ;         ;
+; ../rtl/bit_to_caseg.v            ; yes             ; User Verilog HDL File        ; C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/bit_to_caseg.v                     ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; d:/fpga_software/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_divide.tdf             ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; d:/fpga_software/intelfpga_lite/23.1std/quartus/libraries/megafunctions/abs_divider.inc            ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; d:/fpga_software/intelfpga_lite/23.1std/quartus/libraries/megafunctions/sign_div_unsign.inc        ;         ;
+; aglobal231.inc                   ; yes             ; Megafunction                 ; d:/fpga_software/intelfpga_lite/23.1std/quartus/libraries/megafunctions/aglobal231.inc             ;         ;
+; db/lpm_divide_vam.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/quartus_prj/db/lpm_divide_vam.tdf      ;         ;
+; db/sign_div_unsign_klh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/quartus_prj/db/sign_div_unsign_klh.tdf ;         ;
+; db/alt_u_div_s6f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/quartus_prj/db/alt_u_div_s6f.tdf       ;         ;
+; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/quartus_prj/db/add_sub_7pc.tdf         ;         ;
+; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/quartus_prj/db/add_sub_8pc.tdf         ;         ;
+; db/lpm_divide_sim.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/quartus_prj/db/lpm_divide_sim.tdf      ;         ;
+; db/lpm_divide_vim.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/quartus_prj/db/lpm_divide_vim.tdf      ;         ;
+; db/sign_div_unsign_nlh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/quartus_prj/db/sign_div_unsign_nlh.tdf ;         ;
+; db/alt_u_div_27f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/quartus_prj/db/alt_u_div_27f.tdf       ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------+---------+
+
+
++----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary              ;
++---------------------------------------------+------------+
+; Resource                                    ; Usage      ;
++---------------------------------------------+------------+
+; Estimated Total logic elements              ; 1,301      ;
+;                                             ;            ;
+; Total combinational functions               ; 1291       ;
+; Logic element usage by number of LUT inputs ;            ;
+;     -- 4 input functions                    ; 325        ;
+;     -- 3 input functions                    ; 148        ;
+;     -- <=2 input functions                  ; 818        ;
+;                                             ;            ;
+; Logic elements by mode                      ;            ;
+;     -- normal mode                          ; 729        ;
+;     -- arithmetic mode                      ; 562        ;
+;                                             ;            ;
+; Total registers                             ; 559        ;
+;     -- Dedicated logic registers            ; 559        ;
+;     -- I/O registers                        ; 0          ;
+;                                             ;            ;
+; I/O pins                                    ; 24         ;
+;                                             ;            ;
+; Embedded Multiplier 9-bit elements          ; 0          ;
+;                                             ;            ;
+; Maximum fan-out node                        ; sclk~input ;
+; Maximum fan-out                             ; 559        ;
+; Total fan-out                               ; 5812       ;
+; Average fan-out                             ; 3.06       ;
++---------------------------------------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                         ;
++-----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node                    ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                         ; Entity Name         ; Library Name ;
++-----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; |top_module                                   ; 1291 (9)            ; 559 (3)                   ; 0           ; 0            ; 0       ; 0         ; 24   ; 0            ; |top_module                                                                                                 ; top_module          ; work         ;
+;    |bit_to_caseg:bit_to_caseg_inst|           ; 57 (57)             ; 46 (46)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_module|bit_to_caseg:bit_to_caseg_inst                                                                  ; bit_to_caseg        ; work         ;
+;    |key:key1_inst|                            ; 167 (167)           ; 99 (99)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_module|key:key1_inst                                                                                   ; key                 ; work         ;
+;    |key:key2_inst|                            ; 167 (167)           ; 99 (99)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_module|key:key2_inst                                                                                   ; key                 ; work         ;
+;    |key:key3_inst|                            ; 167 (167)           ; 99 (99)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_module|key:key3_inst                                                                                   ; key                 ; work         ;
+;    |key:key4_inst|                            ; 167 (167)           ; 99 (99)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_module|key:key4_inst                                                                                   ; key                 ; work         ;
+;    |lpm_divide:Div0|                          ; 69 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_module|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
+;       |lpm_divide_vim:auto_generated|         ; 69 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_module|lpm_divide:Div0|lpm_divide_vim:auto_generated                                                   ; lpm_divide_vim      ; work         ;
+;          |sign_div_unsign_nlh:divider|        ; 69 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_module|lpm_divide:Div0|lpm_divide_vim:auto_generated|sign_div_unsign_nlh:divider                       ; sign_div_unsign_nlh ; work         ;
+;             |alt_u_div_27f:divider|           ; 69 (69)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_module|lpm_divide:Div0|lpm_divide_vim:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_27f:divider ; alt_u_div_27f       ; work         ;
+;    |lpm_divide:Div1|                          ; 82 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_module|lpm_divide:Div1                                                                                 ; lpm_divide          ; work         ;
+;       |lpm_divide_sim:auto_generated|         ; 82 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_module|lpm_divide:Div1|lpm_divide_sim:auto_generated                                                   ; lpm_divide_sim      ; work         ;
+;          |sign_div_unsign_klh:divider|        ; 82 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_module|lpm_divide:Div1|lpm_divide_sim:auto_generated|sign_div_unsign_klh:divider                       ; sign_div_unsign_klh ; work         ;
+;             |alt_u_div_s6f:divider|           ; 82 (82)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_module|lpm_divide:Div1|lpm_divide_sim:auto_generated|sign_div_unsign_klh:divider|alt_u_div_s6f:divider ; alt_u_div_s6f       ; work         ;
+;    |lpm_divide:Mod0|                          ; 49 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_module|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
+;       |lpm_divide_vam:auto_generated|         ; 49 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_module|lpm_divide:Mod0|lpm_divide_vam:auto_generated                                                   ; lpm_divide_vam      ; work         ;
+;          |sign_div_unsign_klh:divider|        ; 49 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_module|lpm_divide:Mod0|lpm_divide_vam:auto_generated|sign_div_unsign_klh:divider                       ; sign_div_unsign_klh ; work         ;
+;             |alt_u_div_s6f:divider|           ; 49 (49)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_module|lpm_divide:Mod0|lpm_divide_vam:auto_generated|sign_div_unsign_klh:divider|alt_u_div_s6f:divider ; alt_u_div_s6f       ; work         ;
+;    |lpm_divide:Mod1|                          ; 84 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_module|lpm_divide:Mod1                                                                                 ; lpm_divide          ; work         ;
+;       |lpm_divide_vam:auto_generated|         ; 84 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_module|lpm_divide:Mod1|lpm_divide_vam:auto_generated                                                   ; lpm_divide_vam      ; work         ;
+;          |sign_div_unsign_klh:divider|        ; 84 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_module|lpm_divide:Mod1|lpm_divide_vam:auto_generated|sign_div_unsign_klh:divider                       ; sign_div_unsign_klh ; work         ;
+;             |alt_u_div_s6f:divider|           ; 84 (84)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_module|lpm_divide:Mod1|lpm_divide_vam:auto_generated|sign_div_unsign_klh:divider|alt_u_div_s6f:divider ; alt_u_div_s6f       ; work         ;
+;    |num_cnt:num_cnt_inst|                     ; 32 (32)             ; 10 (10)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_module|num_cnt:num_cnt_inst                                                                            ; num_cnt             ; work         ;
+;    |uart_send_11bytes:uart_send_11bytes_inst| ; 241 (94)            ; 104 (28)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_module|uart_send_11bytes:uart_send_11bytes_inst                                                        ; uart_send_11bytes   ; work         ;
+;       |uart_ctrler:uart_ctrler|               ; 147 (147)           ; 76 (76)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_module|uart_send_11bytes:uart_send_11bytes_inst|uart_ctrler:uart_ctrler                                ; uart_ctrler         ; work         ;
++-----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                           ;
++-----------------------------------------------------+----------------------------------------------------------------------------------------+
+; Register name                                       ; Reason for Removal                                                                     ;
++-----------------------------------------------------+----------------------------------------------------------------------------------------+
+; uart_send_11bytes:uart_send_11bytes_inst|tx_byte[7] ; Stuck at GND due to stuck port data_in                                                 ;
+; bit_to_caseg:bit_to_caseg_inst|cnt_1ms[0]           ; Merged with uart_send_11bytes:uart_send_11bytes_inst|uart_ctrler:uart_ctrler|cnt_tx[0] ;
+; bit_to_caseg:bit_to_caseg_inst|cnt_1ms[1]           ; Merged with uart_send_11bytes:uart_send_11bytes_inst|uart_ctrler:uart_ctrler|cnt_tx[1] ;
+; Total Number of Removed Registers = 3               ;                                                                                        ;
++-----------------------------------------------------+----------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 559   ;
+; Number of registers using Synchronous Clear  ; 414   ;
+; Number of registers using Synchronous Load   ; 1     ;
+; Number of registers using Asynchronous Clear ; 559   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 373   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------+
+; Inverted Register Statistics                                                                ;
++-----------------------------------------------------------------------------------+---------+
+; Inverted Register                                                                 ; Fan out ;
++-----------------------------------------------------------------------------------+---------+
+; state                                                                             ; 7       ;
+; uart_send_11bytes:uart_send_11bytes_inst|uart_ctrler:uart_ctrler|tx               ; 3       ;
+; uart_send_11bytes:uart_send_11bytes_inst|uart_ctrler:uart_ctrler|reg_tran_byte[6] ; 1       ;
+; uart_send_11bytes:uart_send_11bytes_inst|uart_ctrler:uart_ctrler|reg_tran_byte[5] ; 1       ;
+; uart_send_11bytes:uart_send_11bytes_inst|uart_ctrler:uart_ctrler|reg_tran_byte[1] ; 1       ;
+; uart_send_11bytes:uart_send_11bytes_inst|uart_ctrler:uart_ctrler|reg_tran_byte[2] ; 1       ;
+; uart_send_11bytes:uart_send_11bytes_inst|uart_ctrler:uart_ctrler|reg_tran_byte[3] ; 1       ;
+; uart_send_11bytes:uart_send_11bytes_inst|uart_ctrler:uart_ctrler|reg_tran_byte[4] ; 1       ;
+; uart_send_11bytes:uart_send_11bytes_inst|uart_ctrler:uart_ctrler|reg_tran_byte[7] ; 1       ;
+; uart_send_11bytes:uart_send_11bytes_inst|uart_ctrler:uart_ctrler|reg_tran_byte[0] ; 1       ;
+; Total number of inverted registers = 10                                           ;         ;
++-----------------------------------------------------------------------------------+---------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------+
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top_module|key:key1_inst|cnt_1ms[5]                                                             ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top_module|uart_send_11bytes:uart_send_11bytes_inst|uart_ctrler:uart_ctrler|uart_tx_time_cnt[3] ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top_module|key:key1_inst|cnt_20ms[0]                                                            ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top_module|key:key2_inst|cnt_1ms[12]                                                            ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top_module|key:key3_inst|cnt_1ms[2]                                                             ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top_module|key:key1_inst|cnt_lp_rcgn[5]                                                         ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top_module|key:key2_inst|cnt_20ms[11]                                                           ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top_module|key:key3_inst|cnt_20ms[15]                                                           ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top_module|key:key4_inst|cnt_1ms[15]                                                            ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top_module|key:key4_inst|cnt_20ms[0]                                                            ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top_module|key:key2_inst|cnt_lp_rcgn[16]                                                        ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top_module|key:key3_inst|cnt_lp_rcgn[15]                                                        ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top_module|key:key4_inst|cnt_lp_rcgn[0]                                                         ;
+; 4:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |top_module|uart_send_11bytes:uart_send_11bytes_inst|send_step_cnt[0]                            ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top_module|key:key1_inst|cnt_signal_interval[16]                                                ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top_module|key:key2_inst|cnt_signal_interval[19]                                                ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top_module|key:key3_inst|cnt_signal_interval[3]                                                 ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top_module|key:key4_inst|cnt_signal_interval[0]                                                 ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 10 LEs               ; 20 LEs                 ; Yes        ; |top_module|num_cnt:num_cnt_inst|num[9]                                                          ;
+; 10:1               ; 4 bits    ; 24 LEs        ; 20 LEs               ; 4 LEs                  ; Yes        ; |top_module|bit_to_caseg:bit_to_caseg_inst|seg_disp[2]                                           ;
+; 12:1               ; 2 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top_module|uart_send_11bytes:uart_send_11bytes_inst|tx_byte[6]                                  ;
+; 18:1               ; 4 bits    ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; Yes        ; |top_module|uart_send_11bytes:uart_send_11bytes_inst|tx_byte[3]                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: key:key1_inst ;
++-----------------+----------+-------------------------------+
+; Parameter Name  ; Value    ; Type                          ;
++-----------------+----------+-------------------------------+
+; sclk_freq       ; 50000000 ; Signed Integer                ;
+; press_vol       ; 0        ; Signed Integer                ;
+; long_press      ; 500      ; Signed Integer                ;
+; signal_interval ; 100      ; Signed Integer                ;
++-----------------+----------+-------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: key:key2_inst ;
++-----------------+----------+-------------------------------+
+; Parameter Name  ; Value    ; Type                          ;
++-----------------+----------+-------------------------------+
+; sclk_freq       ; 50000000 ; Signed Integer                ;
+; press_vol       ; 0        ; Signed Integer                ;
+; long_press      ; 500      ; Signed Integer                ;
+; signal_interval ; 100      ; Signed Integer                ;
++-----------------+----------+-------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: key:key3_inst ;
++-----------------+----------+-------------------------------+
+; Parameter Name  ; Value    ; Type                          ;
++-----------------+----------+-------------------------------+
+; sclk_freq       ; 50000000 ; Signed Integer                ;
+; press_vol       ; 0        ; Signed Integer                ;
+; long_press      ; 500      ; Signed Integer                ;
+; signal_interval ; 100      ; Signed Integer                ;
++-----------------+----------+-------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: key:key4_inst ;
++-----------------+----------+-------------------------------+
+; Parameter Name  ; Value    ; Type                          ;
++-----------------+----------+-------------------------------+
+; sclk_freq       ; 50000000 ; Signed Integer                ;
+; press_vol       ; 0        ; Signed Integer                ;
+; long_press      ; 500      ; Signed Integer                ;
+; signal_interval ; 100      ; Signed Integer                ;
++-----------------+----------+-------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: num_cnt:num_cnt_inst ;
++----------------+-------+------------------------------------------+
+; Parameter Name ; Value ; Type                                     ;
++----------------+-------+------------------------------------------+
+; num_start      ; 0     ; Signed Integer                           ;
+; num_MAX        ; 999   ; Signed Integer                           ;
++----------------+-------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bit_to_caseg:bit_to_caseg_inst ;
++----------------+------------------+-----------------------------------------+
+; Parameter Name ; Value            ; Type                                    ;
++----------------+------------------+-----------------------------------------+
+; cnt_1ms_MAX    ; 1100001101001111 ; Unsigned Binary                         ;
+; cnt_bit_MAX    ; 111              ; Unsigned Binary                         ;
++----------------+------------------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: uart_send_11bytes:uart_send_11bytes_inst ;
++----------------+----------+-----------------------------------------------------------+
+; Parameter Name ; Value    ; Type                                                      ;
++----------------+----------+-----------------------------------------------------------+
+; sys_clk_freq   ; 50000000 ; Signed Integer                                            ;
+; baudrate       ; 9600     ; Signed Integer                                            ;
++----------------+----------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: uart_send_11bytes:uart_send_11bytes_inst|uart_ctrler:uart_ctrler ;
++----------------+----------+-----------------------------------------------------------------------------------+
+; Parameter Name ; Value    ; Type                                                                              ;
++----------------+----------+-----------------------------------------------------------------------------------+
+; sys_clk_freq   ; 50000000 ; Signed Integer                                                                    ;
+; baudrate       ; 9600     ; Signed Integer                                                                    ;
++----------------+----------+-----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod1 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                ;
+; LPM_WIDTHD             ; 4              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_vam ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Div1 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                ;
+; LPM_WIDTHD             ; 4              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_sim ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                ;
+; LPM_WIDTHD             ; 4              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_vam ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Div0 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                ;
+; LPM_WIDTHD             ; 7              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_vim ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "uart_send_11bytes:uart_send_11bytes_inst|uart_ctrler:uart_ctrler"                      ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; rx_done ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; rx_byte ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------+
+; Port Connectivity Checks: "uart_send_11bytes:uart_send_11bytes_inst" ;
++----------------------+-------+----------+----------------------------+
+; Port                 ; Type  ; Severity ; Details                    ;
++----------------------+-------+----------+----------------------------+
+; send_11bytes[81..80] ; Input ; Info     ; Stuck at VCC               ;
+; send_11bytes[75..72] ; Input ; Info     ; Stuck at VCC               ;
+; send_11bytes[59..57] ; Input ; Info     ; Stuck at VCC               ;
+; send_11bytes[45..43] ; Input ; Info     ; Stuck at VCC               ;
+; send_11bytes[37..36] ; Input ; Info     ; Stuck at VCC               ;
+; send_11bytes[11..10] ; Input ; Info     ; Stuck at VCC               ;
+; send_11bytes[85..82] ; Input ; Info     ; Stuck at GND               ;
+; send_11bytes[77..76] ; Input ; Info     ; Stuck at GND               ;
+; send_11bytes[61..60] ; Input ; Info     ; Stuck at GND               ;
+; send_11bytes[56..55] ; Input ; Info     ; Stuck at GND               ;
+; send_11bytes[49..46] ; Input ; Info     ; Stuck at GND               ;
+; send_11bytes[40..38] ; Input ; Info     ; Stuck at GND               ;
+; send_11bytes[31..30] ; Input ; Info     ; Stuck at GND               ;
+; send_11bytes[23..22] ; Input ; Info     ; Stuck at GND               ;
+; send_11bytes[15..12] ; Input ; Info     ; Stuck at GND               ;
+; send_11bytes[7..4]   ; Input ; Info     ; Stuck at GND               ;
+; send_11bytes[87]     ; Input ; Info     ; Stuck at GND               ;
+; send_11bytes[86]     ; Input ; Info     ; Stuck at VCC               ;
+; send_11bytes[79]     ; Input ; Info     ; Stuck at GND               ;
+; send_11bytes[78]     ; Input ; Info     ; Stuck at VCC               ;
+; send_11bytes[71]     ; Input ; Info     ; Stuck at GND               ;
+; send_11bytes[70]     ; Input ; Info     ; Stuck at VCC               ;
+; send_11bytes[69]     ; Input ; Info     ; Stuck at GND               ;
+; send_11bytes[68]     ; Input ; Info     ; Stuck at VCC               ;
+; send_11bytes[67]     ; Input ; Info     ; Stuck at GND               ;
+; send_11bytes[66]     ; Input ; Info     ; Stuck at VCC               ;
+; send_11bytes[65]     ; Input ; Info     ; Stuck at GND               ;
+; send_11bytes[64]     ; Input ; Info     ; Stuck at VCC               ;
+; send_11bytes[63]     ; Input ; Info     ; Stuck at GND               ;
+; send_11bytes[62]     ; Input ; Info     ; Stuck at VCC               ;
+; send_11bytes[54]     ; Input ; Info     ; Stuck at VCC               ;
+; send_11bytes[53]     ; Input ; Info     ; Stuck at GND               ;
+; send_11bytes[52]     ; Input ; Info     ; Stuck at VCC               ;
+; send_11bytes[51]     ; Input ; Info     ; Stuck at GND               ;
+; send_11bytes[50]     ; Input ; Info     ; Stuck at VCC               ;
+; send_11bytes[42]     ; Input ; Info     ; Stuck at GND               ;
+; send_11bytes[41]     ; Input ; Info     ; Stuck at VCC               ;
+; send_11bytes[29]     ; Input ; Info     ; Stuck at VCC               ;
+; send_11bytes[21]     ; Input ; Info     ; Stuck at VCC               ;
+; send_11bytes[9]      ; Input ; Info     ; Stuck at GND               ;
+; send_11bytes[8]      ; Input ; Info     ; Stuck at VCC               ;
+; send_11bytes[3]      ; Input ; Info     ; Stuck at VCC               ;
+; send_11bytes[2]      ; Input ; Info     ; Stuck at GND               ;
+; send_11bytes[1]      ; Input ; Info     ; Stuck at VCC               ;
+; send_11bytes[0]      ; Input ; Info     ; Stuck at GND               ;
++----------------------+-------+----------+----------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "bit_to_caseg:bit_to_caseg_inst" ;
++-------------+-------+----------+---------------------------+
+; Port        ; Type  ; Severity ; Details                   ;
++-------------+-------+----------+---------------------------+
+; bit_7[3..2] ; Input ; Info     ; Stuck at VCC              ;
+; bit_7[1..0] ; Input ; Info     ; Stuck at GND              ;
+; bit_6[3]    ; Input ; Info     ; Stuck at VCC              ;
+; bit_6[2]    ; Input ; Info     ; Stuck at GND              ;
+; bit_6[1]    ; Input ; Info     ; Stuck at VCC              ;
+; bit_6[0]    ; Input ; Info     ; Stuck at GND              ;
+; bit_5[3]    ; Input ; Info     ; Stuck at VCC              ;
+; bit_5[2]    ; Input ; Info     ; Stuck at GND              ;
+; bit_5[1]    ; Input ; Info     ; Stuck at VCC              ;
+; bit_5[0]    ; Input ; Info     ; Stuck at GND              ;
+; bit_4[3]    ; Input ; Info     ; Stuck at VCC              ;
+; bit_4[2]    ; Input ; Info     ; Stuck at GND              ;
+; bit_4[1]    ; Input ; Info     ; Stuck at VCC              ;
+; bit_4[0]    ; Input ; Info     ; Stuck at GND              ;
+; bit_3[3]    ; Input ; Info     ; Stuck at VCC              ;
+; bit_3[2]    ; Input ; Info     ; Stuck at GND              ;
+; bit_3[1]    ; Input ; Info     ; Stuck at VCC              ;
+; bit_3[0]    ; Input ; Info     ; Stuck at GND              ;
++-------------+-------+----------+---------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 24                          ;
+; cycloneiii_ff         ; 559                         ;
+;     CLR               ; 109                         ;
+;     CLR SCLR          ; 76                          ;
+;     CLR SLD           ; 1                           ;
+;     ENA CLR           ; 35                          ;
+;     ENA CLR SCLR      ; 338                         ;
+; cycloneiii_lcell_comb ; 1292                        ;
+;     arith             ; 562                         ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 474                         ;
+;         3 data inputs ; 87                          ;
+;     normal            ; 730                         ;
+;         0 data inputs ; 22                          ;
+;         1 data inputs ; 30                          ;
+;         2 data inputs ; 292                         ;
+;         3 data inputs ; 61                          ;
+;         4 data inputs ; 325                         ;
+;                       ;                             ;
+; Max LUT depth         ; 23.30                       ;
+; Average LUT depth     ; 6.60                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+    Info: Processing started: Wed Apr  9 20:05:38 2025
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lanqiao_16_mocks_03 -c lanqiao_16_mocks_03
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file /users/zlxwy/desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/uart_send_11bytes.v
+    Info (12023): Found entity 1: uart_send_11bytes File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/uart_send_11bytes.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file /users/zlxwy/desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/uart_ctrler.v
+    Info (12023): Found entity 1: uart_ctrler File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/uart_ctrler.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /users/zlxwy/desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/top_module.v
+    Info (12023): Found entity 1: top_module File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/top_module.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /users/zlxwy/desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/num_cnt.v
+    Info (12023): Found entity 1: num_cnt File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/num_cnt.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /users/zlxwy/desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/key.v
+    Info (12023): Found entity 1: key File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/key.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /users/zlxwy/desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/bit_to_caseg.v
+    Info (12023): Found entity 1: bit_to_caseg File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/bit_to_caseg.v Line: 4
+Warning (10222): Verilog HDL Parameter Declaration warning at uart_ctrler.v(21): Parameter Declaration in module "uart_ctrler" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/uart_ctrler.v Line: 21
+Warning (10222): Verilog HDL Parameter Declaration warning at uart_ctrler.v(22): Parameter Declaration in module "uart_ctrler" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/uart_ctrler.v Line: 22
+Warning (10222): Verilog HDL Parameter Declaration warning at uart_ctrler.v(26): Parameter Declaration in module "uart_ctrler" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/uart_ctrler.v Line: 26
+Warning (10222): Verilog HDL Parameter Declaration warning at uart_ctrler.v(123): Parameter Declaration in module "uart_ctrler" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/uart_ctrler.v Line: 123
+Warning (10222): Verilog HDL Parameter Declaration warning at uart_ctrler.v(124): Parameter Declaration in module "uart_ctrler" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/uart_ctrler.v Line: 124
+Warning (10222): Verilog HDL Parameter Declaration warning at uart_ctrler.v(128): Parameter Declaration in module "uart_ctrler" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/uart_ctrler.v Line: 128
+Warning (10222): Verilog HDL Parameter Declaration warning at uart_send_11bytes.v(39): Parameter Declaration in module "uart_send_11bytes" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/uart_send_11bytes.v Line: 39
+Warning (10222): Verilog HDL Parameter Declaration warning at key.v(15): Parameter Declaration in module "key" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/key.v Line: 15
+Warning (10222): Verilog HDL Parameter Declaration warning at key.v(26): Parameter Declaration in module "key" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/key.v Line: 26
+Warning (10222): Verilog HDL Parameter Declaration warning at key.v(27): Parameter Declaration in module "key" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/key.v Line: 27
+Warning (10222): Verilog HDL Parameter Declaration warning at key.v(49): Parameter Declaration in module "key" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/key.v Line: 49
+Warning (10222): Verilog HDL Parameter Declaration warning at key.v(71): Parameter Declaration in module "key" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/key.v Line: 71
+Info (12127): Elaborating entity "top_module" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at top_module.v(65): truncated value with size 32 to match size of target (1) File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/top_module.v Line: 65
+Warning (10230): Verilog HDL assignment warning at top_module.v(66): truncated value with size 32 to match size of target (1) File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/top_module.v Line: 66
+Warning (10230): Verilog HDL assignment warning at top_module.v(67): truncated value with size 32 to match size of target (1) File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/top_module.v Line: 67
+Warning (10230): Verilog HDL assignment warning at top_module.v(74): truncated value with size 32 to match size of target (4) File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/top_module.v Line: 74
+Warning (10230): Verilog HDL assignment warning at top_module.v(75): truncated value with size 32 to match size of target (4) File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/top_module.v Line: 75
+Warning (10230): Verilog HDL assignment warning at top_module.v(76): truncated value with size 32 to match size of target (4) File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/top_module.v Line: 76
+Warning (10230): Verilog HDL assignment warning at top_module.v(96): truncated value with size 32 to match size of target (4) File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/top_module.v Line: 96
+Warning (10230): Verilog HDL assignment warning at top_module.v(97): truncated value with size 32 to match size of target (4) File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/top_module.v Line: 97
+Warning (10230): Verilog HDL assignment warning at top_module.v(144): truncated value with size 32 to match size of target (8) File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/top_module.v Line: 144
+Warning (10230): Verilog HDL assignment warning at top_module.v(145): truncated value with size 32 to match size of target (8) File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/top_module.v Line: 145
+Warning (10230): Verilog HDL assignment warning at top_module.v(146): truncated value with size 32 to match size of target (8) File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/top_module.v Line: 146
+Info (12128): Elaborating entity "key" for hierarchy "key:key1_inst" File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/top_module.v Line: 21
+Warning (10230): Verilog HDL assignment warning at key.v(22): truncated value with size 32 to match size of target (16) File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/key.v Line: 22
+Warning (10230): Verilog HDL assignment warning at key.v(34): truncated value with size 32 to match size of target (16) File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/key.v Line: 34
+Info (12128): Elaborating entity "num_cnt" for hierarchy "num_cnt:num_cnt_inst" File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/top_module.v Line: 91
+Warning (10230): Verilog HDL assignment warning at num_cnt.v(22): truncated value with size 32 to match size of target (10) File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/num_cnt.v Line: 22
+Warning (10230): Verilog HDL assignment warning at num_cnt.v(24): truncated value with size 32 to match size of target (10) File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/num_cnt.v Line: 24
+Warning (10230): Verilog HDL assignment warning at num_cnt.v(25): truncated value with size 32 to match size of target (10) File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/num_cnt.v Line: 25
+Warning (10230): Verilog HDL assignment warning at num_cnt.v(27): truncated value with size 32 to match size of target (10) File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/num_cnt.v Line: 27
+Warning (10230): Verilog HDL assignment warning at num_cnt.v(28): truncated value with size 32 to match size of target (10) File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/num_cnt.v Line: 28
+Info (12128): Elaborating entity "bit_to_caseg" for hierarchy "bit_to_caseg:bit_to_caseg_inst" File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/top_module.v Line: 113
+Warning (10230): Verilog HDL assignment warning at bit_to_caseg.v(34): truncated value with size 32 to match size of target (16) File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/bit_to_caseg.v Line: 34
+Warning (10230): Verilog HDL assignment warning at bit_to_caseg.v(55): truncated value with size 32 to match size of target (3) File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/bit_to_caseg.v Line: 55
+Info (12128): Elaborating entity "uart_send_11bytes" for hierarchy "uart_send_11bytes:uart_send_11bytes_inst" File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/top_module.v Line: 165
+Warning (10230): Verilog HDL assignment warning at uart_send_11bytes.v(47): truncated value with size 32 to match size of target (17) File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/uart_send_11bytes.v Line: 47
+Info (12128): Elaborating entity "uart_ctrler" for hierarchy "uart_send_11bytes:uart_send_11bytes_inst|uart_ctrler:uart_ctrler" File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/uart_send_11bytes.v Line: 36
+Warning (10762): Verilog HDL Case Statement warning at uart_ctrler.v(82): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/uart_ctrler.v Line: 82
+Warning (10762): Verilog HDL Case Statement warning at uart_ctrler.v(190): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/uart_ctrler.v Line: 190
+Info (278001): Inferred 4 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod1" File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/top_module.v Line: 76
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div1" File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/top_module.v Line: 75
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0" File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/top_module.v Line: 75
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0" File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/top_module.v Line: 74
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod1" File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/top_module.v Line: 76
+Info (12133): Instantiated megafunction "lpm_divide:Mod1" with the following parameter: File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/top_module.v Line: 76
+    Info (12134): Parameter "LPM_WIDTHN" = "10"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_vam.tdf
+    Info (12023): Found entity 1: lpm_divide_vam File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/quartus_prj/db/lpm_divide_vam.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_klh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_klh File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/quartus_prj/db/sign_div_unsign_klh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_s6f.tdf
+    Info (12023): Found entity 1: alt_u_div_s6f File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/quartus_prj/db/alt_u_div_s6f.tdf Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_7pc.tdf
+    Info (12023): Found entity 1: add_sub_7pc File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/quartus_prj/db/add_sub_7pc.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8pc.tdf
+    Info (12023): Found entity 1: add_sub_8pc File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/quartus_prj/db/add_sub_8pc.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Div1" File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/top_module.v Line: 75
+Info (12133): Instantiated megafunction "lpm_divide:Div1" with the following parameter: File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/top_module.v Line: 75
+    Info (12134): Parameter "LPM_WIDTHN" = "10"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_sim.tdf
+    Info (12023): Found entity 1: lpm_divide_sim File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/quartus_prj/db/lpm_divide_sim.tdf Line: 25
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Div0" File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/top_module.v Line: 74
+Info (12133): Instantiated megafunction "lpm_divide:Div0" with the following parameter: File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/top_module.v Line: 74
+    Info (12134): Parameter "LPM_WIDTHN" = "10"
+    Info (12134): Parameter "LPM_WIDTHD" = "7"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_vim.tdf
+    Info (12023): Found entity 1: lpm_divide_vim File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/quartus_prj/db/lpm_divide_vim.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_nlh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_nlh File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/quartus_prj/db/sign_div_unsign_nlh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_27f.tdf
+    Info (12023): Found entity 1: alt_u_div_27f File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/quartus_prj/db/alt_u_div_27f.tdf Line: 27
+Info (13000): Registers with preset signals will power-up high File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/rtl/top_module.v Line: 62
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Info (286030): Timing-Driven Synthesis is running
+Info (17016): Found the following redundant logic cells in design
+    Info (17048): Logic cell "lpm_divide:Mod0|lpm_divide_vam:auto_generated|sign_div_unsign_klh:divider|alt_u_div_s6f:divider|add_sub_9_result_int[0]~0" File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_03/quartus_prj/db/alt_u_div_s6f.tdf Line: 72
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 1327 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 6 input pins
+    Info (21059): Implemented 18 output pins
+    Info (21061): Implemented 1303 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 36 warnings
+    Info: Peak virtual memory: 4847 megabytes
+    Info: Processing ended: Wed Apr  9 20:05:45 2025
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:16
+
+

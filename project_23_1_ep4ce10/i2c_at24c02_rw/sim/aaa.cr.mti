@@ -1,0 +1,15 @@
+C:/Users/ZLXWY/Desktop/i2c_at24c02_rw/rtl/i2c_write_read.v {1 {vlog -work work -vopt -stats=none {C:\Users\ZLXWY\Desktop\i2c_at24c02_rw\rtl\i2c_write_read.v}
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module i2c_write_read
+
+Top level modules:
+	i2c_write_read
+
+} {} {}} C:/Users/ZLXWY/Desktop/i2c_at24c02_rw/sim/i2c_write_read_tb.v {1 {vlog -work work -vopt -stats=none C:/Users/ZLXWY/Desktop/i2c_at24c02_rw/sim/i2c_write_read_tb.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module i2c_write_read_tb
+
+Top level modules:
+	i2c_write_read_tb
+
+} {} {}}

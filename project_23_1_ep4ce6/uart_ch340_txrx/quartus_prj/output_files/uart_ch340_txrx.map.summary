@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sat Apr  5 18:04:02 2025
+Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+Revision Name : uart_ch340_txrx
+Top-level Entity Name : uart_ch340_txrx_test_2
+Family : Cyclone IV E
+Total logic elements : 327
+    Total combinational functions : 319
+    Dedicated logic registers : 158
+Total registers : 158
+Total pins : 4
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

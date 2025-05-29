@@ -1,0 +1,26 @@
+Tue Nov 26 17:46:18 CST 2024
+Trace back: can't pack .main_pane.library.interior.cs.body.search_bar inside .dlg_sim_opts.top_row.child_f.nb.canvas.notebook.cs.page1.cs.libbrowser
+    while executing
+"pack .main_pane.library.interior.cs.body.search_bar -side bottom -before .dlg_sim_opts.top_row.child_f.nb.canvas.notebook.cs.page1.cs.libbrowser.conte..."
+    ("eval" body line 1)
+    invoked from within
+"eval $d($w,show_cmd)"
+    (procedure "SearchBar::show" line 71)
+    invoked from within
+"SearchBar::show .dlg_sim_opts.top_row.child_f.nb.canvas.notebook.cs.page1.cs.libbrowser.contents {}"
+    ("after" script)
+  <2:D:/FPGA_Software/ModelSiim_SE_10_5/win64/tk8.5/bgerror.tcl:92: ::tkerror {can't pack .main_pane.library.interior.cs.body.search_bar inside .dlg_sim_opts.top_row.child_f.nb.canvas.notebook.cs.page1.cs.libbrowser}
+  <1:eval:1: ::tk::dialog::error::bgerror {can't pack .main_pane.library.interior.cs.body.search_bar inside .dlg_sim_opts.top_row.child_f.nb.canvas.notebook.cs.page1.cs.libbrowser}
+Tue Nov 26 18:17:00 CST 2024
+Trace back: can't pack .main_pane.library.interior.cs.body.search_bar inside .dlg_sim_opts.top_row.child_f.nb.canvas.notebook.cs.page1.cs.libbrowser
+    while executing
+"pack .main_pane.library.interior.cs.body.search_bar -side bottom -before .dlg_sim_opts.top_row.child_f.nb.canvas.notebook.cs.page1.cs.libbrowser.conte..."
+    ("eval" body line 1)
+    invoked from within
+"eval $d($w,show_cmd)"
+    (procedure "SearchBar::show" line 71)
+    invoked from within
+"SearchBar::show .dlg_sim_opts.top_row.child_f.nb.canvas.notebook.cs.page1.cs.libbrowser.contents {}"
+    ("after" script)
+  <2:D:/FPGA_Software/ModelSim_SE_10_5/win64/tk8.5/bgerror.tcl:92: ::tkerror {can't pack .main_pane.library.interior.cs.body.search_bar inside .dlg_sim_opts.top_row.child_f.nb.canvas.notebook.cs.page1.cs.libbrowser}
+  <1:eval:1: ::tk::dialog::error::bgerror {can't pack .main_pane.library.interior.cs.body.search_bar inside .dlg_sim_opts.top_row.child_f.nb.canvas.notebook.cs.page1.cs.libbrowser}

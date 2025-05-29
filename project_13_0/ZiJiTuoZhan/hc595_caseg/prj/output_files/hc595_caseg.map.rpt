@@ -1,0 +1,416 @@
+Analysis & Synthesis report for hc595_caseg
+Fri Nov 22 23:10:08 2024
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Inverted Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: digit8_num_generator:digit8_num_generator_inst
+ 13. Parameter Settings for User Entity Instance: num_to_caseg:num_to_caseg_inst
+ 14. Parameter Settings for User Entity Instance: num_to_caseg:num_to_caseg_inst|bcd_8421:bcd_8421_inst
+ 15. Parameter Settings for User Entity Instance: caseg_to_hc595:comb_3
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                          ;
++------------------------------------+--------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri Nov 22 23:10:08 2024            ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
+; Revision Name                      ; hc595_caseg                                      ;
+; Top-level Entity Name              ; top_caseg_disp                                   ;
+; Family                             ; Cyclone IV E                                     ;
+; Total logic elements               ; 396                                              ;
+;     Total combinational functions  ; 340                                              ;
+;     Dedicated logic registers      ; 229                                              ;
+; Total registers                    ; 229                                              ;
+; Total pins                         ; 6                                                ;
+; Total virtual pins                 ; 0                                                ;
+; Total memory bits                  ; 0                                                ;
+; Embedded Multiplier 9-bit elements ; 0                                                ;
+; Total PLLs                         ; 0                                                ;
++------------------------------------+--------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE10F17C8       ;                    ;
+; Top-level entity name                                                      ; top_caseg_disp     ; hc595_caseg        ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 16          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-16        ;   0.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                       ;
++--------------------------------------+-----------------+------------------------+----------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path     ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                     ; Library ;
++--------------------------------------+-----------------+------------------------+----------------------------------------------------------------------------------+---------+
+; ../rtl/num_to_hc595/num_to_caseg.v   ; yes             ; User Verilog HDL File  ; D:/DATAFiles/QuartusII/ZiJiTuoZhan/hc595_caseg/rtl/num_to_hc595/num_to_caseg.v   ;         ;
+; ../rtl/num_to_hc595/caseg_to_hc595.v ; yes             ; User Verilog HDL File  ; D:/DATAFiles/QuartusII/ZiJiTuoZhan/hc595_caseg/rtl/num_to_hc595/caseg_to_hc595.v ;         ;
+; ../rtl/num_to_hc595/bcd_8421.v       ; yes             ; User Verilog HDL File  ; D:/DATAFiles/QuartusII/ZiJiTuoZhan/hc595_caseg/rtl/num_to_hc595/bcd_8421.v       ;         ;
+; ../rtl/top_caseg_disp.v              ; yes             ; User Verilog HDL File  ; D:/DATAFiles/QuartusII/ZiJiTuoZhan/hc595_caseg/rtl/top_caseg_disp.v              ;         ;
+; ../rtl/digit8_generator.v            ; yes             ; User Verilog HDL File  ; D:/DATAFiles/QuartusII/ZiJiTuoZhan/hc595_caseg/rtl/digit8_generator.v            ;         ;
++--------------------------------------+-----------------+------------------------+----------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 396       ;
+;                                             ;           ;
+; Total combinational functions               ; 340       ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 173       ;
+;     -- 3 input functions                    ; 81        ;
+;     -- <=2 input functions                  ; 86        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 275       ;
+;     -- arithmetic mode                      ; 65        ;
+;                                             ;           ;
+; Total registers                             ; 229       ;
+;     -- Dedicated logic registers            ; 229       ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 6         ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 229       ;
+; Total fan-out                               ; 1897      ;
+; Average fan-out                             ; 3.27      ;
++---------------------------------------------+-----------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                    ;
++-----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                          ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                   ; Library Name ;
++-----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------+--------------+
+; |top_caseg_disp                                     ; 340 (0)           ; 229 (0)      ; 0           ; 0            ; 0       ; 0         ; 6    ; 0            ; |top_caseg_disp                                                       ; work         ;
+;    |caseg_to_hc595:comb_3|                          ; 22 (22)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_caseg_disp|caseg_to_hc595:comb_3                                 ; work         ;
+;    |digit8_num_generator:digit8_num_generator_inst| ; 101 (101)         ; 46 (46)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_caseg_disp|digit8_num_generator:digit8_num_generator_inst        ; work         ;
+;    |num_to_caseg:num_to_caseg_inst|                 ; 217 (102)         ; 174 (78)     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_caseg_disp|num_to_caseg:num_to_caseg_inst                        ; work         ;
+;       |bcd_8421:bcd_8421_inst|                      ; 115 (115)         ; 96 (96)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_caseg_disp|num_to_caseg:num_to_caseg_inst|bcd_8421:bcd_8421_inst ; work         ;
++-----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                         ;
++--------------------------------------------------------------------+-------------------------------------------------------+
+; Register name                                                      ; Reason for Removal                                    ;
++--------------------------------------------------------------------+-------------------------------------------------------+
+; num_to_caseg:num_to_caseg_inst|bcd_8421:bcd_8421_inst|shift_signal ; Merged with caseg_to_hc595:comb_3|cnt[0]              ;
+; num_to_caseg:num_to_caseg_inst|cnt_1ms[0]                          ; Merged with caseg_to_hc595:comb_3|cnt[0]              ;
+; digit8_num_generator:digit8_num_generator_inst|cnt_100ms[0]        ; Merged with caseg_to_hc595:comb_3|cnt[0]              ;
+; digit8_num_generator:digit8_num_generator_inst|cnt_100ms[1]        ; Merged with caseg_to_hc595:comb_3|cnt[1]              ;
+; num_to_caseg:num_to_caseg_inst|cnt_1ms[1]                          ; Merged with caseg_to_hc595:comb_3|cnt[1]              ;
+; digit8_num_generator:digit8_num_generator_inst|cnt_100ms[2]        ; Merged with num_to_caseg:num_to_caseg_inst|cnt_1ms[2] ;
+; digit8_num_generator:digit8_num_generator_inst|cnt_100ms[3]        ; Merged with num_to_caseg:num_to_caseg_inst|cnt_1ms[3] ;
+; Total Number of Removed Registers = 7                              ;                                                       ;
++--------------------------------------------------------------------+-------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 229   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 3     ;
+; Number of registers using Asynchronous Clear ; 229   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 94    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------+
+; Inverted Register Statistics                          ;
++---------------------------------------------+---------+
+; Inverted Register                           ; Fan out ;
++---------------------------------------------+---------+
+; num_to_caseg:num_to_caseg_inst|disp_reg[21] ; 1       ;
+; num_to_caseg:num_to_caseg_inst|disp_reg[25] ; 1       ;
+; num_to_caseg:num_to_caseg_inst|disp_reg[17] ; 1       ;
+; num_to_caseg:num_to_caseg_inst|disp_reg[29] ; 1       ;
+; num_to_caseg:num_to_caseg_inst|disp_reg[9]  ; 1       ;
+; num_to_caseg:num_to_caseg_inst|disp_reg[5]  ; 1       ;
+; num_to_caseg:num_to_caseg_inst|disp_reg[1]  ; 1       ;
+; num_to_caseg:num_to_caseg_inst|disp_reg[13] ; 1       ;
+; num_to_caseg:num_to_caseg_inst|disp_reg[23] ; 1       ;
+; num_to_caseg:num_to_caseg_inst|disp_reg[27] ; 1       ;
+; num_to_caseg:num_to_caseg_inst|disp_reg[19] ; 1       ;
+; num_to_caseg:num_to_caseg_inst|disp_reg[31] ; 1       ;
+; num_to_caseg:num_to_caseg_inst|disp_reg[11] ; 1       ;
+; num_to_caseg:num_to_caseg_inst|disp_reg[7]  ; 1       ;
+; num_to_caseg:num_to_caseg_inst|disp_reg[3]  ; 1       ;
+; num_to_caseg:num_to_caseg_inst|disp_reg[15] ; 1       ;
+; Total number of inverted registers = 16     ;         ;
++---------------------------------------------+---------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top_caseg_disp|caseg_to_hc595:comb_3|bit[3]                                         ;
+; 3:1                ; 26 bits   ; 52 LEs        ; 26 LEs               ; 26 LEs                 ; Yes        ; |top_caseg_disp|num_to_caseg:num_to_caseg_inst|bcd_8421:bcd_8421_inst|data_shift[5]  ;
+; 3:1                ; 27 bits   ; 54 LEs        ; 27 LEs               ; 27 LEs                 ; Yes        ; |top_caseg_disp|digit8_num_generator:digit8_num_generator_inst|num[22]               ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |top_caseg_disp|num_to_caseg:num_to_caseg_inst|seg_disp[3]                           ;
+; 16:1               ; 7 bits    ; 70 LEs        ; 49 LEs               ; 21 LEs                 ; Yes        ; |top_caseg_disp|num_to_caseg:num_to_caseg_inst|seg[0]                                ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |top_caseg_disp|num_to_caseg:num_to_caseg_inst|bcd_8421:bcd_8421_inst|data_shift[58] ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |top_caseg_disp|num_to_caseg:num_to_caseg_inst|bcd_8421:bcd_8421_inst|data_shift[53] ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |top_caseg_disp|num_to_caseg:num_to_caseg_inst|bcd_8421:bcd_8421_inst|data_shift[50] ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |top_caseg_disp|num_to_caseg:num_to_caseg_inst|bcd_8421:bcd_8421_inst|data_shift[46] ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |top_caseg_disp|num_to_caseg:num_to_caseg_inst|bcd_8421:bcd_8421_inst|data_shift[41] ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |top_caseg_disp|num_to_caseg:num_to_caseg_inst|bcd_8421:bcd_8421_inst|data_shift[38] ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |top_caseg_disp|num_to_caseg:num_to_caseg_inst|bcd_8421:bcd_8421_inst|data_shift[32] ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |top_caseg_disp|num_to_caseg:num_to_caseg_inst|bcd_8421:bcd_8421_inst|data_shift[27] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: digit8_num_generator:digit8_num_generator_inst ;
++----------------+-----------------------------+----------------------------------------------+
+; Parameter Name ; Value                       ; Type                                         ;
++----------------+-----------------------------+----------------------------------------------+
+; cnt_100ms_MAX  ; 10011000100101100111111     ; Unsigned Binary                              ;
+; num_MAX        ; 101111101011110000011111111 ; Unsigned Binary                              ;
++----------------+-----------------------------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: num_to_caseg:num_to_caseg_inst ;
++----------------+------------------+-----------------------------------------+
+; Parameter Name ; Value            ; Type                                    ;
++----------------+------------------+-----------------------------------------+
+; cnt_1ms_MAX    ; 1100001101001111 ; Unsigned Binary                         ;
+; cnt_bit_MAX    ; 111              ; Unsigned Binary                         ;
++----------------+------------------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: num_to_caseg:num_to_caseg_inst|bcd_8421:bcd_8421_inst ;
++----------------+-------+---------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                      ;
++----------------+-------+---------------------------------------------------------------------------+
+; cnt_shift_MAX  ; 11100 ; Unsigned Binary                                                           ;
++----------------+-------+---------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: caseg_to_hc595:comb_3 ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; cnt_MAX        ; 11    ; Unsigned Binary                           ;
+; bit_MAX        ; 1111  ; Unsigned Binary                           ;
++----------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+    Info: Processing started: Fri Nov 22 23:10:07 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off hc595_caseg -c hc595_caseg
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file /datafiles/quartusii/zijituozhan/hc595_caseg/rtl/num_to_hc595/num_to_caseg.v
+    Info (12023): Found entity 1: num_to_caseg
+Warning (10463): Verilog HDL Declaration warning at caseg_to_hc595.v(20): "bit" is SystemVerilog-2005 keyword
+Info (12021): Found 1 design units, including 1 entities, in source file /datafiles/quartusii/zijituozhan/hc595_caseg/rtl/num_to_hc595/caseg_to_hc595.v
+    Info (12023): Found entity 1: caseg_to_hc595
+Info (12021): Found 1 design units, including 1 entities, in source file /datafiles/quartusii/zijituozhan/hc595_caseg/rtl/num_to_hc595/bcd_8421.v
+    Info (12023): Found entity 1: bcd_8421
+Info (12021): Found 1 design units, including 1 entities, in source file /datafiles/quartusii/zijituozhan/hc595_caseg/rtl/top_caseg_disp.v
+    Info (12023): Found entity 1: top_caseg_disp
+Info (12021): Found 1 design units, including 1 entities, in source file /datafiles/quartusii/zijituozhan/hc595_caseg/rtl/digit8_generator.v
+    Info (12023): Found entity 1: digit8_num_generator
+Critical Warning (10846): Verilog HDL Instantiation warning at top_caseg_disp.v(44): instance has no name
+Info (12127): Elaborating entity "top_caseg_disp" for the top level hierarchy
+Info (12128): Elaborating entity "digit8_num_generator" for hierarchy "digit8_num_generator:digit8_num_generator_inst"
+Warning (10230): Verilog HDL assignment warning at digit8_generator.v(15): truncated value with size 32 to match size of target (23)
+Warning (10230): Verilog HDL assignment warning at digit8_generator.v(23): truncated value with size 32 to match size of target (27)
+Info (12128): Elaborating entity "num_to_caseg" for hierarchy "num_to_caseg:num_to_caseg_inst"
+Warning (10230): Verilog HDL assignment warning at num_to_caseg.v(60): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at num_to_caseg.v(77): truncated value with size 32 to match size of target (3)
+Info (12128): Elaborating entity "bcd_8421" for hierarchy "num_to_caseg:num_to_caseg_inst|bcd_8421:bcd_8421_inst"
+Warning (10230): Verilog HDL assignment warning at bcd_8421.v(32): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at bcd_8421.v(49): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at bcd_8421.v(50): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at bcd_8421.v(51): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at bcd_8421.v(52): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at bcd_8421.v(53): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at bcd_8421.v(54): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at bcd_8421.v(55): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at bcd_8421.v(56): truncated value with size 32 to match size of target (4)
+Info (12128): Elaborating entity "caseg_to_hc595" for hierarchy "caseg_to_hc595:comb_3"
+Warning (10230): Verilog HDL assignment warning at caseg_to_hc595.v(33): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at caseg_to_hc595.v(40): truncated value with size 32 to match size of target (4)
+Info (13000): Registers with preset signals will power-up high
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "oe" is stuck at GND
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 402 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 4 output pins
+    Info (21061): Implemented 396 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 19 warnings
+    Info: Peak virtual memory: 4624 megabytes
+    Info: Processing ended: Fri Nov 22 23:10:08 2024
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

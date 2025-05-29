@@ -1,0 +1,15 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/ZLXWY/Desktop/expt/EDA/E01/sim/h_adder_tb.vhd
+source_file = 1, C:/Users/ZLXWY/Desktop/expt/EDA/E01/rtl/h_adder.vhd
+source_file = 1, C:/Users/ZLXWY/Desktop/expt/EDA/E01/prj/db/h_adder.cbx.xml
+source_file = 1, d:/fpga_software/quartus_ii_13_0/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, d:/fpga_software/quartus_ii_13_0/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, d:/fpga_software/quartus_ii_13_0/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, d:/fpga_software/quartus_ii_13_0/quartus/libraries/vhdl/ieee/timing_p.vhd
+design_name = h_adder
+instance = comp, \so~output , so~output, h_adder, 1
+instance = comp, \co~output , co~output, h_adder, 1
+instance = comp, \b~input , b~input, h_adder, 1
+instance = comp, \a~input , a~input, h_adder, 1
+instance = comp, \so~0 , so~0, h_adder, 1
+instance = comp, \co~0 , co~0, h_adder, 1

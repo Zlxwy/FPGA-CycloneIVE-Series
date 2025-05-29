@@ -1,0 +1,16 @@
+Fitter Status : Successful - Tue Apr  8 10:28:54 2025
+Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+Revision Name : key_press
+Top-level Entity Name : key_ctrl_led_toggle
+Family : Cyclone IV E
+Device : EP4CE6E22C8
+Timing Models : Final
+Total logic elements : 168 / 6,272 ( 3 % )
+    Total combinational functions : 168 / 6,272 ( 3 % )
+    Dedicated logic registers : 100 / 6,272 ( 2 % )
+Total registers : 100
+Total pins : 4 / 92 ( 4 % )
+Total virtual pins : 0
+Total memory bits : 0 / 276,480 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

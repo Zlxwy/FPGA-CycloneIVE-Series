@@ -1,0 +1,41 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/DATAFiles/QuartusII/class/202409201252_Waveform_Generator/test1/simulation/modelsim
+T_opt
+!s110 1727314032
+VK[mmM5W7K>Moefg7;NbI23
+04 4 4 work test fast 0
+=1-38d57ae36083-66f4b870-ea-7b8
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L cycloneive_ver -L gate_work -L work +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;10.5;63
+vtest
+!s110 1727314031
+!i10b 1
+!s100 BT9@b;1PIYdYd=FCc1_4i3
+I[>PjeC8Ab2=9dKAKS4ZLm3
+VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1726817384
+8D:/DATAFiles/QuartusII/class/202409201252_Waveform_Generator/test1/simulation/modelsim/test.vo
+FD:/DATAFiles/QuartusII/class/202409201252_Waveform_Generator/test1/simulation/modelsim/test.vo
+L0 31
+OL;L;10.5;63
+r1
+!s85 0
+31
+!s108 1727314031.000000
+!s107 D:/DATAFiles/QuartusII/class/202409201252_Waveform_Generator/test1/simulation/modelsim/test.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/DATAFiles/QuartusII/class/202409201252_Waveform_Generator/test1/simulation/modelsim|D:/DATAFiles/QuartusII/class/202409201252_Waveform_Generator/test1/simulation/modelsim/test.vo|
+!i113 0
+o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+!s92 -vlog01compat -work work +incdir+D:/DATAFiles/QuartusII/class/202409201252_Waveform_Generator/test1/simulation/modelsim -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1

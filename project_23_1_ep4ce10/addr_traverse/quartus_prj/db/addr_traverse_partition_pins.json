@@ -1,0 +1,33 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "n_data[0]",
+					"strict" : false
+				},
+				{
+					"name" : "n_data[1]",
+					"strict" : false
+				},
+				{
+					"name" : "n_data[2]",
+					"strict" : false
+				},
+				{
+					"name" : "n_data[3]",
+					"strict" : false
+				},
+				{
+					"name" : "sclk",
+					"strict" : false
+				},
+				{
+					"name" : "nrst",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

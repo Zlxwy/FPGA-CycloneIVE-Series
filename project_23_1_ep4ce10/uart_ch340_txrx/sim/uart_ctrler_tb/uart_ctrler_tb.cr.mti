@@ -1,0 +1,15 @@
+D:/DATAFiles/QuartusII/project_23_1/uart_ch340_txrx/rtl/key_debounce.v {1 {vlog -work work -vopt -stats=none D:/DATAFiles/QuartusII/project_23_1/uart_ch340_txrx/rtl/key_debounce.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module key_debounce
+
+Top level modules:
+	key_debounce
+
+} {} {}} D:/DATAFiles/QuartusII/project_23_1/uart_ch340_txrx/sim/uart_ch340_tb/uart_ch340_tb.v {1 {vlog -work work -vopt -stats=none D:/DATAFiles/QuartusII/project_23_1/uart_ch340_txrx/sim/uart_ch340_tb/uart_ch340_tb.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module uart_ch340_tb
+
+Top level modules:
+	uart_ch340_tb
+
+} {} {}}

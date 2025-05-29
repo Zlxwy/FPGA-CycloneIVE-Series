@@ -1,0 +1,15 @@
+C:/Users/ZLXWY/Desktop/LF/example_wo/spi_w25q128_rw/rtl/spi_ctrler.v {1 {vlog -work work -vopt -stats=none C:/Users/ZLXWY/Desktop/LF/example_wo/spi_w25q128_rw/rtl/spi_ctrler.v
+Model Technology ModelSim SE-64 vlog 10.7 Compiler 2017.12 Dec  7 2017
+-- Compiling module spi_ctrl
+
+Top level modules:
+	spi_ctrl
+
+} {} {}} C:/Users/ZLXWY/Desktop/LF/example_wo/spi_w25q128_rw/sim/spi_ctrler_tb.v {1 {vlog -work work -vopt -stats=none C:/Users/ZLXWY/Desktop/LF/example_wo/spi_w25q128_rw/sim/spi_ctrler_tb.v
+Model Technology ModelSim SE-64 vlog 10.7 Compiler 2017.12 Dec  7 2017
+-- Compiling module spi_ctrler_tb
+
+Top level modules:
+	spi_ctrler_tb
+
+} {} {}}

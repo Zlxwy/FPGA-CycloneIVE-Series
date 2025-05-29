@@ -1,0 +1,97 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/ZLXWY/Desktop/expt/EDA/E02/prj/simulation/modelsim
+T_opt
+Z1 !s110 1731675780
+VjGP9R[jM_c>27zXXM8EAD3
+04 11 16 work dchufaqi_tb dchufaqi_tb_arch 1
+=1-38d57ae36083-67374684-2ac-5858
+o-quiet -auto_acc_if_foreign -work work -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work +acc
+tCvgOpt 0
+n@_opt
+OL;O;10.5;63
+Edchufaqi
+Z2 w1731675005
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8C:/Users/ZLXWY/Desktop/expt/EDA/E02/rtl/dchufaqi.vhd
+Z6 FC:/Users/ZLXWY/Desktop/expt/EDA/E02/rtl/dchufaqi.vhd
+l0
+L4
+VP[77a5WFCQgT61Z;2WTo_0
+!s100 bZCSEMG9a`^PZL>S]@AYd2
+Z7 OL;C;10.5;63
+31
+R1
+!i10b 1
+Z8 !s108 1731675779.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/ZLXWY/Desktop/expt/EDA/E02/rtl/dchufaqi.vhd|
+Z10 !s107 C:/Users/ZLXWY/Desktop/expt/EDA/E02/rtl/dchufaqi.vhd|
+!i113 0
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Adchufaqi_arch
+R3
+R4
+DEx4 work 8 dchufaqi 0 22 P[77a5WFCQgT61Z;2WTo_0
+l12
+L11
+VnVn64mhVN@Xe7KV9dbffa2
+!s100 EaS6`iEg<_?8dB@fzQHmD1
+R7
+31
+R1
+!i10b 1
+R8
+R9
+R10
+!i113 0
+R11
+R12
+Edchufaqi_tb
+Z13 w1731675762
+R3
+R4
+R0
+Z14 8C:/Users/ZLXWY/Desktop/expt/EDA/E02/prj/../sim/dchufaqi_tb.vhd
+Z15 FC:/Users/ZLXWY/Desktop/expt/EDA/E02/prj/../sim/dchufaqi_tb.vhd
+l0
+L4
+VYXzj18mUS7kQ`l15QBQ:10
+!s100 >a<4]aoK[C_jY?4I0FS220
+R7
+31
+R1
+!i10b 1
+Z16 !s108 1731675780.000000
+Z17 !s90 -reportprogress|300|-93|-work|work|C:/Users/ZLXWY/Desktop/expt/EDA/E02/prj/../sim/dchufaqi_tb.vhd|
+Z18 !s107 C:/Users/ZLXWY/Desktop/expt/EDA/E02/prj/../sim/dchufaqi_tb.vhd|
+!i113 0
+R11
+R12
+Adchufaqi_tb_arch
+R3
+R4
+DEx4 work 11 dchufaqi_tb 0 22 YXzj18mUS7kQ`l15QBQ:10
+l18
+L7
+V^LoiXafC^mbNE0T^]PUGl1
+!s100 [WUZI^Jz`7IC=7`Q_5g[j1
+R7
+31
+R1
+!i10b 1
+R16
+R17
+R18
+!i113 0
+R11
+R12

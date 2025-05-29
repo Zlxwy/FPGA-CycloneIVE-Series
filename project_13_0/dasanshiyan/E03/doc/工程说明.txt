@@ -1,0 +1,9 @@
+简介
+实验三：基于VerilogHDL语言设计全加器
+
+连线
+ain     ——
+bin     ——
+cin     ——
+sout    ——
+cout    ——

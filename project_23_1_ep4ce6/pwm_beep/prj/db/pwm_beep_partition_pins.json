@@ -1,0 +1,25 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "beep",
+					"strict" : false
+				},
+				{
+					"name" : "beep_n",
+					"strict" : false
+				},
+				{
+					"name" : "sclk",
+					"strict" : false
+				},
+				{
+					"name" : "nrst",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

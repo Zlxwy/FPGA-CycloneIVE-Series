@@ -1,0 +1,101 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "sel[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sel[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sel[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sel[3]",
+					"strict" : false
+				},
+				{
+					"name" : "sel[4]",
+					"strict" : false
+				},
+				{
+					"name" : "sel[5]",
+					"strict" : false
+				},
+				{
+					"name" : "sel[6]",
+					"strict" : false
+				},
+				{
+					"name" : "sel[7]",
+					"strict" : false
+				},
+				{
+					"name" : "seg[0]",
+					"strict" : false
+				},
+				{
+					"name" : "seg[1]",
+					"strict" : false
+				},
+				{
+					"name" : "seg[2]",
+					"strict" : false
+				},
+				{
+					"name" : "seg[3]",
+					"strict" : false
+				},
+				{
+					"name" : "seg[4]",
+					"strict" : false
+				},
+				{
+					"name" : "seg[5]",
+					"strict" : false
+				},
+				{
+					"name" : "seg[6]",
+					"strict" : false
+				},
+				{
+					"name" : "seg[7]",
+					"strict" : false
+				},
+				{
+					"name" : "ds1302_ce",
+					"strict" : false
+				},
+				{
+					"name" : "ds1302_sclk",
+					"strict" : false
+				},
+				{
+					"name" : "ds1302_io",
+					"strict" : false
+				},
+				{
+					"name" : "sclk",
+					"strict" : false
+				},
+				{
+					"name" : "nrst",
+					"strict" : false
+				},
+				{
+					"name" : "key_get",
+					"strict" : false
+				},
+				{
+					"name" : "key_set",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

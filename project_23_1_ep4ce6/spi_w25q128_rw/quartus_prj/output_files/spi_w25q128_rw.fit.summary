@@ -1,0 +1,16 @@
+Fitter Status : Successful - Mon Apr  7 21:49:28 2025
+Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+Revision Name : spi_w25q128_rw
+Top-level Entity Name : top_test
+Family : Cyclone IV E
+Device : EP4CE6E22C8
+Timing Models : Final
+Total logic elements : 548 / 6,272 ( 9 % )
+    Total combinational functions : 546 / 6,272 ( 9 % )
+    Dedicated logic registers : 296 / 6,272 ( 5 % )
+Total registers : 296
+Total pins : 16 / 92 ( 17 % )
+Total virtual pins : 0
+Total memory bits : 0 / 276,480 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

@@ -1,0 +1,16 @@
+Fitter Status : Successful - Mon Apr  7 12:25:17 2025
+Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+Revision Name : ds1302_caseg_disp
+Top-level Entity Name : top_ds1302_test_1
+Family : Cyclone IV E
+Device : EP4CE6E22C8
+Timing Models : Final
+Total logic elements : 634 / 6,272 ( 10 % )
+    Total combinational functions : 622 / 6,272 ( 10 % )
+    Dedicated logic registers : 323 / 6,272 ( 5 % )
+Total registers : 323
+Total pins : 23 / 92 ( 25 % )
+Total virtual pins : 0
+Total memory bits : 0 / 276,480 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

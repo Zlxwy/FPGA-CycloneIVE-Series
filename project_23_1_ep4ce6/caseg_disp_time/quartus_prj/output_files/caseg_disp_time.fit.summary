@@ -1,0 +1,16 @@
+Fitter Status : Successful - Sat Apr  5 17:09:04 2025
+Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+Revision Name : caseg_disp_time
+Top-level Entity Name : top_mod
+Family : Cyclone IV E
+Device : EP4CE6E22C8
+Timing Models : Final
+Total logic elements : 264 / 6,272 ( 4 % )
+    Total combinational functions : 253 / 6,272 ( 4 % )
+    Dedicated logic registers : 155 / 6,272 ( 2 % )
+Total registers : 155
+Total pins : 18 / 92 ( 20 % )
+Total virtual pins : 0
+Total memory bits : 0 / 276,480 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

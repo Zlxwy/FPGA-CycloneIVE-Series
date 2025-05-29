@@ -1,0 +1,101 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'sclk'
+Slack : -3.882
+TNS   : -150.237
+
+Type  : Slow 1200mV 85C Model Setup 'nrst'
+Slack : -1.885
+TNS   : -1.885
+
+Type  : Slow 1200mV 85C Model Hold 'sclk'
+Slack : 0.072
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'nrst'
+Slack : 1.505
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'sclk'
+Slack : -0.311
+TNS   : -13.955
+
+Type  : Slow 1200mV 85C Model Removal 'sclk'
+Slack : 0.016
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'sclk'
+Slack : -3.000
+TNS   : -83.298
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'nrst'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 0C Model Setup 'sclk'
+Slack : -3.454
+TNS   : -134.387
+
+Type  : Slow 1200mV 0C Model Setup 'nrst'
+Slack : -1.624
+TNS   : -1.624
+
+Type  : Slow 1200mV 0C Model Hold 'sclk'
+Slack : 0.054
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'nrst'
+Slack : 1.371
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'sclk'
+Slack : -0.322
+TNS   : -15.109
+
+Type  : Slow 1200mV 0C Model Removal 'sclk'
+Slack : 0.007
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'sclk'
+Slack : -3.000
+TNS   : -83.298
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'nrst'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Fast 1200mV 0C Model Setup 'sclk'
+Slack : -1.161
+TNS   : -35.155
+
+Type  : Fast 1200mV 0C Model Setup 'nrst'
+Slack : -0.286
+TNS   : -0.286
+
+Type  : Fast 1200mV 0C Model Hold 'sclk'
+Slack : 0.001
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'nrst'
+Slack : 0.643
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'sclk'
+Slack : -0.141
+TNS   : -6.152
+
+Type  : Fast 1200mV 0C Model Removal 'sclk'
+Slack : 0.008
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'sclk'
+Slack : -3.000
+TNS   : -60.536
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'nrst'
+Slack : -3.000
+TNS   : -3.000
+
+------------------------------------------------------------

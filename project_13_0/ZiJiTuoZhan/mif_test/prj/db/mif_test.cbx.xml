@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="mif_test">
+		<CBX_INST_ENTRY INSTANCE_NAME="|mif_test|rom_4x32:rom_4x32_inst|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_7sa1.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

@@ -1,0 +1,97 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/ZLXWY/Desktop/expt/EDA/E01/prj/simulation/modelsim
+T_opt
+!s110 1731672321
+V[H^5j`FL8GfXdiG`b28Kf0
+04 10 15 work h_adder_tb h_adder_tb_arch 1
+=1-38d57ae36083-67373901-167-60dc
+o-quiet -auto_acc_if_foreign -work work -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work +acc
+tCvgOpt 0
+n@_opt
+OL;O;10.5;63
+Eh_adder
+Z1 w1731644382
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z4 8C:/Users/ZLXWY/Desktop/expt/EDA/E01/rtl/h_adder.vhd
+Z5 FC:/Users/ZLXWY/Desktop/expt/EDA/E01/rtl/h_adder.vhd
+l0
+L4
+VHMUIE8V6S[oV@S;BCQ0DX0
+!s100 5mg0UBSNY8U9<P;Nm8bG`3
+Z6 OL;C;10.5;63
+31
+Z7 !s110 1731672320
+!i10b 1
+Z8 !s108 1731672320.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/ZLXWY/Desktop/expt/EDA/E01/rtl/h_adder.vhd|
+Z10 !s107 C:/Users/ZLXWY/Desktop/expt/EDA/E01/rtl/h_adder.vhd|
+!i113 0
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Ah_adder_arch
+R2
+R3
+DEx4 work 7 h_adder 0 22 HMUIE8V6S[oV@S;BCQ0DX0
+l12
+L11
+VIQ^_EbT@[PI2In88>[[1D2
+!s100 4XhY4>W0zM?5DNk31jYWY0
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 0
+R11
+R12
+Eh_adder_tb
+Z13 w1731581591
+R2
+R3
+R0
+Z14 8C:/Users/ZLXWY/Desktop/expt/EDA/E01/prj/../sim/h_adder_tb.vhd
+Z15 FC:/Users/ZLXWY/Desktop/expt/EDA/E01/prj/../sim/h_adder_tb.vhd
+l0
+L4
+V9lZo>cN0L_c5TzAJmi03=1
+!s100 ebb`Ui>o_LRDiLY^^ZK6l0
+R6
+31
+R7
+!i10b 1
+R8
+Z16 !s90 -reportprogress|300|-93|-work|work|C:/Users/ZLXWY/Desktop/expt/EDA/E01/prj/../sim/h_adder_tb.vhd|
+Z17 !s107 C:/Users/ZLXWY/Desktop/expt/EDA/E01/prj/../sim/h_adder_tb.vhd|
+!i113 0
+R11
+R12
+Ah_adder_tb_arch
+R2
+R3
+DEx4 work 10 h_adder_tb 0 22 9lZo>cN0L_c5TzAJmi03=1
+l18
+L7
+VJGb;VGAY?UmNCf?`;GJ;11
+!s100 IilL_XJf@?g:j8<HH9UfD2
+R6
+31
+R7
+!i10b 1
+R8
+R16
+R17
+!i113 0
+R11
+R12

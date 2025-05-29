@@ -1,0 +1,114 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+
+// 
+// Device: Altera EP4CE10F17C8 Package FBGA256
+// 
+
+//
+// This file contains Fast Corner delays for the design using part EP4CE10F17C8,
+// with speed grade M, core voltage 1.2V, and temperature 0 Celsius
+//
+
+// 
+// This SDF file should be used for ModelSim (Verilog) only
+// 
+
+(DELAYFILE
+  (SDFVERSION "2.1")
+  (DESIGN "f_adder")
+  (DATE "11/16/2024 14:57:16")
+  (VENDOR "Altera")
+  (PROGRAM "Quartus II 64-Bit")
+  (VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version")
+  (DIVIDER .)
+  (TIMESCALE 1 us)
+
+  (CELL
+    (CELLTYPE "cycloneive_io_obuf")
+    (INSTANCE sout\~output)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (0.000234:0.000234:0.000234) (0.000255:0.000255:0.000255))
+        (IOPATH i o (0.001602:0.001602:0.001602) (0.001605:0.001605:0.001605))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_obuf")
+    (INSTANCE cout\~output)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (0.000229:0.000229:0.000229) (0.000249:0.000249:0.000249))
+        (IOPATH i o (0.001602:0.001602:0.001602) (0.001605:0.001605:0.001605))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_ibuf")
+    (INSTANCE bin\~input)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (0.000298:0.000298:0.000298) (0.000677:0.000677:0.000677))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_ibuf")
+    (INSTANCE cin\~input)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (0.000298:0.000298:0.000298) (0.000677:0.000677:0.000677))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_ibuf")
+    (INSTANCE ain\~input)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (0.000298:0.000298:0.000298) (0.000677:0.000677:0.000677))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE sout\~0)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (0.001627:0.001627:0.001627) (0.001818:0.001818:0.001818))
+        (PORT datab (0.001724:0.001724:0.001724) (0.001922:0.001922:0.001922))
+        (PORT datad (0.001603:0.001603:0.001603) (0.001788:0.001788:0.001788))
+        (IOPATH dataa combout (0.000195:0.000195:0.000195) (0.000193:0.000193:0.000193))
+        (IOPATH datab combout (0.000196:0.000196:0.000196) (0.000192:0.000192:0.000192))
+        (IOPATH datad combout (0.000068:0.000068:0.000068) (0.000063:0.000063:0.000063))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE cout\~0)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (0.001627:0.001627:0.001627) (0.001818:0.001818:0.001818))
+        (PORT datab (0.001724:0.001724:0.001724) (0.001922:0.001922:0.001922))
+        (PORT datad (0.001604:0.001604:0.001604) (0.001788:0.001788:0.001788))
+        (IOPATH dataa combout (0.00017:0.00017:0.00017) (0.000163:0.000163:0.000163))
+        (IOPATH datab combout (0.000168:0.000168:0.000168) (0.000167:0.000167:0.000167))
+        (IOPATH datad combout (0.000068:0.000068:0.000068) (0.000063:0.000063:0.000063))
+      )
+    )
+  )
+)

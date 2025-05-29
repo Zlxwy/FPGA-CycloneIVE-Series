@@ -1,0 +1,29 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "ds",
+					"strict" : false
+				},
+				{
+					"name" : "shcp",
+					"strict" : false
+				},
+				{
+					"name" : "stcp",
+					"strict" : false
+				},
+				{
+					"name" : "sclk",
+					"strict" : false
+				},
+				{
+					"name" : "nrst",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

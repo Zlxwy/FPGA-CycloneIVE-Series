@@ -1,0 +1,65 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/DATAFiles/QuartusII/class/202409201252_Waveform_Generator/SawTooth_Wave/prj/simulation/modelsim
+T_opt
+!s110 1726815350
+VK7d^VdjQlKiPm5W[immPK0
+04 16 4 work tb_SawTooth_Wave fast 0
+=1-38d57ae36083-66ed1c75-3af-20ac
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;10.5;63
+vSawTooth_Wave
+Z2 !s110 1726815349
+!i10b 1
+!s100 S`Oj4Q2V[mYbdM>ciB>R_3
+Ik190e^PSQI0aTPfif_j>30
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1726815322
+8D:/DATAFiles/QuartusII/class/202409201252_Waveform_Generator/SawTooth_Wave/rtl/SawTooth_Wave.v
+FD:/DATAFiles/QuartusII/class/202409201252_Waveform_Generator/SawTooth_Wave/rtl/SawTooth_Wave.v
+L0 1
+Z4 OL;L;10.5;63
+r1
+!s85 0
+31
+Z5 !s108 1726815349.000000
+!s107 D:/DATAFiles/QuartusII/class/202409201252_Waveform_Generator/SawTooth_Wave/rtl/SawTooth_Wave.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/DATAFiles/QuartusII/class/202409201252_Waveform_Generator/SawTooth_Wave/rtl|D:/DATAFiles/QuartusII/class/202409201252_Waveform_Generator/SawTooth_Wave/rtl/SawTooth_Wave.v|
+!i113 0
+Z6 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+!s92 -vlog01compat -work work +incdir+D:/DATAFiles/QuartusII/class/202409201252_Waveform_Generator/SawTooth_Wave/rtl -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+n@saw@tooth_@wave
+vtb_SawTooth_Wave
+R2
+!i10b 1
+!s100 I6YJG6FV>kS@YcOiXDg3M2
+Igh9gJnzOIk_U6B9lzOnYU1
+R3
+R0
+w1726814411
+8D:/DATAFiles/QuartusII/class/202409201252_Waveform_Generator/SawTooth_Wave/prj/../tb/tb_SawTooth_Wave.v
+FD:/DATAFiles/QuartusII/class/202409201252_Waveform_Generator/SawTooth_Wave/prj/../tb/tb_SawTooth_Wave.v
+L0 3
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/DATAFiles/QuartusII/class/202409201252_Waveform_Generator/SawTooth_Wave/prj/../tb/tb_SawTooth_Wave.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/DATAFiles/QuartusII/class/202409201252_Waveform_Generator/SawTooth_Wave/prj/../tb|D:/DATAFiles/QuartusII/class/202409201252_Waveform_Generator/SawTooth_Wave/prj/../tb/tb_SawTooth_Wave.v|
+!i113 0
+R6
+!s92 -vlog01compat -work work +incdir+D:/DATAFiles/QuartusII/class/202409201252_Waveform_Generator/SawTooth_Wave/prj/../tb -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+ntb_@saw@tooth_@wave

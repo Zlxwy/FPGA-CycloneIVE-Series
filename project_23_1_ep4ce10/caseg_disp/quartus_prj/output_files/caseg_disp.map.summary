@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri Apr  4 21:00:00 2025
+Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+Revision Name : caseg_disp
+Top-level Entity Name : top_mod
+Family : Cyclone IV E
+Total logic elements : 298
+    Total combinational functions : 275
+    Dedicated logic registers : 162
+Total registers : 162
+Total pins : 6
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

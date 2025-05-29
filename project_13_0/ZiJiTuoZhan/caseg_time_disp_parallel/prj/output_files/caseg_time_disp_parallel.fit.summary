@@ -1,0 +1,16 @@
+Fitter Status : Successful - Mon Nov 18 14:13:47 2024
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
+Revision Name : caseg_time_disp_parallel
+Top-level Entity Name : top_caseg_time_disp_parallel
+Family : Cyclone IV E
+Device : EP4CE10F17C8
+Timing Models : Final
+Total logic elements : 263 / 10,320 ( 3 % )
+    Total combinational functions : 253 / 10,320 ( 2 % )
+    Dedicated logic registers : 155 / 10,320 ( 2 % )
+Total registers : 155
+Total pins : 18 / 180 ( 10 % )
+Total virtual pins : 0
+Total memory bits : 0 / 423,936 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 46 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

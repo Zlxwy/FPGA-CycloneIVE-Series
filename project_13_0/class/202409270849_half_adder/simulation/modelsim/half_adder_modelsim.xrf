@@ -1,0 +1,14 @@
+vendor_name = ModelSim
+source_file = 1, D:/DATAFiles/QuartusII/class/202409270849half_adder/half_adder.vhd
+source_file = 1, D:/DATAFiles/QuartusII/class/202409270849half_adder/db/half_adder.cbx.xml
+source_file = 1, d:/fpga_software/quartus_ii_13_0/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, d:/fpga_software/quartus_ii_13_0/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, d:/fpga_software/quartus_ii_13_0/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, d:/fpga_software/quartus_ii_13_0/quartus/libraries/vhdl/ieee/timing_p.vhd
+design_name = half_adder
+instance = comp, \so~output , so~output, half_adder, 1
+instance = comp, \co~output , co~output, half_adder, 1
+instance = comp, \a~input , a~input, half_adder, 1
+instance = comp, \b~input , b~input, half_adder, 1
+instance = comp, \so~0 , so~0, half_adder, 1
+instance = comp, \co~0 , co~0, half_adder, 1

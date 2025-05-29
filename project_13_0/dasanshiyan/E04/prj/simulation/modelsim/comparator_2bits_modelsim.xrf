@@ -1,0 +1,14 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/ZLXWY/Desktop/expt/EDA/E04/sim/comparator_2bits_tb.v
+source_file = 1, C:/Users/ZLXWY/Desktop/expt/EDA/E04/rtl/comparator_2bits.v
+source_file = 1, C:/Users/ZLXWY/Desktop/expt/EDA/E04/prj/db/comparator_2bits.cbx.xml
+design_name = comparator_2bits
+instance = comp, \less~output , less~output, comparator_2bits, 1
+instance = comp, \equal~output , equal~output, comparator_2bits, 1
+instance = comp, \greater~output , greater~output, comparator_2bits, 1
+instance = comp, \a[0]~input , a[0]~input, comparator_2bits, 1
+instance = comp, \b[1]~input , b[1]~input, comparator_2bits, 1
+instance = comp, \b[0]~input , b[0]~input, comparator_2bits, 1
+instance = comp, \a[1]~input , a[1]~input, comparator_2bits, 1
+instance = comp, \less~0 , less~0, comparator_2bits, 1
+instance = comp, \greater~0 , greater~0, comparator_2bits, 1

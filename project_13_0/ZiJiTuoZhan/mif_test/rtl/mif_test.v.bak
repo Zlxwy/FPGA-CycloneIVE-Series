@@ -1,0 +1,13 @@
+module mif_test(
+    input   wire            sclk,
+    input   wire[3:0]       addr,
+    output  wire[3:0]       data
+);
+
+rom_4x32 rom_4x32_inst (
+    .clock      (sclk),
+    .address    (addr),
+    .q          (data)
+);
+
+endmodule

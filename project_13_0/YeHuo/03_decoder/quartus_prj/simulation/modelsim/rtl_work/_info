@@ -1,0 +1,63 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/DATAFiles/QuartusII/decoder/quartus_prj/simulation/modelsim
+T_opt
+!s110 1726223056
+VbTNm8^UaZdBczb01HiB8K1
+04 10 4 work tb_decoder fast 0
+=1-38d57ae36083-66e412d0-70-2e38
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;10.5;63
+vdecoder
+Z2 !s110 1726223055
+!i10b 1
+!s100 cDiW2_[MU`ooKR6HEYCSC2
+ICI91UOK>4B7Fm9k`;l=G`0
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1726219920
+8D:/DATAFiles/QuartusII/decoder/quartus_prj/decoder.v
+FD:/DATAFiles/QuartusII/decoder/quartus_prj/decoder.v
+L0 1
+Z4 OL;L;10.5;63
+r1
+!s85 0
+31
+Z5 !s108 1726223055.000000
+!s107 D:/DATAFiles/QuartusII/decoder/quartus_prj/decoder.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/DATAFiles/QuartusII/decoder/quartus_prj|D:/DATAFiles/QuartusII/decoder/quartus_prj/decoder.v|
+!i113 0
+Z6 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+!s92 -vlog01compat -work work +incdir+D:/DATAFiles/QuartusII/decoder/quartus_prj -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vtb_decoder
+R2
+!i10b 1
+!s100 6Zl4cBiQ7<hj:ZiXAj2900
+I`o<7zm=8HgdiFUR^YSdMF0
+R3
+R0
+w1726222746
+8D:/DATAFiles/QuartusII/decoder/quartus_prj/../sim/tb_decoder.v
+FD:/DATAFiles/QuartusII/decoder/quartus_prj/../sim/tb_decoder.v
+L0 3
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/DATAFiles/QuartusII/decoder/quartus_prj/../sim/tb_decoder.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/DATAFiles/QuartusII/decoder/quartus_prj/../sim|D:/DATAFiles/QuartusII/decoder/quartus_prj/../sim/tb_decoder.v|
+!i113 0
+R6
+!s92 -vlog01compat -work work +incdir+D:/DATAFiles/QuartusII/decoder/quartus_prj/../sim -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1

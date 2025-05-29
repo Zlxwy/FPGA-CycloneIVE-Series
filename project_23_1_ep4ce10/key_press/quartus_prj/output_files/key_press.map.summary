@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Thu Apr  3 18:24:07 2025
+Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+Revision Name : key_press
+Top-level Entity Name : key_ctrl_led_toggle
+Family : Cyclone IV E
+Total logic elements : 110
+    Total combinational functions : 110
+    Dedicated logic registers : 69
+Total registers : 69
+Total pins : 4
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

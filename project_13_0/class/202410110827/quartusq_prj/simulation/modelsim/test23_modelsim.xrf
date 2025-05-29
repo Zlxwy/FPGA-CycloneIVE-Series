@@ -1,0 +1,9 @@
+vendor_name = ModelSim
+source_file = 1, D:/DATAFiles/QuartusII/class/202410110827/rtl/test23.v
+source_file = 1, D:/DATAFiles/QuartusII/class/202410110827/quartusq_prj/db/test23.cbx.xml
+design_name = test23
+instance = comp, \y~output , y~output, test23, 1
+instance = comp, \a~input , a~input, test23, 1
+instance = comp, \c~input , c~input, test23, 1
+instance = comp, \b~input , b~input, test23, 1
+instance = comp, \y~0 , y~0, test23, 1

@@ -1,0 +1,61 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/ZLXWY/Desktop/prj3/eeprom/modelsim_20250410
+T_opt
+!s110 1744291489
+Vm^UfVl:W?jA;M2]^OkTLM2
+04 23 4 work adc_081c021_read_vol_tb fast 0
+=2-38d57ae36083-67f7c6a1-f1-3684
+o-quiet -auto_acc_if_foreign -work aaa +acc
+Z0 tCvgOpt 0
+n@_opt
+OL;O;10.7;67
+vadc_081c021_read_vol
+Z1 !s110 1744291484
+!i10b 1
+!s100 =PJo<]>2nIIkfg7]7=BEc2
+I2G0M4A1ob0L:^Mg^c7iPJ2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dC:/Users/ZLXWY/Desktop/i2c_adc081c021/sim
+w1744291470
+8C:/Users/ZLXWY/Desktop/i2c_adc081c021/rtl/adc081c021_read_vol.v
+FC:/Users/ZLXWY/Desktop/i2c_adc081c021/rtl/adc081c021_read_vol.v
+L0 3
+Z4 OL;L;10.7;67
+r1
+!s85 0
+31
+Z5 !s108 1744291484.000000
+!s107 C:/Users/ZLXWY/Desktop/i2c_adc081c021/rtl/adc081c021_read_vol.v|
+!s90 -reportprogress|300|-work|aaa|-vopt|-stats=none|C:/Users/ZLXWY/Desktop/i2c_adc081c021/rtl/adc081c021_read_vol.v|
+!i113 0
+Z6 o-work aaa -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R0
+vadc_081c021_read_vol_tb
+R1
+!i10b 1
+!s100 7XMR1R<Wo7V:7>M2^dNCi1
+Io4AKYz`6ikeU30E5:TfJ;2
+R2
+R3
+w1744290828
+8C:/Users/ZLXWY/Desktop/i2c_adc081c021/sim/adc081c021_read_vol_tb.v
+FC:/Users/ZLXWY/Desktop/i2c_adc081c021/sim/adc081c021_read_vol_tb.v
+L0 2
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/ZLXWY/Desktop/i2c_adc081c021/sim/adc081c021_read_vol_tb.v|
+!s90 -reportprogress|300|-work|aaa|-vopt|-stats=none|C:/Users/ZLXWY/Desktop/i2c_adc081c021/sim/adc081c021_read_vol_tb.v|
+!i113 0
+R6
+R0

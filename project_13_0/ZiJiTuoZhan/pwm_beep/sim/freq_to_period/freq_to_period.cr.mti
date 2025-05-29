@@ -1,0 +1,15 @@
+D:/DATAFiles/QuartusII/ZiJiTuoZhan/pwm_beep/sim/freq_to_period_tb.v {1 {vlog -work work -vopt -stats=none D:/DATAFiles/QuartusII/ZiJiTuoZhan/pwm_beep/sim/freq_to_period_tb.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module freq_to_period_tb
+
+Top level modules:
+	freq_to_period_tb
+
+} {} {}} D:/DATAFiles/QuartusII/ZiJiTuoZhan/pwm_beep/rtl/freq_to_period.v {1 {vlog -work work -vopt -stats=none D:/DATAFiles/QuartusII/ZiJiTuoZhan/pwm_beep/rtl/freq_to_period.v
+Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+-- Compiling module freq_to_period
+
+Top level modules:
+	freq_to_period
+
+} {} {}}

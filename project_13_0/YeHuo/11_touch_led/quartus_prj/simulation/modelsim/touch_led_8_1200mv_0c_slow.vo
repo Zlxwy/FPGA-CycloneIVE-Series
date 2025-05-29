@@ -1,0 +1,242 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus II 64-Bit"
+// VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version"
+
+// DATE "09/22/2024 15:56:45"
+
+// 
+// Device: Altera EP4CE10F17C8 Package FBGA256
+// 
+
+// 
+// This Verilog file should be used for ModelSim (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module touch_led (
+	sys_clk,
+	sys_rst_n,
+	touch_in,
+	led_out);
+input 	sys_clk;
+input 	sys_rst_n;
+input 	touch_in;
+output 	led_out;
+
+// Design Ports Information
+// led_out	=>  Location: PIN_L7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// sys_rst_n	=>  Location: PIN_M15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// touch_in	=>  Location: PIN_K11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// sys_clk	=>  Location: PIN_E1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+// synopsys translate_off
+initial $sdf_annotate("touch_led_8_1200mv_0c_v_slow.sdo");
+// synopsys translate_on
+
+wire \sys_clk~input_o ;
+wire \led_out~output_o ;
+wire \touch_in~input_o ;
+wire \touch_1~0_combout ;
+wire \sys_rst_n~input_o ;
+wire \sys_rst_n~inputclkctrl_outclk ;
+wire \touch_1~q ;
+wire \touch_2~q ;
+wire \touch_flag~combout ;
+wire \led_out~0_combout ;
+wire \led_out~reg0_q ;
+
+
+// Location: IOIBUF_X0_Y11_N8
+cycloneive_io_ibuf \sys_clk~input (
+	.i(sys_clk),
+	.ibar(gnd),
+	.o(\sys_clk~input_o ));
+// synopsys translate_off
+defparam \sys_clk~input .bus_hold = "false";
+defparam \sys_clk~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOOBUF_X11_Y0_N9
+cycloneive_io_obuf \led_out~output (
+	.i(!\led_out~reg0_q ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\led_out~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \led_out~output .bus_hold = "false";
+defparam \led_out~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOIBUF_X34_Y6_N15
+cycloneive_io_ibuf \touch_in~input (
+	.i(touch_in),
+	.ibar(gnd),
+	.o(\touch_in~input_o ));
+// synopsys translate_off
+defparam \touch_in~input .bus_hold = "false";
+defparam \touch_in~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LCCOMB_X1_Y11_N12
+cycloneive_lcell_comb \touch_1~0 (
+// Equation(s):
+// \touch_1~0_combout  = !\touch_in~input_o 
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(\touch_in~input_o ),
+	.datad(gnd),
+	.cin(gnd),
+	.combout(\touch_1~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \touch_1~0 .lut_mask = 16'h0F0F;
+defparam \touch_1~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: IOIBUF_X34_Y12_N15
+cycloneive_io_ibuf \sys_rst_n~input (
+	.i(sys_rst_n),
+	.ibar(gnd),
+	.o(\sys_rst_n~input_o ));
+// synopsys translate_off
+defparam \sys_rst_n~input .bus_hold = "false";
+defparam \sys_rst_n~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: CLKCTRL_G9
+cycloneive_clkctrl \sys_rst_n~inputclkctrl (
+	.ena(vcc),
+	.inclk({vcc,vcc,vcc,\sys_rst_n~input_o }),
+	.clkselect(2'b00),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.outclk(\sys_rst_n~inputclkctrl_outclk ));
+// synopsys translate_off
+defparam \sys_rst_n~inputclkctrl .clock_type = "global clock";
+defparam \sys_rst_n~inputclkctrl .ena_register_mode = "none";
+// synopsys translate_on
+
+// Location: FF_X1_Y11_N13
+dffeas touch_1(
+	.clk(\sys_clk~input_o ),
+	.d(\touch_1~0_combout ),
+	.asdata(vcc),
+	.clrn(\sys_rst_n~inputclkctrl_outclk ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\touch_1~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam touch_1.is_wysiwyg = "true";
+defparam touch_1.power_up = "low";
+// synopsys translate_on
+
+// Location: FF_X1_Y11_N9
+dffeas touch_2(
+	.clk(\sys_clk~input_o ),
+	.d(gnd),
+	.asdata(\touch_1~q ),
+	.clrn(\sys_rst_n~inputclkctrl_outclk ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(vcc),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\touch_2~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam touch_2.is_wysiwyg = "true";
+defparam touch_2.power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X1_Y11_N8
+cycloneive_lcell_comb touch_flag(
+// Equation(s):
+// \touch_flag~combout  = LCELL((!\touch_2~q  & \touch_1~q ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(\touch_2~q ),
+	.datad(\touch_1~q ),
+	.cin(gnd),
+	.combout(\touch_flag~combout ),
+	.cout());
+// synopsys translate_off
+defparam touch_flag.lut_mask = 16'h0F00;
+defparam touch_flag.sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X1_Y11_N24
+cycloneive_lcell_comb \led_out~0 (
+// Equation(s):
+// \led_out~0_combout  = !\led_out~reg0_q 
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(\led_out~reg0_q ),
+	.datad(gnd),
+	.cin(gnd),
+	.combout(\led_out~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \led_out~0 .lut_mask = 16'h0F0F;
+defparam \led_out~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: FF_X1_Y11_N25
+dffeas \led_out~reg0 (
+	.clk(\touch_flag~combout ),
+	.d(\led_out~0_combout ),
+	.asdata(vcc),
+	.clrn(\sys_rst_n~inputclkctrl_outclk ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\led_out~reg0_q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \led_out~reg0 .is_wysiwyg = "true";
+defparam \led_out~reg0 .power_up = "low";
+// synopsys translate_on
+
+assign led_out = \led_out~output_o ;
+
+endmodule

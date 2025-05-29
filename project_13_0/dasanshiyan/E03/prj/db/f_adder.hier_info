@@ -1,0 +1,11 @@
+|f_adder
+ain => so_tmp_1.IN0
+ain => co_tmp_1.IN0
+bin => so_tmp_1.IN1
+bin => co_tmp_1.IN1
+cin => co_tmp_2.IN1
+cin => sout.IN1
+sout <= sout.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+

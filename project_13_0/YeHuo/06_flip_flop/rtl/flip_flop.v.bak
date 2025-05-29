@@ -1,0 +1,20 @@
+module flip_flop
+(
+
+  input   wire      sys_clk,//由板载晶振传入，50MHz
+  input   wire      sys_rst_n,//RESET按键输入
+  input   wire      key_in,//按键输入
+  
+  output  reg       led_out
+);
+//使用always语句赋值的用reg类型
+//使用assign语句赋值的用wire类型
+
+always @(posedge sys_clk)
+  if(sys_rst_n == 1'b0)//如果时钟上升沿时，采集到复位信号为低电平（有效信号）
+    led_out <= 1'b1;//LED输出1（熄灭）
+    //时序逻辑中，赋值一定要用<=赋值（非阻塞赋值）
+  else//如果时钟上升沿时，采集到复位信号为高电平（无效信号）
+    key_in <= led_out;//LED输出电平同步按键输入电平（按键按下则LED点亮）
+
+endmodule

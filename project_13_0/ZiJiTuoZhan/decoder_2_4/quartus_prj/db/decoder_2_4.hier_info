@@ -1,0 +1,15 @@
+|decoder_2_4
+in_1 => out_2.IN0
+in_1 => out_3.IN0
+in_1 => out_0.IN0
+in_1 => out_1.IN0
+in_0 => out_1.IN1
+in_0 => out_3.IN1
+in_0 => out_0.IN1
+in_0 => out_2.IN1
+out_0 <= out_0.DB_MAX_OUTPUT_PORT_TYPE
+out_1 <= out_1.DB_MAX_OUTPUT_PORT_TYPE
+out_2 <= out_2.DB_MAX_OUTPUT_PORT_TYPE
+out_3 <= out_3.DB_MAX_OUTPUT_PORT_TYPE
+
+

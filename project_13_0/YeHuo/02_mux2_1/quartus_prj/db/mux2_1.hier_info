@@ -1,0 +1,9 @@
+|mux2_1
+in_1[0] => out.IN0
+in_1[0] => out.IN0
+in_2 => out.IN1
+in_2 => out.IN1
+select => ~NO_FANOUT~
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+

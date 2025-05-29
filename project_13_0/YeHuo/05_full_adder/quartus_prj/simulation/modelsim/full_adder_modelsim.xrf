@@ -1,0 +1,13 @@
+vendor_name = ModelSim
+source_file = 1, D:/DATAFiles/QuartusII/full_adder/sim/tb_full_adder.v
+source_file = 1, D:/DATAFiles/QuartusII/full_adder/rtl/half_adder.v
+source_file = 1, D:/DATAFiles/QuartusII/full_adder/rtl/full_adder.v
+source_file = 1, D:/DATAFiles/QuartusII/full_adder/quartus_prj/db/full_adder.cbx.xml
+design_name = full_adder
+instance = comp, \sum~output , sum~output, full_adder, 1
+instance = comp, \carry_out~output , carry_out~output, full_adder, 1
+instance = comp, \carry_in~input , carry_in~input, full_adder, 1
+instance = comp, \addend_1~input , addend_1~input, full_adder, 1
+instance = comp, \addend_2~input , addend_2~input, full_adder, 1
+instance = comp, \half_adder_inst_1|Add0~0 , half_adder_inst_1|Add0~0, full_adder, 1
+instance = comp, \carry_out~0 , carry_out~0, full_adder, 1

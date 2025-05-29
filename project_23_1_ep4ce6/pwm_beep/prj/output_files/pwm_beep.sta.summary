@@ -1,0 +1,137 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'sclk'
+Slack : -92.763
+TNS   : -1974.628
+
+Type  : Slow 1200mV 85C Model Setup 'nrst'
+Slack : -92.295
+TNS   : -1234.306
+
+Type  : Slow 1200mV 85C Model Setup 'read_rom_11x700:read_rom_11x700_inst|rom_11x700:rom_11x700_inst|altsyncram:altsyncram_component|altsyncram_b7a1:auto_generated|q_a[0]'
+Slack : -88.703
+TNS   : -1078.671
+
+Type  : Slow 1200mV 85C Model Hold 'sclk'
+Slack : 0.452
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'read_rom_11x700:read_rom_11x700_inst|rom_11x700:rom_11x700_inst|altsyncram:altsyncram_component|altsyncram_b7a1:auto_generated|q_a[0]'
+Slack : 0.598
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'nrst'
+Slack : 1.357
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'sclk'
+Slack : 0.062
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'sclk'
+Slack : -0.126
+TNS   : -15.540
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'sclk'
+Slack : -3.201
+TNS   : -263.429
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'nrst'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'read_rom_11x700:read_rom_11x700_inst|rom_11x700:rom_11x700_inst|altsyncram:altsyncram_component|altsyncram_b7a1:auto_generated|q_a[0]'
+Slack : 0.415
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'sclk'
+Slack : -84.627
+TNS   : -1811.331
+
+Type  : Slow 1200mV 0C Model Setup 'nrst'
+Slack : -84.160
+TNS   : -1127.530
+
+Type  : Slow 1200mV 0C Model Setup 'read_rom_11x700:read_rom_11x700_inst|rom_11x700:rom_11x700_inst|altsyncram:altsyncram_component|altsyncram_b7a1:auto_generated|q_a[0]'
+Slack : -80.974
+TNS   : -986.942
+
+Type  : Slow 1200mV 0C Model Hold 'sclk'
+Slack : 0.401
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'read_rom_11x700:read_rom_11x700_inst|rom_11x700:rom_11x700_inst|altsyncram:altsyncram_component|altsyncram_b7a1:auto_generated|q_a[0]'
+Slack : 0.420
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'nrst'
+Slack : 1.292
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'sclk'
+Slack : 0.135
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'sclk'
+Slack : -0.126
+TNS   : -15.343
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'sclk'
+Slack : -3.201
+TNS   : -263.486
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'nrst'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'read_rom_11x700:read_rom_11x700_inst|rom_11x700:rom_11x700_inst|altsyncram:altsyncram_component|altsyncram_b7a1:auto_generated|q_a[0]'
+Slack : 0.342
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'sclk'
+Slack : -40.068
+TNS   : -789.227
+
+Type  : Fast 1200mV 0C Model Setup 'nrst'
+Slack : -39.934
+TNS   : -521.776
+
+Type  : Fast 1200mV 0C Model Setup 'read_rom_11x700:read_rom_11x700_inst|rom_11x700:rom_11x700_inst|altsyncram:altsyncram_component|altsyncram_b7a1:auto_generated|q_a[0]'
+Slack : -38.602
+TNS   : -462.618
+
+Type  : Fast 1200mV 0C Model Hold 'sclk'
+Slack : 0.174
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'read_rom_11x700:read_rom_11x700_inst|rom_11x700:rom_11x700_inst|altsyncram:altsyncram_component|altsyncram_b7a1:auto_generated|q_a[0]'
+Slack : 0.390
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'nrst'
+Slack : 0.582
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'sclk'
+Slack : -0.099
+TNS   : -13.644
+
+Type  : Fast 1200mV 0C Model Removal 'sclk'
+Slack : -0.079
+TNS   : -10.025
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'sclk'
+Slack : -3.000
+TNS   : -172.840
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'nrst'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'read_rom_11x700:read_rom_11x700_inst|rom_11x700:rom_11x700_inst|altsyncram:altsyncram_component|altsyncram_b7a1:auto_generated|q_a[0]'
+Slack : 0.418
+TNS   : 0.000
+
+------------------------------------------------------------

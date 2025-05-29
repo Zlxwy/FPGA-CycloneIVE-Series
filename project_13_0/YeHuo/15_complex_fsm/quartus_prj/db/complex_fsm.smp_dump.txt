@@ -1,0 +1,8 @@
+
+State Machine - |complex_fsm|state
+Name state.TWO state.ONE_HALF state.ONE state.HALF state.IDLE 
+state.IDLE 0 0 0 0 0 
+state.HALF 0 0 0 1 1 
+state.ONE 0 0 1 0 1 
+state.ONE_HALF 0 1 0 0 1 
+state.TWO 1 0 0 0 1 

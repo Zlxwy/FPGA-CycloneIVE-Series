@@ -1,0 +1,63 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/DATAFiles/QuartusII/flip_flop/quartus_prj/simulation/modelsim
+T_opt
+!s110 1726291893
+VA^FMcohAh[J2?ZQH71J<k3
+04 12 4 work tb_flip_flop fast 0
+=1-38d57ae36083-66e51fb4-382-28fc
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;10.5;63
+vflip_flop
+Z2 !s110 1726291892
+!i10b 1
+!s100 <ITKDK7C3zO?Ac:T9B[Ei1
+I^4C7ZJL:G2a`NWcd2HLlP1
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1726291068
+8D:/DATAFiles/QuartusII/flip_flop/rtl/flip_flop.v
+FD:/DATAFiles/QuartusII/flip_flop/rtl/flip_flop.v
+L0 1
+Z4 OL;L;10.5;63
+r1
+!s85 0
+31
+Z5 !s108 1726291892.000000
+!s107 D:/DATAFiles/QuartusII/flip_flop/rtl/flip_flop.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/DATAFiles/QuartusII/flip_flop/rtl|D:/DATAFiles/QuartusII/flip_flop/rtl/flip_flop.v|
+!i113 0
+Z6 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+!s92 -vlog01compat -work work +incdir+D:/DATAFiles/QuartusII/flip_flop/rtl -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vtb_flip_flop
+R2
+!i10b 1
+!s100 6UI:T=>laS>gDI[1^d<na1
+ISL2aMQXA`e[5G8fl_IZ680
+R3
+R0
+w1726291818
+8D:/DATAFiles/QuartusII/flip_flop/quartus_prj/../sim/tb_flip_flop.v
+FD:/DATAFiles/QuartusII/flip_flop/quartus_prj/../sim/tb_flip_flop.v
+L0 2
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/DATAFiles/QuartusII/flip_flop/quartus_prj/../sim/tb_flip_flop.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/DATAFiles/QuartusII/flip_flop/quartus_prj/../sim|D:/DATAFiles/QuartusII/flip_flop/quartus_prj/../sim/tb_flip_flop.v|
+!i113 0
+R6
+!s92 -vlog01compat -work work +incdir+D:/DATAFiles/QuartusII/flip_flop/quartus_prj/../sim -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1

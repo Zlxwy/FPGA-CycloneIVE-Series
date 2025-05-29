@@ -1,0 +1,6 @@
+
+State Machine - |simple_fsm|state
+Name state.TWO state.ONE state.IDLE 
+state.IDLE 0 0 0 
+state.ONE 0 1 1 
+state.TWO 1 0 1 

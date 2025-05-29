@@ -1,0 +1,49 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "led",
+					"strict" : false
+				},
+				{
+					"name" : "ds",
+					"strict" : false
+				},
+				{
+					"name" : "shcp",
+					"strict" : false
+				},
+				{
+					"name" : "stcp",
+					"strict" : false
+				},
+				{
+					"name" : "eeprom_scl",
+					"strict" : false
+				},
+				{
+					"name" : "eeprom_sda",
+					"strict" : false
+				},
+				{
+					"name" : "sclk",
+					"strict" : false
+				},
+				{
+					"name" : "nrst",
+					"strict" : false
+				},
+				{
+					"name" : "key1",
+					"strict" : false
+				},
+				{
+					"name" : "key2",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

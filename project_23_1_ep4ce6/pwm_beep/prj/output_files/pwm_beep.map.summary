@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sat Apr  5 18:26:24 2025
+Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+Revision Name : pwm_beep
+Top-level Entity Name : top_pwm_beep
+Family : Cyclone IV E
+Total logic elements : 1,136
+    Total combinational functions : 1,136
+    Dedicated logic registers : 145
+Total registers : 145
+Total pins : 4
+Total virtual pins : 0
+Total memory bits : 7,700
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

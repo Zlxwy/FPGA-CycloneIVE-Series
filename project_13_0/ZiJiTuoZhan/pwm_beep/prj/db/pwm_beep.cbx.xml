@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="pwm_beep">
+		<CBX_INST_ENTRY INSTANCE_NAME="|top_pwm_beep|freq_to_period:freq_to_period_inst|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_gkm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|top_pwm_beep|read_rom_11x700:read_rom_11x700_inst|rom_11x700:rom_11x700_inst|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_mba1.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

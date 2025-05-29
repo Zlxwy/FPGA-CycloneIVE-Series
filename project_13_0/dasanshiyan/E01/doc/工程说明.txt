@@ -1,0 +1,8 @@
+简介
+实验1：基于VHDL语言设计半加器
+
+连线
+a——PIN_M15
+b——PIN_M16
+co——PIN_C9
+so——PIN_D9

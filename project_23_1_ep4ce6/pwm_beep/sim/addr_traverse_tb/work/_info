@@ -1,0 +1,61 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/FPGA_Software/ModelSiim_SE_10_5/examples
+T_opt
+!s110 1732551731
+VEn[YY9lOkj`db0G`M3lE63
+04 16 4 work addr_traverse_tb fast 0
+=1-38d57ae36083-6744a432-329-426c
+o-quiet -auto_acc_if_foreign -work work +acc
+Z0 tCvgOpt 0
+n@_opt
+OL;O;10.5;63
+vaddr_traverse
+!s110 1732551454
+!i10b 1
+!s100 5mWOn3FNTWZZ[GdI]TMYU0
+If3bORXb^60hkjG6;@VVIB1
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dD:/DATAFiles/QuartusII/ZiJiTuoZhan/pwm_beep/sim/addr_traverse_tb
+w1732519306
+8D:/DATAFiles/QuartusII/ZiJiTuoZhan/pwm_beep/rtl/addr_traverse.v
+FD:/DATAFiles/QuartusII/ZiJiTuoZhan/pwm_beep/rtl/addr_traverse.v
+L0 3
+Z3 OL;L;10.5;63
+r1
+!s85 0
+31
+Z4 !s108 1732551454.000000
+!s107 D:/DATAFiles/QuartusII/ZiJiTuoZhan/pwm_beep/rtl/addr_traverse.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/DATAFiles/QuartusII/ZiJiTuoZhan/pwm_beep/rtl/addr_traverse.v|
+!i113 0
+Z5 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R0
+vaddr_traverse_tb
+!s110 1732551455
+!i10b 1
+!s100 ]n3OdjO_eB[cFYFzJYo;a1
+I4=LCMJ0>MO[ghW2[k?@CL1
+R1
+R2
+w1732547831
+8D:/DATAFiles/QuartusII/ZiJiTuoZhan/pwm_beep/sim/addr_traverse_tb.v
+FD:/DATAFiles/QuartusII/ZiJiTuoZhan/pwm_beep/sim/addr_traverse_tb.v
+L0 2
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/DATAFiles/QuartusII/ZiJiTuoZhan/pwm_beep/sim/addr_traverse_tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/DATAFiles/QuartusII/ZiJiTuoZhan/pwm_beep/sim/addr_traverse_tb.v|
+!i113 0
+R5
+R0

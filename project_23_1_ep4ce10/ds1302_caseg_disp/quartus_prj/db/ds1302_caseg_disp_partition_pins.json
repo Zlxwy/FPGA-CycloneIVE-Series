@@ -1,0 +1,49 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "ds",
+					"strict" : false
+				},
+				{
+					"name" : "shcp",
+					"strict" : false
+				},
+				{
+					"name" : "stcp",
+					"strict" : false
+				},
+				{
+					"name" : "ds1302_ce",
+					"strict" : false
+				},
+				{
+					"name" : "ds1302_sclk",
+					"strict" : false
+				},
+				{
+					"name" : "ds1302_io",
+					"strict" : false
+				},
+				{
+					"name" : "sclk",
+					"strict" : false
+				},
+				{
+					"name" : "nrst",
+					"strict" : false
+				},
+				{
+					"name" : "key_set",
+					"strict" : false
+				},
+				{
+					"name" : "key_get",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

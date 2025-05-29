@@ -1,0 +1,608 @@
+Analysis & Synthesis report for lanqiao_16_mocks_01
+Wed Apr  9 21:18:35 2025
+Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Inverted Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: key:key_pp_inst
+ 13. Parameter Settings for User Entity Instance: down_counter:down_counter_inst
+ 14. Parameter Settings for User Entity Instance: led:led_inst
+ 15. Parameter Settings for User Entity Instance: key:key_1_inst
+ 16. Parameter Settings for User Entity Instance: key:key_2_inst
+ 17. Parameter Settings for User Entity Instance: up_counter:up_counter_inst_1
+ 18. Parameter Settings for User Entity Instance: up_counter:up_counter_inst_2
+ 19. Parameter Settings for User Entity Instance: num_to_bit:num_to_bit_inst
+ 20. Parameter Settings for User Entity Instance: bit_to_caseg:bit_to_caseg_inst
+ 21. Port Connectivity Checks: "bit_to_caseg:bit_to_caseg_inst"
+ 22. Port Connectivity Checks: "num_to_bit:num_to_bit_inst"
+ 23. Port Connectivity Checks: "up_counter:up_counter_inst_2"
+ 24. Port Connectivity Checks: "up_counter:up_counter_inst_1"
+ 25. Port Connectivity Checks: "down_counter:down_counter_inst"
+ 26. Post-Synthesis Netlist Statistics for Top Partition
+ 27. Elapsed Time Per Partition
+ 28. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2024  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                        ;
++------------------------------------+------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Apr  9 21:18:35 2025          ;
+; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
+; Revision Name                      ; lanqiao_16_mocks_01                            ;
+; Top-level Entity Name              ; top_module                                     ;
+; Family                             ; Cyclone IV E                                   ;
+; Total logic elements               ; 794                                            ;
+;     Total combinational functions  ; 773                                            ;
+;     Dedicated logic registers      ; 481                                            ;
+; Total registers                    ; 481                                            ;
+; Total pins                         ; 22                                             ;
+; Total virtual pins                 ; 0                                              ;
+; Total memory bits                  ; 0                                              ;
+; Embedded Multiplier 9-bit elements ; 0                                              ;
+; Total PLLs                         ; 0                                              ;
++------------------------------------+------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                               ;
++------------------------------------------------------------------+--------------------+---------------------+
+; Option                                                           ; Setting            ; Default Value       ;
++------------------------------------------------------------------+--------------------+---------------------+
+; Device                                                           ; EP4CE6E22C8        ;                     ;
+; Top-level entity name                                            ; top_module         ; lanqiao_16_mocks_01 ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V           ;
+; Use smart compilation                                            ; Off                ; Off                 ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                  ;
+; Enable compact report table                                      ; Off                ; Off                 ;
+; Restructure Multiplexers                                         ; Auto               ; Auto                ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                 ;
+; Preserve fewer node names                                        ; On                 ; On                  ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable              ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001        ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993           ;
+; State Machine Processing                                         ; Auto               ; Auto                ;
+; Safe State Machine                                               ; Off                ; Off                 ;
+; Extract Verilog State Machines                                   ; On                 ; On                  ;
+; Extract VHDL State Machines                                      ; On                 ; On                  ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                 ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000                ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                 ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                  ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                  ;
+; Parallel Synthesis                                               ; On                 ; On                  ;
+; DSP Block Balancing                                              ; Auto               ; Auto                ;
+; NOT Gate Push-Back                                               ; On                 ; On                  ;
+; Power-Up Don't Care                                              ; On                 ; On                  ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                 ;
+; Remove Duplicate Registers                                       ; On                 ; On                  ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                 ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                 ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                 ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                 ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                 ;
+; Ignore SOFT Buffers                                              ; On                 ; On                  ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                 ;
+; Optimization Technique                                           ; Balanced           ; Balanced            ;
+; Carry Chain Length                                               ; 70                 ; 70                  ;
+; Auto Carry Chains                                                ; On                 ; On                  ;
+; Auto Open-Drain Pins                                             ; On                 ; On                  ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                 ;
+; Auto ROM Replacement                                             ; On                 ; On                  ;
+; Auto RAM Replacement                                             ; On                 ; On                  ;
+; Auto DSP Block Replacement                                       ; On                 ; On                  ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto                ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto                ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                  ;
+; Strict RAM Replacement                                           ; Off                ; Off                 ;
+; Allow Synchronous Control Signals                                ; On                 ; On                  ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                 ;
+; Auto RAM Block Balancing                                         ; On                 ; On                  ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                 ;
+; Auto Resource Sharing                                            ; Off                ; Off                 ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                 ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                 ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                 ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                  ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                 ;
+; Timing-Driven Synthesis                                          ; On                 ; On                  ;
+; Report Parameter Settings                                        ; On                 ; On                  ;
+; Report Source Assignments                                        ; On                 ; On                  ;
+; Report Connectivity Checks                                       ; On                 ; On                  ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                 ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                   ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation  ;
+; HDL message level                                                ; Level2             ; Level2              ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                 ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000                ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000                ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                 ;
+; Clock MUX Protection                                             ; On                 ; On                  ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                 ;
+; Block Design Naming                                              ; Auto               ; Auto                ;
+; SDC constraint protection                                        ; Off                ; Off                 ;
+; Synthesis Effort                                                 ; Auto               ; Auto                ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                  ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                 ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium              ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto                ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                  ;
++------------------------------------------------------------------+--------------------+---------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 16          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 16          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
+;     Processor 5            ;   0.0%      ;
+;     Processor 6            ;   0.0%      ;
+;     Processor 7            ;   0.0%      ;
+;     Processor 8            ;   0.0%      ;
+;     Processors 9-16        ;   0.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                 ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                   ; Library ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------+---------+
+; ../rtl/num_to_bit.v              ; yes             ; User Verilog HDL File  ; C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_01/rtl/num_to_bit.v   ;         ;
+; ../rtl/key.v                     ; yes             ; User Verilog HDL File  ; C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_01/rtl/key.v          ;         ;
+; ../rtl/top_module.v              ; yes             ; User Verilog HDL File  ; C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_01/rtl/top_module.v   ;         ;
+; ../rtl/bit_to_caseg.v            ; yes             ; User Verilog HDL File  ; C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_01/rtl/bit_to_caseg.v ;         ;
+; ../rtl/up_counter.v              ; yes             ; User Verilog HDL File  ; C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_01/rtl/up_counter.v   ;         ;
+; ../rtl/led.v                     ; yes             ; User Verilog HDL File  ; C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_01/rtl/led.v          ;         ;
+; ../rtl/down_counter.v            ; yes             ; User Verilog HDL File  ; C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_01/rtl/down_counter.v ;         ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------+---------+
+
+
++----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary              ;
++---------------------------------------------+------------+
+; Resource                                    ; Usage      ;
++---------------------------------------------+------------+
+; Estimated Total logic elements              ; 794        ;
+;                                             ;            ;
+; Total combinational functions               ; 773        ;
+; Logic element usage by number of LUT inputs ;            ;
+;     -- 4 input functions                    ; 201        ;
+;     -- 3 input functions                    ; 62         ;
+;     -- <=2 input functions                  ; 510        ;
+;                                             ;            ;
+; Logic elements by mode                      ;            ;
+;     -- normal mode                          ; 418        ;
+;     -- arithmetic mode                      ; 355        ;
+;                                             ;            ;
+; Total registers                             ; 481        ;
+;     -- Dedicated logic registers            ; 481        ;
+;     -- I/O registers                        ; 0          ;
+;                                             ;            ;
+; I/O pins                                    ; 22         ;
+;                                             ;            ;
+; Embedded Multiplier 9-bit elements          ; 0          ;
+;                                             ;            ;
+; Maximum fan-out node                        ; sclk~input ;
+; Maximum fan-out                             ; 481        ;
+; Total fan-out                               ; 4183       ;
+; Average fan-out                             ; 3.22       ;
++---------------------------------------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                       ;
++-------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------+--------------+--------------+
+; Compilation Hierarchy Node          ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                        ; Entity Name  ; Library Name ;
++-------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------+--------------+--------------+
+; |top_module                         ; 773 (1)             ; 481 (0)                   ; 0           ; 0            ; 0       ; 0         ; 22   ; 0            ; |top_module                                ; top_module   ; work         ;
+;    |bit_to_caseg:bit_to_caseg_inst| ; 64 (64)             ; 44 (44)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_module|bit_to_caseg:bit_to_caseg_inst ; bit_to_caseg ; work         ;
+;    |down_counter:down_counter_inst| ; 54 (54)             ; 36 (36)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_module|down_counter:down_counter_inst ; down_counter ; work         ;
+;    |key:key_1_inst|                 ; 167 (167)           ; 99 (99)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_module|key:key_1_inst                 ; key          ; work         ;
+;    |key:key_2_inst|                 ; 167 (167)           ; 99 (99)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_module|key:key_2_inst                 ; key          ; work         ;
+;    |key:key_pp_inst|                ; 167 (167)           ; 99 (99)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_module|key:key_pp_inst                ; key          ; work         ;
+;    |led:led_inst|                   ; 42 (42)             ; 24 (24)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_module|led:led_inst                   ; led          ; work         ;
+;    |num_to_bit:num_to_bit_inst|     ; 87 (87)             ; 66 (66)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_module|num_to_bit:num_to_bit_inst     ; num_to_bit   ; work         ;
+;    |up_counter:up_counter_inst_1|   ; 12 (12)             ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_module|up_counter:up_counter_inst_1   ; up_counter   ; work         ;
+;    |up_counter:up_counter_inst_2|   ; 12 (12)             ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_module|up_counter:up_counter_inst_2   ; up_counter   ; work         ;
++-------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------+--------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                ;
++-------------------------------------------+-------------------------------------------------------+
+; Register name                             ; Reason for Removal                                    ;
++-------------------------------------------+-------------------------------------------------------+
+; bit_to_caseg:bit_to_caseg_inst|cnt_1ms[0] ; Merged with led:led_inst|cnt_100ms[0]                 ;
+; num_to_bit:num_to_bit_inst|shift_signal   ; Merged with led:led_inst|cnt_100ms[0]                 ;
+; bit_to_caseg:bit_to_caseg_inst|cnt_1ms[1] ; Merged with led:led_inst|cnt_100ms[1]                 ;
+; num_to_bit:num_to_bit_inst|cnt_shift[0]   ; Merged with led:led_inst|cnt_100ms[1]                 ;
+; num_to_bit:num_to_bit_inst|cnt_shift[1]   ; Merged with bit_to_caseg:bit_to_caseg_inst|cnt_1ms[2] ;
+; bit_to_caseg:bit_to_caseg_inst|cnt_1ms[2] ; Merged with led:led_inst|cnt_100ms[2]                 ;
+; num_to_bit:num_to_bit_inst|cnt_shift[2]   ; Merged with bit_to_caseg:bit_to_caseg_inst|cnt_1ms[3] ;
+; bit_to_caseg:bit_to_caseg_inst|cnt_1ms[3] ; Merged with led:led_inst|cnt_100ms[3]                 ;
+; Total Number of Removed Registers = 8     ;                                                       ;
++-------------------------------------------+-------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 481   ;
+; Number of registers using Synchronous Clear  ; 323   ;
+; Number of registers using Synchronous Load   ; 37    ;
+; Number of registers using Asynchronous Clear ; 481   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 328   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------+
+; Inverted Register Statistics                          ;
++---------------------------------------------+---------+
+; Inverted Register                           ; Fan out ;
++---------------------------------------------+---------+
+; down_counter:down_counter_inst|cnt[2]       ; 3       ;
+; down_counter:down_counter_inst|cnt[4]       ; 3       ;
+; down_counter:down_counter_inst|cnt_state[0] ; 8       ;
+; num_to_bit:num_to_bit_inst|bit_0[1]         ; 1       ;
+; num_to_bit:num_to_bit_inst|bit_1[1]         ; 1       ;
+; num_to_bit:num_to_bit_inst|bit_6[1]         ; 1       ;
+; num_to_bit:num_to_bit_inst|bit_7[1]         ; 1       ;
+; num_to_bit:num_to_bit_inst|bit_3[1]         ; 1       ;
+; num_to_bit:num_to_bit_inst|bit_4[1]         ; 1       ;
+; num_to_bit:num_to_bit_inst|bit_0[3]         ; 1       ;
+; num_to_bit:num_to_bit_inst|bit_1[3]         ; 1       ;
+; num_to_bit:num_to_bit_inst|bit_6[3]         ; 1       ;
+; num_to_bit:num_to_bit_inst|bit_7[3]         ; 1       ;
+; num_to_bit:num_to_bit_inst|bit_3[3]         ; 1       ;
+; num_to_bit:num_to_bit_inst|bit_4[3]         ; 1       ;
+; Total number of inverted registers = 15     ;         ;
++---------------------------------------------+---------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |top_module|down_counter:down_counter_inst|cnt[0]       ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top_module|key:key_pp_inst|cnt_1ms[1]                  ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top_module|key:key_pp_inst|cnt_20ms[8]                 ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top_module|key:key_pp_inst|cnt_lp_rcgn[9]              ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top_module|key:key_1_inst|cnt_1ms[3]                   ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top_module|key:key_2_inst|cnt_1ms[10]                  ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top_module|key:key_1_inst|cnt_20ms[5]                  ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top_module|key:key_2_inst|cnt_20ms[6]                  ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top_module|key:key_1_inst|cnt_lp_rcgn[8]               ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top_module|key:key_2_inst|cnt_lp_rcgn[1]               ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_module|num_to_bit:num_to_bit_inst|num_00_shift[0]  ;
+; 3:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |top_module|num_to_bit:num_to_bit_inst|num_00_shift[2]  ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; Yes        ; |top_module|bit_to_caseg:bit_to_caseg_inst|seg_disp[2]  ;
+; 4:1                ; 26 bits   ; 52 LEs        ; 26 LEs               ; 26 LEs                 ; Yes        ; |top_module|down_counter:down_counter_inst|cnt_1s[12]   ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top_module|key:key_pp_inst|cnt_signal_interval[2]      ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top_module|key:key_1_inst|cnt_signal_interval[27]      ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top_module|key:key_2_inst|cnt_signal_interval[0]       ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |top_module|num_to_bit:num_to_bit_inst|num_02_shift[10] ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |top_module|num_to_bit:num_to_bit_inst|num_02_shift[8]  ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |top_module|num_to_bit:num_to_bit_inst|num_01_shift[12] ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |top_module|num_to_bit:num_to_bit_inst|num_01_shift[8]  ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |top_module|num_to_bit:num_to_bit_inst|num_00_shift[10] ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |top_module|num_to_bit:num_to_bit_inst|num_00_shift[7]  ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |top_module|down_counter:down_counter_inst|cnt_state[2] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |top_module|down_counter:down_counter_inst|cnt[2]       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: key:key_pp_inst ;
++-----------------+----------+---------------------------------+
+; Parameter Name  ; Value    ; Type                            ;
++-----------------+----------+---------------------------------+
+; sclk_freq       ; 50000000 ; Signed Integer                  ;
+; press_vol       ; 0        ; Signed Integer                  ;
+; long_press      ; 500      ; Signed Integer                  ;
+; signal_interval ; 100      ; Signed Integer                  ;
++-----------------+----------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: down_counter:down_counter_inst ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; down_cnt_MAX   ; 20    ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: led:led_inst ;
++----------------+---------+--------------------------------+
+; Parameter Name ; Value   ; Type                           ;
++----------------+---------+--------------------------------+
+; cnt_100ms_MAX  ; 4999999 ; Signed Integer                 ;
++----------------+---------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: key:key_1_inst ;
++-----------------+----------+--------------------------------+
+; Parameter Name  ; Value    ; Type                           ;
++-----------------+----------+--------------------------------+
+; sclk_freq       ; 50000000 ; Signed Integer                 ;
+; press_vol       ; 0        ; Signed Integer                 ;
+; long_press      ; 500      ; Signed Integer                 ;
+; signal_interval ; 100      ; Signed Integer                 ;
++-----------------+----------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: key:key_2_inst ;
++-----------------+----------+--------------------------------+
+; Parameter Name  ; Value    ; Type                           ;
++-----------------+----------+--------------------------------+
+; sclk_freq       ; 50000000 ; Signed Integer                 ;
+; press_vol       ; 0        ; Signed Integer                 ;
+; long_press      ; 500      ; Signed Integer                 ;
+; signal_interval ; 100      ; Signed Integer                 ;
++-----------------+----------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: up_counter:up_counter_inst_1 ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; up_cnt_MAX     ; 99    ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: up_counter:up_counter_inst_2 ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; up_cnt_MAX     ; 99    ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: num_to_bit:num_to_bit_inst ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; cnt_shift_MAX  ; 111   ; Unsigned Binary                                ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bit_to_caseg:bit_to_caseg_inst ;
++----------------+------------------+-----------------------------------------+
+; Parameter Name ; Value            ; Type                                    ;
++----------------+------------------+-----------------------------------------+
+; cnt_1ms_MAX    ; 1100001101001111 ; Unsigned Binary                         ;
+; cnt_bit_MAX    ; 111              ; Unsigned Binary                         ;
++----------------+------------------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "bit_to_caseg:bit_to_caseg_inst" ;
++-------------+-------+----------+---------------------------+
+; Port        ; Type  ; Severity ; Details                   ;
++-------------+-------+----------+---------------------------+
+; bit_5[3]    ; Input ; Info     ; Stuck at VCC              ;
+; bit_5[2]    ; Input ; Info     ; Stuck at GND              ;
+; bit_5[1]    ; Input ; Info     ; Stuck at VCC              ;
+; bit_5[0]    ; Input ; Info     ; Stuck at GND              ;
+; bit_2[1..0] ; Input ; Info     ; Stuck at VCC              ;
+; bit_2[3]    ; Input ; Info     ; Stuck at VCC              ;
+; bit_2[2]    ; Input ; Info     ; Stuck at GND              ;
++-------------+-------+----------+---------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "num_to_bit:num_to_bit_inst"                                                                                                                                                        ;
++--------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                                                                                                                          ;
++--------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; num_02 ; Input  ; Warning  ; Input port expression (7 bits) is wider than the input port (6 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; num_01 ; Input  ; Warning  ; Input port expression (7 bits) is wider than the input port (6 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; num_00 ; Input  ; Warning  ; Input port expression (7 bits) is wider than the input port (6 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; bit_5  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                              ;
+; bit_2  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                              ;
++--------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "up_counter:up_counter_inst_2"                                                         ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; cnt[6] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "up_counter:up_counter_inst_1"                                                         ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; cnt[6] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "down_counter:down_counter_inst"                                                       ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; cnt[6] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 22                          ;
+; cycloneiii_ff         ; 481                         ;
+;     CLR               ; 70                          ;
+;     CLR SCLR          ; 57                          ;
+;     CLR SCLR SLD      ; 26                          ;
+;     ENA CLR           ; 77                          ;
+;     ENA CLR SCLR      ; 240                         ;
+;     ENA CLR SLD       ; 11                          ;
+; cycloneiii_lcell_comb ; 773                         ;
+;     arith             ; 355                         ;
+;         2 data inputs ; 351                         ;
+;         3 data inputs ; 4                           ;
+;     normal            ; 418                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 31                          ;
+;         2 data inputs ; 127                         ;
+;         3 data inputs ; 58                          ;
+;         4 data inputs ; 201                         ;
+;                       ;                             ;
+; Max LUT depth         ; 5.10                        ;
+; Average LUT depth     ; 3.18                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+    Info: Processing started: Wed Apr  9 21:18:26 2025
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lanqiao_16_mocks_01 -c lanqiao_16_mocks_01
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file /users/zlxwy/desktop/lanqiao_16_mocks/lanqiao_16_mocks_01/rtl/num_to_bit.v
+    Info (12023): Found entity 1: num_to_bit File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_01/rtl/num_to_bit.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file /users/zlxwy/desktop/lanqiao_16_mocks/lanqiao_16_mocks_01/rtl/key.v
+    Info (12023): Found entity 1: key File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_01/rtl/key.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /users/zlxwy/desktop/lanqiao_16_mocks/lanqiao_16_mocks_01/rtl/top_module.v
+    Info (12023): Found entity 1: top_module File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_01/rtl/top_module.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /users/zlxwy/desktop/lanqiao_16_mocks/lanqiao_16_mocks_01/rtl/bit_to_caseg.v
+    Info (12023): Found entity 1: bit_to_caseg File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_01/rtl/bit_to_caseg.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file /users/zlxwy/desktop/lanqiao_16_mocks/lanqiao_16_mocks_01/rtl/up_counter.v
+    Info (12023): Found entity 1: up_counter File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_01/rtl/up_counter.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file /users/zlxwy/desktop/lanqiao_16_mocks/lanqiao_16_mocks_01/rtl/led.v
+    Info (12023): Found entity 1: led File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_01/rtl/led.v Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file /users/zlxwy/desktop/lanqiao_16_mocks/lanqiao_16_mocks_01/rtl/down_counter.v
+    Info (12023): Found entity 1: down_counter File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_01/rtl/down_counter.v Line: 1
+Warning (10222): Verilog HDL Parameter Declaration warning at key.v(15): Parameter Declaration in module "key" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_01/rtl/key.v Line: 15
+Warning (10222): Verilog HDL Parameter Declaration warning at key.v(26): Parameter Declaration in module "key" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_01/rtl/key.v Line: 26
+Warning (10222): Verilog HDL Parameter Declaration warning at key.v(27): Parameter Declaration in module "key" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_01/rtl/key.v Line: 27
+Warning (10222): Verilog HDL Parameter Declaration warning at key.v(49): Parameter Declaration in module "key" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_01/rtl/key.v Line: 49
+Warning (10222): Verilog HDL Parameter Declaration warning at key.v(71): Parameter Declaration in module "key" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_01/rtl/key.v Line: 71
+Warning (10222): Verilog HDL Parameter Declaration warning at down_counter.v(30): Parameter Declaration in module "down_counter" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_01/rtl/down_counter.v Line: 30
+Info (12127): Elaborating entity "top_module" for the top level hierarchy
+Info (12128): Elaborating entity "key" for hierarchy "key:key_pp_inst" File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_01/rtl/top_module.v Line: 29
+Warning (10230): Verilog HDL assignment warning at key.v(22): truncated value with size 32 to match size of target (16) File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_01/rtl/key.v Line: 22
+Warning (10230): Verilog HDL assignment warning at key.v(34): truncated value with size 32 to match size of target (16) File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_01/rtl/key.v Line: 34
+Info (12128): Elaborating entity "down_counter" for hierarchy "down_counter:down_counter_inst" File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_01/rtl/top_module.v Line: 44
+Warning (10230): Verilog HDL assignment warning at down_counter.v(36): truncated value with size 32 to match size of target (26) File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_01/rtl/down_counter.v Line: 36
+Warning (10230): Verilog HDL assignment warning at down_counter.v(40): truncated value with size 32 to match size of target (7) File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_01/rtl/down_counter.v Line: 40
+Warning (10230): Verilog HDL assignment warning at down_counter.v(41): truncated value with size 32 to match size of target (7) File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_01/rtl/down_counter.v Line: 41
+Warning (10230): Verilog HDL assignment warning at down_counter.v(42): truncated value with size 32 to match size of target (7) File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_01/rtl/down_counter.v Line: 42
+Info (12128): Elaborating entity "led" for hierarchy "led:led_inst" File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_01/rtl/top_module.v Line: 54
+Warning (10230): Verilog HDL assignment warning at led.v(18): truncated value with size 32 to match size of target (23) File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_01/rtl/led.v Line: 18
+Info (12128): Elaborating entity "up_counter" for hierarchy "up_counter:up_counter_inst_1" File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_01/rtl/top_module.v Line: 101
+Warning (10230): Verilog HDL assignment warning at up_counter.v(18): truncated value with size 32 to match size of target (7) File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_01/rtl/up_counter.v Line: 18
+Info (12128): Elaborating entity "num_to_bit" for hierarchy "num_to_bit:num_to_bit_inst" File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_01/rtl/top_module.v Line: 136
+Warning (10230): Verilog HDL assignment warning at num_to_bit.v(43): truncated value with size 32 to match size of target (3) File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_01/rtl/num_to_bit.v Line: 43
+Warning (10230): Verilog HDL assignment warning at num_to_bit.v(69): truncated value with size 32 to match size of target (4) File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_01/rtl/num_to_bit.v Line: 69
+Warning (10230): Verilog HDL assignment warning at num_to_bit.v(70): truncated value with size 32 to match size of target (4) File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_01/rtl/num_to_bit.v Line: 70
+Warning (10230): Verilog HDL assignment warning at num_to_bit.v(84): truncated value with size 32 to match size of target (4) File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_01/rtl/num_to_bit.v Line: 84
+Warning (10230): Verilog HDL assignment warning at num_to_bit.v(85): truncated value with size 32 to match size of target (4) File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_01/rtl/num_to_bit.v Line: 85
+Warning (10230): Verilog HDL assignment warning at num_to_bit.v(99): truncated value with size 32 to match size of target (4) File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_01/rtl/num_to_bit.v Line: 99
+Warning (10230): Verilog HDL assignment warning at num_to_bit.v(100): truncated value with size 32 to match size of target (4) File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_01/rtl/num_to_bit.v Line: 100
+Info (12128): Elaborating entity "bit_to_caseg" for hierarchy "bit_to_caseg:bit_to_caseg_inst" File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_01/rtl/top_module.v Line: 157
+Warning (10230): Verilog HDL assignment warning at bit_to_caseg.v(34): truncated value with size 32 to match size of target (16) File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_01/rtl/bit_to_caseg.v Line: 34
+Warning (10230): Verilog HDL assignment warning at bit_to_caseg.v(55): truncated value with size 32 to match size of target (3) File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_01/rtl/bit_to_caseg.v Line: 55
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (13000): Registers with preset signals will power-up high File: C:/Users/ZLXWY/Desktop/lanqiao_16_mocks/lanqiao_16_mocks_01/rtl/down_counter.v Line: 20
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 816 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 5 input pins
+    Info (21059): Implemented 17 output pins
+    Info (21061): Implemented 794 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 25 warnings
+    Info: Peak virtual memory: 4849 megabytes
+    Info: Processing ended: Wed Apr  9 21:18:35 2025
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:22
+
+

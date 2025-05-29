@@ -1,0 +1,144 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/FPGA_Software/ModelSim_SE_10_5/examples
+T_opt
+!s110 1741700013
+ViVDaFU4HAGMmdXD?`P3@z2
+04 14 4 work uart_ctrler_tb fast 0
+=4-38d57ae36083-67d03bad-162-89a4
+Z1 o-quiet -auto_acc_if_foreign -work work +acc
+Z2 tCvgOpt 0
+n@_opt
+Z3 OL;O;10.5;63
+R0
+T_opt1
+!s110 1741703049
+VeDVQG:UkX40hL@IaP3g]B0
+04 22 4 work uart_ch340_txrx_test_1 fast 0
+=1-38d57ae36083-67d04788-36b-1588
+R1
+R2
+n@_opt1
+R3
+R0
+T_opt2
+!s110 1741703323
+VlCR^eBMH`>0FSXe1Y2lPY3
+04 13 4 work uart_ch340_tb fast 0
+=4-38d57ae36083-67d0489b-207-71cc
+R1
+R2
+n@_opt2
+R3
+vkey_debounce
+Z4 !s110 1741703317
+!i10b 1
+!s100 mS0M8lEH8@9cEFQHAzHEK3
+I=;Yk9dg<=:0iWhBk<[f_33
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+Z6 dD:/DATAFiles/QuartusII/project_23_1/uart_ch340_txrx/sim/uart_ctrler_tb
+w1741441334
+8D:/DATAFiles/QuartusII/project_23_1/uart_ch340_txrx/rtl/key_debounce.v
+FD:/DATAFiles/QuartusII/project_23_1/uart_ch340_txrx/rtl/key_debounce.v
+L0 2
+Z7 OL;L;10.5;63
+r1
+!s85 0
+31
+Z8 !s108 1741703317.000000
+!s107 D:/DATAFiles/QuartusII/project_23_1/uart_ch340_txrx/rtl/key_debounce.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/DATAFiles/QuartusII/project_23_1/uart_ch340_txrx/rtl/key_debounce.v|
+!i113 0
+Z9 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vuart_ch340_tb
+R4
+!i10b 1
+!s100 BI6<N@jV:BT^lPVUQ=<PZ3
+Io]IWfl_gZ;AdJIM`8=QOn0
+R5
+R6
+w1741703310
+8D:/DATAFiles/QuartusII/project_23_1/uart_ch340_txrx/sim/uart_ch340_tb/uart_ch340_tb.v
+FD:/DATAFiles/QuartusII/project_23_1/uart_ch340_txrx/sim/uart_ch340_tb/uart_ch340_tb.v
+L0 2
+R7
+r1
+!s85 0
+31
+R8
+!s107 D:/DATAFiles/QuartusII/project_23_1/uart_ch340_txrx/sim/uart_ch340_tb/uart_ch340_tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/DATAFiles/QuartusII/project_23_1/uart_ch340_txrx/sim/uart_ch340_tb/uart_ch340_tb.v|
+!i113 0
+R9
+R2
+vuart_ch340_txrx_test_1
+R4
+!i10b 1
+!s100 _:7REJdV`Xn26gGRb?^HL1
+Igel2a<3ecPCa[H:eamA7]1
+R5
+R6
+w1741702277
+8D:/DATAFiles/QuartusII/project_23_1/uart_ch340_txrx/rtl/uart_ch340_txrx_test_1.v
+FD:/DATAFiles/QuartusII/project_23_1/uart_ch340_txrx/rtl/uart_ch340_txrx_test_1.v
+L0 2
+R7
+r1
+!s85 0
+31
+R8
+!s107 D:/DATAFiles/QuartusII/project_23_1/uart_ch340_txrx/rtl/uart_ch340_txrx_test_1.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/DATAFiles/QuartusII/project_23_1/uart_ch340_txrx/rtl/uart_ch340_txrx_test_1.v|
+!i113 0
+R9
+R2
+vuart_ctrler
+R4
+!i10b 1
+!s100 C@K7V7R6NoS;UCVfH[OYk1
+IGzcjFbZ0n7oH>GESn@gO[3
+R5
+R6
+w1741699905
+8D:/DATAFiles/QuartusII/project_23_1/uart_ch340_txrx/rtl/uart_ctrler.v
+FD:/DATAFiles/QuartusII/project_23_1/uart_ch340_txrx/rtl/uart_ctrler.v
+L0 1
+R7
+r1
+!s85 0
+31
+R8
+!s107 D:/DATAFiles/QuartusII/project_23_1/uart_ch340_txrx/rtl/uart_ctrler.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/DATAFiles/QuartusII/project_23_1/uart_ch340_txrx/rtl/uart_ctrler.v|
+!i113 0
+R9
+R2
+vuart_ctrler_tb
+!s110 1741699988
+!i10b 1
+!s100 _hjPoTiB3f]WGVlT@on@J2
+ICz>da=X7^b@zQ1F=c8z5d1
+R5
+R6
+w1741698424
+8D:/DATAFiles/QuartusII/project_23_1/uart_ch340_txrx/sim/uart_ctrler_tb/uart_ctrler_tb.v
+FD:/DATAFiles/QuartusII/project_23_1/uart_ch340_txrx/sim/uart_ctrler_tb/uart_ctrler_tb.v
+L0 2
+R7
+r1
+!s85 0
+31
+!s108 1741699988.000000
+!s107 D:/DATAFiles/QuartusII/project_23_1/uart_ch340_txrx/sim/uart_ctrler_tb/uart_ctrler_tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/DATAFiles/QuartusII/project_23_1/uart_ch340_txrx/sim/uart_ctrler_tb/uart_ctrler_tb.v|
+!i113 0
+R9
+R2

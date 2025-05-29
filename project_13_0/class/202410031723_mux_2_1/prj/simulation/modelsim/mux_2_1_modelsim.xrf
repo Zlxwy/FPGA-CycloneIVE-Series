@@ -1,0 +1,13 @@
+vendor_name = ModelSim
+source_file = 1, D:/DATAFiles/QuartusII/class/202410031723_mux_2_1/rtl/mux_2_1.vhd
+source_file = 1, D:/DATAFiles/QuartusII/class/202410031723_mux_2_1/prj/db/mux_2_1.cbx.xml
+source_file = 1, d:/fpga_software/quartus_ii_13_0/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, d:/fpga_software/quartus_ii_13_0/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, d:/fpga_software/quartus_ii_13_0/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, d:/fpga_software/quartus_ii_13_0/quartus/libraries/vhdl/ieee/timing_p.vhd
+design_name = mux_2_1
+instance = comp, \out0~output , out0~output, mux_2_1, 1
+instance = comp, \in1~input , in1~input, mux_2_1, 1
+instance = comp, \in0~input , in0~input, mux_2_1, 1
+instance = comp, \sel~input , sel~input, mux_2_1, 1
+instance = comp, \out0~0 , out0~0, mux_2_1, 1

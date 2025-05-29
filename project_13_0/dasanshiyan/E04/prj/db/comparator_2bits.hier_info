@@ -1,0 +1,18 @@
+|comparator_2bits
+a[0] => equal.IN0
+a[0] => less.IN0
+a[0] => less.IN0
+a[1] => equal.IN0
+a[1] => less.IN1
+a[1] => less.IN0
+b[0] => less.IN1
+b[0] => less.IN1
+b[0] => equal.IN1
+b[1] => less.IN1
+b[1] => less.IN1
+b[1] => equal.IN1
+less <= less.DB_MAX_OUTPUT_PORT_TYPE
+equal <= WideNor0.DB_MAX_OUTPUT_PORT_TYPE
+greater <= greater.DB_MAX_OUTPUT_PORT_TYPE
+
+

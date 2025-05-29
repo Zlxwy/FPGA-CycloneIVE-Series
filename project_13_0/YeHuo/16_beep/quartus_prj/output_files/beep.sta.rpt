@@ -1,0 +1,1527 @@
+TimeQuest Timing Analyzer report for beep
+Fri Oct 04 00:41:09 2024
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1200mV 85C Model Fmax Summary
+  6. Timing Closure Recommendations
+  7. Slow 1200mV 85C Model Setup Summary
+  8. Slow 1200mV 85C Model Hold Summary
+  9. Slow 1200mV 85C Model Recovery Summary
+ 10. Slow 1200mV 85C Model Removal Summary
+ 11. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 12. Slow 1200mV 85C Model Setup: 'sys_clk'
+ 13. Slow 1200mV 85C Model Hold: 'sys_clk'
+ 14. Slow 1200mV 85C Model Minimum Pulse Width: 'sys_clk'
+ 15. Clock to Output Times
+ 16. Minimum Clock to Output Times
+ 17. Slow 1200mV 85C Model Metastability Report
+ 18. Slow 1200mV 0C Model Fmax Summary
+ 19. Slow 1200mV 0C Model Setup Summary
+ 20. Slow 1200mV 0C Model Hold Summary
+ 21. Slow 1200mV 0C Model Recovery Summary
+ 22. Slow 1200mV 0C Model Removal Summary
+ 23. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 24. Slow 1200mV 0C Model Setup: 'sys_clk'
+ 25. Slow 1200mV 0C Model Hold: 'sys_clk'
+ 26. Slow 1200mV 0C Model Minimum Pulse Width: 'sys_clk'
+ 27. Clock to Output Times
+ 28. Minimum Clock to Output Times
+ 29. Slow 1200mV 0C Model Metastability Report
+ 30. Fast 1200mV 0C Model Setup Summary
+ 31. Fast 1200mV 0C Model Hold Summary
+ 32. Fast 1200mV 0C Model Recovery Summary
+ 33. Fast 1200mV 0C Model Removal Summary
+ 34. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 35. Fast 1200mV 0C Model Setup: 'sys_clk'
+ 36. Fast 1200mV 0C Model Hold: 'sys_clk'
+ 37. Fast 1200mV 0C Model Minimum Pulse Width: 'sys_clk'
+ 38. Clock to Output Times
+ 39. Minimum Clock to Output Times
+ 40. Fast 1200mV 0C Model Metastability Report
+ 41. Multicorner Timing Analysis Summary
+ 42. Clock to Output Times
+ 43. Minimum Clock to Output Times
+ 44. Board Trace Model Assignments
+ 45. Input Transition Times
+ 46. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 47. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 48. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 49. Setup Transfers
+ 50. Hold Transfers
+ 51. Report TCCS
+ 52. Report RSKM
+ 53. Unconstrained Paths
+ 54. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                       ;
++--------------------+--------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version ;
+; Revision Name      ; beep                                                               ;
+; Device Family      ; Cyclone IV E                                                       ;
+; Device Name        ; EP4CE10F17C8                                                       ;
+; Timing Models      ; Final                                                              ;
+; Delay Model        ; Combined                                                           ;
+; Rise/Fall Delays   ; Enabled                                                            ;
++--------------------+--------------------------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 16          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 16          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-16        ; < 0.1%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                              ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets     ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------+
+; sys_clk    ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { sys_clk } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------+
+
+
++-------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary              ;
++-----------+-----------------+------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
++-----------+-----------------+------------+------+
+; 191.5 MHz ; 191.5 MHz       ; sys_clk    ;      ;
++-----------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++-------------------------------------+
+; Slow 1200mV 85C Model Setup Summary ;
++---------+--------+------------------+
+; Clock   ; Slack  ; End Point TNS    ;
++---------+--------+------------------+
+; sys_clk ; -4.222 ; -154.173         ;
++---------+--------+------------------+
+
+
++------------------------------------+
+; Slow 1200mV 85C Model Hold Summary ;
++---------+-------+------------------+
+; Clock   ; Slack ; End Point TNS    ;
++---------+-------+------------------+
+; sys_clk ; 0.454 ; 0.000            ;
++---------+-------+------------------+
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
++---------+--------+--------------------------------+
+; Clock   ; Slack  ; End Point TNS                  ;
++---------+--------+--------------------------------+
+; sys_clk ; -3.000 ; -98.168                        ;
++---------+--------+--------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'sys_clk'                                                                       ;
++--------+-----------------+-------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node       ; To Node     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------+-------------+--------------+-------------+--------------+------------+------------+
+; -4.222 ; cnt[8]          ; cnt_tone[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.077     ; 5.146      ;
+; -4.222 ; cnt[8]          ; cnt_tone[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.077     ; 5.146      ;
+; -4.222 ; cnt[8]          ; cnt_tone[2] ; sys_clk      ; sys_clk     ; 1.000        ; -0.077     ; 5.146      ;
+; -4.222 ; cnt[8]          ; cnt_tone[3] ; sys_clk      ; sys_clk     ; 1.000        ; -0.077     ; 5.146      ;
+; -4.222 ; cnt[8]          ; cnt_tone[4] ; sys_clk      ; sys_clk     ; 1.000        ; -0.077     ; 5.146      ;
+; -4.222 ; cnt[8]          ; cnt_tone[5] ; sys_clk      ; sys_clk     ; 1.000        ; -0.077     ; 5.146      ;
+; -4.222 ; cnt[8]          ; cnt_tone[6] ; sys_clk      ; sys_clk     ; 1.000        ; -0.077     ; 5.146      ;
+; -4.222 ; cnt[8]          ; cnt_tone[7] ; sys_clk      ; sys_clk     ; 1.000        ; -0.077     ; 5.146      ;
+; -4.222 ; cnt[8]          ; cnt_tone[8] ; sys_clk      ; sys_clk     ; 1.000        ; -0.077     ; 5.146      ;
+; -4.200 ; cnt[7]          ; cnt_tone[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.077     ; 5.124      ;
+; -4.200 ; cnt[7]          ; cnt_tone[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.077     ; 5.124      ;
+; -4.200 ; cnt[7]          ; cnt_tone[2] ; sys_clk      ; sys_clk     ; 1.000        ; -0.077     ; 5.124      ;
+; -4.200 ; cnt[7]          ; cnt_tone[3] ; sys_clk      ; sys_clk     ; 1.000        ; -0.077     ; 5.124      ;
+; -4.200 ; cnt[7]          ; cnt_tone[4] ; sys_clk      ; sys_clk     ; 1.000        ; -0.077     ; 5.124      ;
+; -4.200 ; cnt[7]          ; cnt_tone[5] ; sys_clk      ; sys_clk     ; 1.000        ; -0.077     ; 5.124      ;
+; -4.200 ; cnt[7]          ; cnt_tone[6] ; sys_clk      ; sys_clk     ; 1.000        ; -0.077     ; 5.124      ;
+; -4.200 ; cnt[7]          ; cnt_tone[7] ; sys_clk      ; sys_clk     ; 1.000        ; -0.077     ; 5.124      ;
+; -4.200 ; cnt[7]          ; cnt_tone[8] ; sys_clk      ; sys_clk     ; 1.000        ; -0.077     ; 5.124      ;
+; -4.188 ; cnt[6]          ; cnt_tone[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.077     ; 5.112      ;
+; -4.188 ; cnt[6]          ; cnt_tone[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.077     ; 5.112      ;
+; -4.188 ; cnt[6]          ; cnt_tone[2] ; sys_clk      ; sys_clk     ; 1.000        ; -0.077     ; 5.112      ;
+; -4.188 ; cnt[6]          ; cnt_tone[3] ; sys_clk      ; sys_clk     ; 1.000        ; -0.077     ; 5.112      ;
+; -4.188 ; cnt[6]          ; cnt_tone[4] ; sys_clk      ; sys_clk     ; 1.000        ; -0.077     ; 5.112      ;
+; -4.188 ; cnt[6]          ; cnt_tone[5] ; sys_clk      ; sys_clk     ; 1.000        ; -0.077     ; 5.112      ;
+; -4.188 ; cnt[6]          ; cnt_tone[6] ; sys_clk      ; sys_clk     ; 1.000        ; -0.077     ; 5.112      ;
+; -4.188 ; cnt[6]          ; cnt_tone[7] ; sys_clk      ; sys_clk     ; 1.000        ; -0.077     ; 5.112      ;
+; -4.188 ; cnt[6]          ; cnt_tone[8] ; sys_clk      ; sys_clk     ; 1.000        ; -0.077     ; 5.112      ;
+; -4.117 ; cnt[23]         ; cnt_tone[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.076     ; 5.042      ;
+; -4.117 ; cnt[23]         ; cnt_tone[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.076     ; 5.042      ;
+; -4.117 ; cnt[23]         ; cnt_tone[2] ; sys_clk      ; sys_clk     ; 1.000        ; -0.076     ; 5.042      ;
+; -4.117 ; cnt[23]         ; cnt_tone[3] ; sys_clk      ; sys_clk     ; 1.000        ; -0.076     ; 5.042      ;
+; -4.117 ; cnt[23]         ; cnt_tone[4] ; sys_clk      ; sys_clk     ; 1.000        ; -0.076     ; 5.042      ;
+; -4.117 ; cnt[23]         ; cnt_tone[5] ; sys_clk      ; sys_clk     ; 1.000        ; -0.076     ; 5.042      ;
+; -4.117 ; cnt[23]         ; cnt_tone[6] ; sys_clk      ; sys_clk     ; 1.000        ; -0.076     ; 5.042      ;
+; -4.117 ; cnt[23]         ; cnt_tone[7] ; sys_clk      ; sys_clk     ; 1.000        ; -0.076     ; 5.042      ;
+; -4.117 ; cnt[23]         ; cnt_tone[8] ; sys_clk      ; sys_clk     ; 1.000        ; -0.076     ; 5.042      ;
+; -4.069 ; cnt[19]         ; cnt_tone[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.076     ; 4.994      ;
+; -4.069 ; cnt[19]         ; cnt_tone[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.076     ; 4.994      ;
+; -4.069 ; cnt[19]         ; cnt_tone[2] ; sys_clk      ; sys_clk     ; 1.000        ; -0.076     ; 4.994      ;
+; -4.069 ; cnt[19]         ; cnt_tone[3] ; sys_clk      ; sys_clk     ; 1.000        ; -0.076     ; 4.994      ;
+; -4.069 ; cnt[19]         ; cnt_tone[4] ; sys_clk      ; sys_clk     ; 1.000        ; -0.076     ; 4.994      ;
+; -4.069 ; cnt[19]         ; cnt_tone[5] ; sys_clk      ; sys_clk     ; 1.000        ; -0.076     ; 4.994      ;
+; -4.069 ; cnt[19]         ; cnt_tone[6] ; sys_clk      ; sys_clk     ; 1.000        ; -0.076     ; 4.994      ;
+; -4.069 ; cnt[19]         ; cnt_tone[7] ; sys_clk      ; sys_clk     ; 1.000        ; -0.076     ; 4.994      ;
+; -4.069 ; cnt[19]         ; cnt_tone[8] ; sys_clk      ; sys_clk     ; 1.000        ; -0.076     ; 4.994      ;
+; -3.990 ; cnt[4]          ; cnt_tone[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.077     ; 4.914      ;
+; -3.990 ; cnt[4]          ; cnt_tone[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.077     ; 4.914      ;
+; -3.990 ; cnt[4]          ; cnt_tone[2] ; sys_clk      ; sys_clk     ; 1.000        ; -0.077     ; 4.914      ;
+; -3.990 ; cnt[4]          ; cnt_tone[3] ; sys_clk      ; sys_clk     ; 1.000        ; -0.077     ; 4.914      ;
+; -3.990 ; cnt[4]          ; cnt_tone[4] ; sys_clk      ; sys_clk     ; 1.000        ; -0.077     ; 4.914      ;
+; -3.990 ; cnt[4]          ; cnt_tone[5] ; sys_clk      ; sys_clk     ; 1.000        ; -0.077     ; 4.914      ;
+; -3.990 ; cnt[4]          ; cnt_tone[6] ; sys_clk      ; sys_clk     ; 1.000        ; -0.077     ; 4.914      ;
+; -3.990 ; cnt[4]          ; cnt_tone[7] ; sys_clk      ; sys_clk     ; 1.000        ; -0.077     ; 4.914      ;
+; -3.990 ; cnt[4]          ; cnt_tone[8] ; sys_clk      ; sys_clk     ; 1.000        ; -0.077     ; 4.914      ;
+; -3.987 ; cnt[1]          ; cnt_tone[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.077     ; 4.911      ;
+; -3.987 ; cnt[1]          ; cnt_tone[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.077     ; 4.911      ;
+; -3.987 ; cnt[1]          ; cnt_tone[2] ; sys_clk      ; sys_clk     ; 1.000        ; -0.077     ; 4.911      ;
+; -3.987 ; cnt[1]          ; cnt_tone[3] ; sys_clk      ; sys_clk     ; 1.000        ; -0.077     ; 4.911      ;
+; -3.987 ; cnt[1]          ; cnt_tone[4] ; sys_clk      ; sys_clk     ; 1.000        ; -0.077     ; 4.911      ;
+; -3.987 ; cnt[1]          ; cnt_tone[5] ; sys_clk      ; sys_clk     ; 1.000        ; -0.077     ; 4.911      ;
+; -3.987 ; cnt[1]          ; cnt_tone[6] ; sys_clk      ; sys_clk     ; 1.000        ; -0.077     ; 4.911      ;
+; -3.987 ; cnt[1]          ; cnt_tone[7] ; sys_clk      ; sys_clk     ; 1.000        ; -0.077     ; 4.911      ;
+; -3.987 ; cnt[1]          ; cnt_tone[8] ; sys_clk      ; sys_clk     ; 1.000        ; -0.077     ; 4.911      ;
+; -3.930 ; cnt_tone_MAX[2] ; cnt_tone[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 4.851      ;
+; -3.930 ; cnt_tone_MAX[2] ; cnt_tone[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 4.851      ;
+; -3.930 ; cnt_tone_MAX[2] ; cnt_tone[2] ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 4.851      ;
+; -3.930 ; cnt_tone_MAX[2] ; cnt_tone[3] ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 4.851      ;
+; -3.930 ; cnt_tone_MAX[2] ; cnt_tone[4] ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 4.851      ;
+; -3.930 ; cnt_tone_MAX[2] ; cnt_tone[5] ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 4.851      ;
+; -3.930 ; cnt_tone_MAX[2] ; cnt_tone[6] ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 4.851      ;
+; -3.930 ; cnt_tone_MAX[2] ; cnt_tone[7] ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 4.851      ;
+; -3.930 ; cnt_tone_MAX[2] ; cnt_tone[8] ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 4.851      ;
+; -3.919 ; cnt[17]         ; cnt_tone[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.076     ; 4.844      ;
+; -3.919 ; cnt[17]         ; cnt_tone[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.076     ; 4.844      ;
+; -3.919 ; cnt[17]         ; cnt_tone[2] ; sys_clk      ; sys_clk     ; 1.000        ; -0.076     ; 4.844      ;
+; -3.919 ; cnt[17]         ; cnt_tone[3] ; sys_clk      ; sys_clk     ; 1.000        ; -0.076     ; 4.844      ;
+; -3.919 ; cnt[17]         ; cnt_tone[4] ; sys_clk      ; sys_clk     ; 1.000        ; -0.076     ; 4.844      ;
+; -3.919 ; cnt[17]         ; cnt_tone[5] ; sys_clk      ; sys_clk     ; 1.000        ; -0.076     ; 4.844      ;
+; -3.919 ; cnt[17]         ; cnt_tone[6] ; sys_clk      ; sys_clk     ; 1.000        ; -0.076     ; 4.844      ;
+; -3.919 ; cnt[17]         ; cnt_tone[7] ; sys_clk      ; sys_clk     ; 1.000        ; -0.076     ; 4.844      ;
+; -3.919 ; cnt[17]         ; cnt_tone[8] ; sys_clk      ; sys_clk     ; 1.000        ; -0.076     ; 4.844      ;
+; -3.886 ; cnt_tone_MAX[7] ; cnt_tone[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 4.807      ;
+; -3.886 ; cnt_tone_MAX[7] ; cnt_tone[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 4.807      ;
+; -3.886 ; cnt_tone_MAX[7] ; cnt_tone[2] ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 4.807      ;
+; -3.886 ; cnt_tone_MAX[7] ; cnt_tone[3] ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 4.807      ;
+; -3.886 ; cnt_tone_MAX[7] ; cnt_tone[4] ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 4.807      ;
+; -3.886 ; cnt_tone_MAX[7] ; cnt_tone[5] ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 4.807      ;
+; -3.886 ; cnt_tone_MAX[7] ; cnt_tone[6] ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 4.807      ;
+; -3.886 ; cnt_tone_MAX[7] ; cnt_tone[7] ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 4.807      ;
+; -3.886 ; cnt_tone_MAX[7] ; cnt_tone[8] ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 4.807      ;
+; -3.883 ; cnt[3]          ; cnt_tone[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.077     ; 4.807      ;
+; -3.883 ; cnt[3]          ; cnt_tone[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.077     ; 4.807      ;
+; -3.883 ; cnt[3]          ; cnt_tone[2] ; sys_clk      ; sys_clk     ; 1.000        ; -0.077     ; 4.807      ;
+; -3.883 ; cnt[3]          ; cnt_tone[3] ; sys_clk      ; sys_clk     ; 1.000        ; -0.077     ; 4.807      ;
+; -3.883 ; cnt[3]          ; cnt_tone[4] ; sys_clk      ; sys_clk     ; 1.000        ; -0.077     ; 4.807      ;
+; -3.883 ; cnt[3]          ; cnt_tone[5] ; sys_clk      ; sys_clk     ; 1.000        ; -0.077     ; 4.807      ;
+; -3.883 ; cnt[3]          ; cnt_tone[6] ; sys_clk      ; sys_clk     ; 1.000        ; -0.077     ; 4.807      ;
+; -3.883 ; cnt[3]          ; cnt_tone[7] ; sys_clk      ; sys_clk     ; 1.000        ; -0.077     ; 4.807      ;
+; -3.883 ; cnt[3]          ; cnt_tone[8] ; sys_clk      ; sys_clk     ; 1.000        ; -0.077     ; 4.807      ;
+; -3.883 ; cnt_tone_MAX[3] ; cnt_tone[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.080     ; 4.804      ;
++--------+-----------------+-------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'sys_clk'                                                                             ;
++-------+------------------+------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node        ; To Node          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------+------------------+--------------+-------------+--------------+------------+------------+
+; 0.454 ; cnt_per500ms[0]  ; cnt_per500ms[0]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; cnt_per500ms[2]  ; cnt_per500ms[2]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; cnt_per500ms[1]  ; cnt_per500ms[1]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 0.746      ;
+; 0.491 ; cnt_tone[17]     ; cnt_tone[17]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.100      ; 0.803      ;
+; 0.631 ; cnt_tone[8]      ; cnt_tone[9]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.574      ; 1.417      ;
+; 0.640 ; cnt_tone[8]      ; cnt_tone[10]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.574      ; 1.426      ;
+; 0.640 ; cnt_tone[14]     ; cnt_tone[15]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.574      ; 1.426      ;
+; 0.649 ; cnt_tone[14]     ; cnt_tone[16]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.574      ; 1.435      ;
+; 0.743 ; cnt[7]           ; cnt[7]           ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.036      ;
+; 0.744 ; cnt[1]           ; cnt[1]           ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.037      ;
+; 0.745 ; cnt[3]           ; cnt[3]           ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.038      ;
+; 0.745 ; cnt[5]           ; cnt[5]           ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.038      ;
+; 0.746 ; cnt[2]           ; cnt[2]           ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.039      ;
+; 0.747 ; cnt[4]           ; cnt[4]           ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.040      ;
+; 0.748 ; cnt_tone[16]     ; cnt_tone[16]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.100      ; 1.060      ;
+; 0.750 ; cnt_tone[9]      ; cnt_tone[9]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.100      ; 1.062      ;
+; 0.752 ; cnt_tone[15]     ; cnt_tone[15]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.100      ; 1.064      ;
+; 0.754 ; cnt_per500ms[2]  ; cnt_per500ms[1]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.046      ;
+; 0.761 ; cnt[15]          ; cnt[15]          ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.054      ;
+; 0.761 ; cnt[17]          ; cnt[17]          ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.054      ;
+; 0.761 ; cnt_tone[7]      ; cnt_tone[9]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.574      ; 1.547      ;
+; 0.762 ; cnt[23]          ; cnt[23]          ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.055      ;
+; 0.763 ; cnt_tone[13]     ; cnt_tone[15]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.574      ; 1.549      ;
+; 0.764 ; cnt[8]           ; cnt[8]           ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.057      ;
+; 0.764 ; cnt_tone[1]      ; cnt_tone[1]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.056      ;
+; 0.764 ; cnt_tone[8]      ; cnt_tone[8]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.056      ;
+; 0.770 ; cnt_tone[7]      ; cnt_tone[7]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.062      ;
+; 0.770 ; cnt_tone[7]      ; cnt_tone[10]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.574      ; 1.556      ;
+; 0.771 ; cnt_tone[5]      ; cnt_tone[5]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.063      ;
+; 0.771 ; cnt_tone[6]      ; cnt_tone[6]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.063      ;
+; 0.771 ; cnt_tone[11]     ; cnt_tone[11]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.063      ;
+; 0.772 ; cnt_tone[3]      ; cnt_tone[3]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.064      ;
+; 0.772 ; cnt_tone[4]      ; cnt_tone[4]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.064      ;
+; 0.772 ; cnt_tone[12]     ; cnt_tone[12]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.064      ;
+; 0.772 ; cnt_tone[13]     ; cnt_tone[13]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.064      ;
+; 0.772 ; cnt_tone[13]     ; cnt_tone[16]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.574      ; 1.558      ;
+; 0.773 ; cnt_tone[14]     ; cnt_tone[14]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.065      ;
+; 0.774 ; cnt_tone[2]      ; cnt_tone[2]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.066      ;
+; 0.778 ; cnt_tone[6]      ; cnt_tone[9]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.574      ; 1.564      ;
+; 0.779 ; cnt_tone[12]     ; cnt_tone[15]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.574      ; 1.565      ;
+; 0.780 ; cnt_tone[14]     ; cnt_tone[17]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.574      ; 1.566      ;
+; 0.785 ; cnt_per500ms[1]  ; cnt_tone_MAX[14] ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.077      ;
+; 0.786 ; cnt_per500ms[1]  ; cnt_tone_MAX[9]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.078      ;
+; 0.787 ; cnt[0]           ; cnt[0]           ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.080      ;
+; 0.787 ; cnt_tone[6]      ; cnt_tone[10]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.574      ; 1.573      ;
+; 0.788 ; cnt_tone[12]     ; cnt_tone[16]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.574      ; 1.574      ;
+; 0.789 ; cnt_tone[0]      ; cnt_tone[0]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.081      ;
+; 0.800 ; cnt_per500ms[2]  ; cnt_tone_MAX[14] ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.092      ;
+; 0.802 ; cnt_per500ms[1]  ; cnt_tone_MAX[17] ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.094      ;
+; 0.803 ; cnt_per500ms[1]  ; cnt_tone_MAX[8]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.095      ;
+; 0.825 ; cnt_per500ms[2]  ; cnt_tone_MAX[9]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.117      ;
+; 0.827 ; cnt_per500ms[2]  ; cnt_tone_MAX[17] ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.119      ;
+; 0.850 ; cnt_tone_MAX[17] ; beep_out~reg0    ; sys_clk      ; sys_clk     ; 0.000        ; 0.577      ; 1.639      ;
+; 0.850 ; cnt_per500ms[2]  ; cnt_tone_MAX[8]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.142      ;
+; 0.902 ; cnt_tone[5]      ; cnt_tone[9]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.574      ; 1.688      ;
+; 0.902 ; cnt_tone[11]     ; cnt_tone[15]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.574      ; 1.688      ;
+; 0.903 ; cnt_tone[13]     ; cnt_tone[17]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.574      ; 1.689      ;
+; 0.911 ; cnt_tone[5]      ; cnt_tone[10]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.574      ; 1.697      ;
+; 0.911 ; cnt_tone[11]     ; cnt_tone[16]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.574      ; 1.697      ;
+; 0.919 ; cnt_tone[4]      ; cnt_tone[9]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.574      ; 1.705      ;
+; 0.919 ; cnt_tone[12]     ; cnt_tone[17]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.574      ; 1.705      ;
+; 0.928 ; cnt_tone[4]      ; cnt_tone[10]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.574      ; 1.714      ;
+; 0.961 ; cnt_tone[10]     ; cnt_tone[10]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.100      ; 1.273      ;
+; 1.042 ; cnt_tone[11]     ; cnt_tone[17]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.574      ; 1.828      ;
+; 1.043 ; cnt_tone[3]      ; cnt_tone[9]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.574      ; 1.829      ;
+; 1.051 ; cnt_tone[8]      ; cnt_tone[15]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.574      ; 1.837      ;
+; 1.052 ; cnt_tone[3]      ; cnt_tone[10]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.574      ; 1.838      ;
+; 1.054 ; cnt_per500ms[1]  ; cnt_tone_MAX[13] ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.346      ;
+; 1.054 ; cnt_per500ms[1]  ; cnt_tone_MAX[4]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.346      ;
+; 1.054 ; cnt_per500ms[1]  ; cnt_tone_MAX[6]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.346      ;
+; 1.056 ; cnt_per500ms[1]  ; cnt_tone_MAX[11] ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.348      ;
+; 1.060 ; cnt_tone[8]      ; cnt_tone[16]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.574      ; 1.846      ;
+; 1.061 ; cnt_per500ms[1]  ; cnt_per500ms[2]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.353      ;
+; 1.061 ; cnt_tone[2]      ; cnt_tone[9]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.574      ; 1.847      ;
+; 1.070 ; cnt_tone[2]      ; cnt_tone[10]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.574      ; 1.856      ;
+; 1.079 ; cnt_per500ms[1]  ; cnt_tone_MAX[12] ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.371      ;
+; 1.098 ; cnt[7]           ; cnt[8]           ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.391      ;
+; 1.099 ; cnt[1]           ; cnt[2]           ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.392      ;
+; 1.099 ; cnt[3]           ; cnt[4]           ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.392      ;
+; 1.101 ; cnt_per500ms[1]  ; cnt_per500ms[0]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.393      ;
+; 1.104 ; cnt_tone[9]      ; cnt_tone[10]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.100      ; 1.416      ;
+; 1.107 ; cnt_tone[15]     ; cnt_tone[16]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.100      ; 1.419      ;
+; 1.107 ; cnt[2]           ; cnt[3]           ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.400      ;
+; 1.108 ; cnt[4]           ; cnt[5]           ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.401      ;
+; 1.109 ; cnt[6]           ; cnt[7]           ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.402      ;
+; 1.109 ; cnt_tone[16]     ; cnt_tone[17]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.100      ; 1.421      ;
+; 1.116 ; cnt[2]           ; cnt[4]           ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.409      ;
+; 1.118 ; cnt_tone[1]      ; cnt_tone[2]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.410      ;
+; 1.118 ; cnt[6]           ; cnt[8]           ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.411      ;
+; 1.124 ; cnt_tone[7]      ; cnt_tone[8]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.416      ;
+; 1.125 ; cnt[0]           ; cnt[1]           ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.418      ;
+; 1.125 ; cnt_tone[5]      ; cnt_tone[6]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.417      ;
+; 1.125 ; cnt_tone[11]     ; cnt_tone[12]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.417      ;
+; 1.126 ; cnt_tone[3]      ; cnt_tone[4]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.418      ;
+; 1.126 ; cnt_tone[13]     ; cnt_tone[14]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.418      ;
+; 1.127 ; cnt_tone[0]      ; cnt_tone[1]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.419      ;
+; 1.132 ; cnt_tone[6]      ; cnt_tone[7]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.424      ;
+; 1.133 ; cnt_tone[4]      ; cnt_tone[5]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.425      ;
+; 1.133 ; cnt_tone[12]     ; cnt_tone[13]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.080      ; 1.425      ;
+; 1.134 ; cnt[0]           ; cnt[2]           ; sys_clk      ; sys_clk     ; 0.000        ; 0.081      ; 1.427      ;
++-------+------------------+------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width: 'sys_clk'                                                ;
++--------+--------------+----------------+------------------+---------+------------+------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock   ; Clock Edge ; Target           ;
++--------+--------------+----------------+------------------+---------+------------+------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate        ; sys_clk ; Rise       ; sys_clk          ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; beep_out~reg0    ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt[0]           ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt[10]          ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt[11]          ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt[12]          ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt[13]          ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt[14]          ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt[15]          ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt[16]          ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt[17]          ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt[18]          ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt[19]          ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt[1]           ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt[20]          ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt[21]          ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt[22]          ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt[23]          ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt[24]          ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt[2]           ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt[3]           ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt[4]           ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt[5]           ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt[6]           ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt[7]           ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt[8]           ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt[9]           ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_per500ms[0]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_per500ms[1]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_per500ms[2]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone[0]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone[10]     ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone[11]     ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone[12]     ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone[13]     ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone[14]     ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone[15]     ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone[16]     ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone[17]     ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone[1]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone[2]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone[3]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone[4]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone[5]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone[6]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone[7]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone[8]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone[9]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone_MAX[0]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone_MAX[10] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone_MAX[11] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone_MAX[12] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone_MAX[13] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone_MAX[14] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone_MAX[15] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone_MAX[16] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone_MAX[17] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone_MAX[1]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone_MAX[2]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone_MAX[3]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone_MAX[4]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone_MAX[6]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone_MAX[7]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone_MAX[8]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone_MAX[9]  ;
+; 0.268  ; 0.488        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; cnt_tone[10]     ;
+; 0.268  ; 0.488        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; cnt_tone[15]     ;
+; 0.268  ; 0.488        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; cnt_tone[16]     ;
+; 0.268  ; 0.488        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; cnt_tone[17]     ;
+; 0.268  ; 0.488        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; cnt_tone[9]      ;
+; 0.278  ; 0.498        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; beep_out~reg0    ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; cnt[0]           ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; cnt[10]          ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; cnt[11]          ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; cnt[12]          ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; cnt[13]          ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; cnt[14]          ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; cnt[15]          ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; cnt[16]          ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; cnt[17]          ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; cnt[18]          ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; cnt[19]          ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; cnt[1]           ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; cnt[20]          ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; cnt[21]          ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; cnt[22]          ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; cnt[23]          ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; cnt[24]          ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; cnt[2]           ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; cnt[3]           ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; cnt[4]           ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; cnt[5]           ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; cnt[6]           ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; cnt[7]           ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; cnt[8]           ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; cnt[9]           ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; cnt_per500ms[0]  ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; cnt_per500ms[1]  ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; cnt_per500ms[2]  ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; sys_clk ; Rise       ; cnt_tone[0]      ;
++--------+--------------+----------------+------------------+---------+------------+------------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; beep_out  ; sys_clk    ; 7.565 ; 7.453 ; Rise       ; sys_clk         ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; beep_out  ; sys_clk    ; 7.297 ; 7.188 ; Rise       ; sys_clk         ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
+----------------------------------------------
+; Slow 1200mV 85C Model Metastability Report ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 201.69 MHz ; 201.69 MHz      ; sys_clk    ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------+
+; Slow 1200mV 0C Model Setup Summary ;
++---------+--------+-----------------+
+; Clock   ; Slack  ; End Point TNS   ;
++---------+--------+-----------------+
+; sys_clk ; -3.958 ; -139.316        ;
++---------+--------+-----------------+
+
+
++-----------------------------------+
+; Slow 1200mV 0C Model Hold Summary ;
++---------+-------+-----------------+
+; Clock   ; Slack ; End Point TNS   ;
++---------+-------+-----------------+
+; sys_clk ; 0.402 ; 0.000           ;
++---------+-------+-----------------+
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
++---------+--------+-------------------------------+
+; Clock   ; Slack  ; End Point TNS                 ;
++---------+--------+-------------------------------+
+; sys_clk ; -3.000 ; -98.168                       ;
++---------+--------+-------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'sys_clk'                                                                        ;
++--------+-----------------+-------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node       ; To Node     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------+-------------+--------------+-------------+--------------+------------+------------+
+; -3.958 ; cnt[8]          ; cnt_tone[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 4.889      ;
+; -3.958 ; cnt[8]          ; cnt_tone[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 4.889      ;
+; -3.958 ; cnt[8]          ; cnt_tone[2] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 4.889      ;
+; -3.958 ; cnt[8]          ; cnt_tone[3] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 4.889      ;
+; -3.958 ; cnt[8]          ; cnt_tone[4] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 4.889      ;
+; -3.958 ; cnt[8]          ; cnt_tone[5] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 4.889      ;
+; -3.958 ; cnt[8]          ; cnt_tone[6] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 4.889      ;
+; -3.958 ; cnt[8]          ; cnt_tone[7] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 4.889      ;
+; -3.958 ; cnt[8]          ; cnt_tone[8] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 4.889      ;
+; -3.932 ; cnt[7]          ; cnt_tone[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 4.863      ;
+; -3.932 ; cnt[7]          ; cnt_tone[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 4.863      ;
+; -3.932 ; cnt[7]          ; cnt_tone[2] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 4.863      ;
+; -3.932 ; cnt[7]          ; cnt_tone[3] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 4.863      ;
+; -3.932 ; cnt[7]          ; cnt_tone[4] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 4.863      ;
+; -3.932 ; cnt[7]          ; cnt_tone[5] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 4.863      ;
+; -3.932 ; cnt[7]          ; cnt_tone[6] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 4.863      ;
+; -3.932 ; cnt[7]          ; cnt_tone[7] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 4.863      ;
+; -3.932 ; cnt[7]          ; cnt_tone[8] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 4.863      ;
+; -3.922 ; cnt[6]          ; cnt_tone[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 4.853      ;
+; -3.922 ; cnt[6]          ; cnt_tone[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 4.853      ;
+; -3.922 ; cnt[6]          ; cnt_tone[2] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 4.853      ;
+; -3.922 ; cnt[6]          ; cnt_tone[3] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 4.853      ;
+; -3.922 ; cnt[6]          ; cnt_tone[4] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 4.853      ;
+; -3.922 ; cnt[6]          ; cnt_tone[5] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 4.853      ;
+; -3.922 ; cnt[6]          ; cnt_tone[6] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 4.853      ;
+; -3.922 ; cnt[6]          ; cnt_tone[7] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 4.853      ;
+; -3.922 ; cnt[6]          ; cnt_tone[8] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 4.853      ;
+; -3.840 ; cnt[19]         ; cnt_tone[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.070     ; 4.772      ;
+; -3.840 ; cnt[19]         ; cnt_tone[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.070     ; 4.772      ;
+; -3.840 ; cnt[19]         ; cnt_tone[2] ; sys_clk      ; sys_clk     ; 1.000        ; -0.070     ; 4.772      ;
+; -3.840 ; cnt[19]         ; cnt_tone[3] ; sys_clk      ; sys_clk     ; 1.000        ; -0.070     ; 4.772      ;
+; -3.840 ; cnt[19]         ; cnt_tone[4] ; sys_clk      ; sys_clk     ; 1.000        ; -0.070     ; 4.772      ;
+; -3.840 ; cnt[19]         ; cnt_tone[5] ; sys_clk      ; sys_clk     ; 1.000        ; -0.070     ; 4.772      ;
+; -3.840 ; cnt[19]         ; cnt_tone[6] ; sys_clk      ; sys_clk     ; 1.000        ; -0.070     ; 4.772      ;
+; -3.840 ; cnt[19]         ; cnt_tone[7] ; sys_clk      ; sys_clk     ; 1.000        ; -0.070     ; 4.772      ;
+; -3.840 ; cnt[19]         ; cnt_tone[8] ; sys_clk      ; sys_clk     ; 1.000        ; -0.070     ; 4.772      ;
+; -3.808 ; cnt[23]         ; cnt_tone[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.070     ; 4.740      ;
+; -3.808 ; cnt[23]         ; cnt_tone[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.070     ; 4.740      ;
+; -3.808 ; cnt[23]         ; cnt_tone[2] ; sys_clk      ; sys_clk     ; 1.000        ; -0.070     ; 4.740      ;
+; -3.808 ; cnt[23]         ; cnt_tone[3] ; sys_clk      ; sys_clk     ; 1.000        ; -0.070     ; 4.740      ;
+; -3.808 ; cnt[23]         ; cnt_tone[4] ; sys_clk      ; sys_clk     ; 1.000        ; -0.070     ; 4.740      ;
+; -3.808 ; cnt[23]         ; cnt_tone[5] ; sys_clk      ; sys_clk     ; 1.000        ; -0.070     ; 4.740      ;
+; -3.808 ; cnt[23]         ; cnt_tone[6] ; sys_clk      ; sys_clk     ; 1.000        ; -0.070     ; 4.740      ;
+; -3.808 ; cnt[23]         ; cnt_tone[7] ; sys_clk      ; sys_clk     ; 1.000        ; -0.070     ; 4.740      ;
+; -3.808 ; cnt[23]         ; cnt_tone[8] ; sys_clk      ; sys_clk     ; 1.000        ; -0.070     ; 4.740      ;
+; -3.754 ; cnt[4]          ; cnt_tone[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 4.685      ;
+; -3.754 ; cnt[4]          ; cnt_tone[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 4.685      ;
+; -3.754 ; cnt[4]          ; cnt_tone[2] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 4.685      ;
+; -3.754 ; cnt[4]          ; cnt_tone[3] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 4.685      ;
+; -3.754 ; cnt[4]          ; cnt_tone[4] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 4.685      ;
+; -3.754 ; cnt[4]          ; cnt_tone[5] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 4.685      ;
+; -3.754 ; cnt[4]          ; cnt_tone[6] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 4.685      ;
+; -3.754 ; cnt[4]          ; cnt_tone[7] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 4.685      ;
+; -3.754 ; cnt[4]          ; cnt_tone[8] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 4.685      ;
+; -3.750 ; cnt[1]          ; cnt_tone[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 4.681      ;
+; -3.750 ; cnt[1]          ; cnt_tone[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 4.681      ;
+; -3.750 ; cnt[1]          ; cnt_tone[2] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 4.681      ;
+; -3.750 ; cnt[1]          ; cnt_tone[3] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 4.681      ;
+; -3.750 ; cnt[1]          ; cnt_tone[4] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 4.681      ;
+; -3.750 ; cnt[1]          ; cnt_tone[5] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 4.681      ;
+; -3.750 ; cnt[1]          ; cnt_tone[6] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 4.681      ;
+; -3.750 ; cnt[1]          ; cnt_tone[7] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 4.681      ;
+; -3.750 ; cnt[1]          ; cnt_tone[8] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 4.681      ;
+; -3.683 ; cnt_tone_MAX[2] ; cnt_tone[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 4.613      ;
+; -3.683 ; cnt_tone_MAX[2] ; cnt_tone[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 4.613      ;
+; -3.683 ; cnt_tone_MAX[2] ; cnt_tone[2] ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 4.613      ;
+; -3.683 ; cnt_tone_MAX[2] ; cnt_tone[3] ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 4.613      ;
+; -3.683 ; cnt_tone_MAX[2] ; cnt_tone[4] ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 4.613      ;
+; -3.683 ; cnt_tone_MAX[2] ; cnt_tone[5] ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 4.613      ;
+; -3.683 ; cnt_tone_MAX[2] ; cnt_tone[6] ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 4.613      ;
+; -3.683 ; cnt_tone_MAX[2] ; cnt_tone[7] ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 4.613      ;
+; -3.683 ; cnt_tone_MAX[2] ; cnt_tone[8] ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 4.613      ;
+; -3.655 ; cnt[3]          ; cnt_tone[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 4.586      ;
+; -3.655 ; cnt[3]          ; cnt_tone[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 4.586      ;
+; -3.655 ; cnt[3]          ; cnt_tone[2] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 4.586      ;
+; -3.655 ; cnt[3]          ; cnt_tone[3] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 4.586      ;
+; -3.655 ; cnt[3]          ; cnt_tone[4] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 4.586      ;
+; -3.655 ; cnt[3]          ; cnt_tone[5] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 4.586      ;
+; -3.655 ; cnt[3]          ; cnt_tone[6] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 4.586      ;
+; -3.655 ; cnt[3]          ; cnt_tone[7] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 4.586      ;
+; -3.655 ; cnt[3]          ; cnt_tone[8] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 4.586      ;
+; -3.645 ; cnt[5]          ; cnt_tone[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 4.576      ;
+; -3.645 ; cnt[5]          ; cnt_tone[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 4.576      ;
+; -3.645 ; cnt[5]          ; cnt_tone[2] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 4.576      ;
+; -3.645 ; cnt[5]          ; cnt_tone[3] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 4.576      ;
+; -3.645 ; cnt[5]          ; cnt_tone[4] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 4.576      ;
+; -3.645 ; cnt[5]          ; cnt_tone[5] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 4.576      ;
+; -3.645 ; cnt[5]          ; cnt_tone[6] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 4.576      ;
+; -3.645 ; cnt[5]          ; cnt_tone[7] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 4.576      ;
+; -3.645 ; cnt[5]          ; cnt_tone[8] ; sys_clk      ; sys_clk     ; 1.000        ; -0.071     ; 4.576      ;
+; -3.639 ; cnt[17]         ; cnt_tone[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.070     ; 4.571      ;
+; -3.639 ; cnt[17]         ; cnt_tone[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.070     ; 4.571      ;
+; -3.639 ; cnt[17]         ; cnt_tone[2] ; sys_clk      ; sys_clk     ; 1.000        ; -0.070     ; 4.571      ;
+; -3.639 ; cnt[17]         ; cnt_tone[3] ; sys_clk      ; sys_clk     ; 1.000        ; -0.070     ; 4.571      ;
+; -3.639 ; cnt[17]         ; cnt_tone[4] ; sys_clk      ; sys_clk     ; 1.000        ; -0.070     ; 4.571      ;
+; -3.639 ; cnt[17]         ; cnt_tone[5] ; sys_clk      ; sys_clk     ; 1.000        ; -0.070     ; 4.571      ;
+; -3.639 ; cnt[17]         ; cnt_tone[6] ; sys_clk      ; sys_clk     ; 1.000        ; -0.070     ; 4.571      ;
+; -3.639 ; cnt[17]         ; cnt_tone[7] ; sys_clk      ; sys_clk     ; 1.000        ; -0.070     ; 4.571      ;
+; -3.639 ; cnt[17]         ; cnt_tone[8] ; sys_clk      ; sys_clk     ; 1.000        ; -0.070     ; 4.571      ;
+; -3.586 ; cnt_tone[1]     ; cnt_tone[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.072     ; 4.516      ;
++--------+-----------------+-------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'sys_clk'                                                                              ;
++-------+------------------+------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node        ; To Node          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------+------------------+--------------+-------------+--------------+------------+------------+
+; 0.402 ; cnt_per500ms[0]  ; cnt_per500ms[0]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; cnt_per500ms[2]  ; cnt_per500ms[2]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; cnt_per500ms[1]  ; cnt_per500ms[1]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.669      ;
+; 0.451 ; cnt_tone[17]     ; cnt_tone[17]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.091      ; 0.737      ;
+; 0.561 ; cnt_tone[8]      ; cnt_tone[9]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.537      ; 1.293      ;
+; 0.569 ; cnt_tone[14]     ; cnt_tone[15]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.537      ; 1.301      ;
+; 0.576 ; cnt_tone[8]      ; cnt_tone[10]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.537      ; 1.308      ;
+; 0.584 ; cnt_tone[14]     ; cnt_tone[16]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.537      ; 1.316      ;
+; 0.670 ; cnt_tone[7]      ; cnt_tone[9]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.537      ; 1.402      ;
+; 0.673 ; cnt_tone[13]     ; cnt_tone[15]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.537      ; 1.405      ;
+; 0.690 ; cnt_tone[6]      ; cnt_tone[9]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.537      ; 1.422      ;
+; 0.691 ; cnt_tone[14]     ; cnt_tone[17]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.537      ; 1.423      ;
+; 0.692 ; cnt[7]           ; cnt[7]           ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.959      ;
+; 0.692 ; cnt_tone[12]     ; cnt_tone[15]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.537      ; 1.424      ;
+; 0.693 ; cnt[1]           ; cnt[1]           ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.960      ;
+; 0.693 ; cnt[2]           ; cnt[2]           ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.960      ;
+; 0.694 ; cnt[5]           ; cnt[5]           ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.961      ;
+; 0.694 ; cnt_tone[16]     ; cnt_tone[16]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.091      ; 0.980      ;
+; 0.695 ; cnt[3]           ; cnt[3]           ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.962      ;
+; 0.695 ; cnt_tone[9]      ; cnt_tone[9]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.091      ; 0.981      ;
+; 0.695 ; cnt_tone[7]      ; cnt_tone[10]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.537      ; 1.427      ;
+; 0.696 ; cnt_per500ms[2]  ; cnt_per500ms[1]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.963      ;
+; 0.697 ; cnt_tone[15]     ; cnt_tone[15]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.091      ; 0.983      ;
+; 0.698 ; cnt[4]           ; cnt[4]           ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.965      ;
+; 0.698 ; cnt_tone[13]     ; cnt_tone[16]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.537      ; 1.430      ;
+; 0.705 ; cnt[15]          ; cnt[15]          ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.972      ;
+; 0.705 ; cnt_tone[6]      ; cnt_tone[10]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.537      ; 1.437      ;
+; 0.706 ; cnt[17]          ; cnt[17]          ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.973      ;
+; 0.706 ; cnt[23]          ; cnt[23]          ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.973      ;
+; 0.707 ; cnt_tone[8]      ; cnt_tone[8]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.974      ;
+; 0.707 ; cnt_tone[12]     ; cnt_tone[16]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.537      ; 1.439      ;
+; 0.709 ; cnt_tone[1]      ; cnt_tone[1]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.976      ;
+; 0.711 ; cnt[8]           ; cnt[8]           ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.978      ;
+; 0.714 ; cnt_tone[5]      ; cnt_tone[5]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.981      ;
+; 0.714 ; cnt_tone[6]      ; cnt_tone[6]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.981      ;
+; 0.714 ; cnt_tone[7]      ; cnt_tone[7]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.981      ;
+; 0.715 ; cnt_tone[3]      ; cnt_tone[3]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.982      ;
+; 0.715 ; cnt_tone[4]      ; cnt_tone[4]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.982      ;
+; 0.715 ; cnt_tone[14]     ; cnt_tone[14]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.982      ;
+; 0.716 ; cnt_tone[11]     ; cnt_tone[11]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.983      ;
+; 0.716 ; cnt_tone[12]     ; cnt_tone[12]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.983      ;
+; 0.717 ; cnt_tone[13]     ; cnt_tone[13]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.984      ;
+; 0.720 ; cnt_tone[2]      ; cnt_tone[2]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.987      ;
+; 0.724 ; cnt_tone_MAX[17] ; beep_out~reg0    ; sys_clk      ; sys_clk     ; 0.000        ; 0.543      ; 1.462      ;
+; 0.728 ; cnt_per500ms[1]  ; cnt_tone_MAX[14] ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.995      ;
+; 0.728 ; cnt_per500ms[1]  ; cnt_tone_MAX[17] ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.995      ;
+; 0.729 ; cnt_per500ms[1]  ; cnt_tone_MAX[9]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.996      ;
+; 0.730 ; cnt_per500ms[1]  ; cnt_tone_MAX[8]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 0.997      ;
+; 0.735 ; cnt[0]           ; cnt[0]           ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.002      ;
+; 0.736 ; cnt_tone[0]      ; cnt_tone[0]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.003      ;
+; 0.747 ; cnt_per500ms[2]  ; cnt_tone_MAX[14] ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.014      ;
+; 0.773 ; cnt_per500ms[2]  ; cnt_tone_MAX[17] ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.040      ;
+; 0.773 ; cnt_per500ms[2]  ; cnt_tone_MAX[9]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.040      ;
+; 0.792 ; cnt_tone[5]      ; cnt_tone[9]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.537      ; 1.524      ;
+; 0.793 ; cnt_per500ms[2]  ; cnt_tone_MAX[8]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.060      ;
+; 0.794 ; cnt_tone[11]     ; cnt_tone[15]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.537      ; 1.526      ;
+; 0.795 ; cnt_tone[13]     ; cnt_tone[17]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.537      ; 1.527      ;
+; 0.813 ; cnt_tone[4]      ; cnt_tone[9]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.537      ; 1.545      ;
+; 0.814 ; cnt_tone[12]     ; cnt_tone[17]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.537      ; 1.546      ;
+; 0.817 ; cnt_tone[5]      ; cnt_tone[10]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.537      ; 1.549      ;
+; 0.819 ; cnt_tone[11]     ; cnt_tone[16]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.537      ; 1.551      ;
+; 0.828 ; cnt_tone[4]      ; cnt_tone[10]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.537      ; 1.560      ;
+; 0.854 ; cnt_tone[10]     ; cnt_tone[10]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.091      ; 1.140      ;
+; 0.916 ; cnt_tone[3]      ; cnt_tone[9]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.537      ; 1.648      ;
+; 0.916 ; cnt_tone[11]     ; cnt_tone[17]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.537      ; 1.648      ;
+; 0.927 ; cnt_tone[8]      ; cnt_tone[15]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.537      ; 1.659      ;
+; 0.936 ; cnt_per500ms[1]  ; cnt_tone_MAX[11] ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.203      ;
+; 0.940 ; cnt_per500ms[1]  ; cnt_tone_MAX[13] ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.207      ;
+; 0.940 ; cnt_per500ms[1]  ; cnt_tone_MAX[4]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.207      ;
+; 0.940 ; cnt_per500ms[1]  ; cnt_tone_MAX[6]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.207      ;
+; 0.940 ; cnt_tone[3]      ; cnt_tone[10]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.537      ; 1.672      ;
+; 0.940 ; cnt_tone[2]      ; cnt_tone[9]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.537      ; 1.672      ;
+; 0.942 ; cnt_tone[8]      ; cnt_tone[16]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.537      ; 1.674      ;
+; 0.955 ; cnt_tone[2]      ; cnt_tone[10]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.537      ; 1.687      ;
+; 0.962 ; cnt_per500ms[1]  ; cnt_tone_MAX[12] ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.229      ;
+; 0.985 ; cnt_per500ms[1]  ; cnt_per500ms[2]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.252      ;
+; 1.012 ; cnt_tone[16]     ; cnt_tone[17]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.091      ; 1.298      ;
+; 1.012 ; cnt[2]           ; cnt[3]           ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.279      ;
+; 1.014 ; cnt[7]           ; cnt[8]           ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.281      ;
+; 1.015 ; cnt[1]           ; cnt[2]           ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.282      ;
+; 1.017 ; cnt_per500ms[1]  ; cnt_per500ms[0]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.284      ;
+; 1.017 ; cnt[4]           ; cnt[5]           ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.284      ;
+; 1.018 ; cnt[6]           ; cnt[7]           ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.285      ;
+; 1.019 ; cnt_tone[9]      ; cnt_tone[10]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.091      ; 1.305      ;
+; 1.019 ; cnt_tone[15]     ; cnt_tone[16]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.091      ; 1.305      ;
+; 1.019 ; cnt[3]           ; cnt[4]           ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.286      ;
+; 1.027 ; cnt[2]           ; cnt[4]           ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.294      ;
+; 1.028 ; cnt[0]           ; cnt[1]           ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.295      ;
+; 1.029 ; cnt_tone[1]      ; cnt_tone[9]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.537      ; 1.761      ;
+; 1.030 ; cnt_tone[0]      ; cnt_tone[1]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.297      ;
+; 1.033 ; cnt_tone[1]      ; cnt_tone[2]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.300      ;
+; 1.033 ; cnt_tone[6]      ; cnt_tone[7]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.300      ;
+; 1.033 ; cnt[6]           ; cnt[8]           ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.300      ;
+; 1.034 ; cnt_tone[4]      ; cnt_tone[5]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.301      ;
+; 1.035 ; cnt_tone[12]     ; cnt_tone[13]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.302      ;
+; 1.036 ; cnt_tone[7]      ; cnt_tone[15]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.537      ; 1.768      ;
+; 1.038 ; cnt_tone[7]      ; cnt_tone[8]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.305      ;
+; 1.038 ; cnt_tone[5]      ; cnt_tone[6]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.305      ;
+; 1.039 ; cnt_tone[3]      ; cnt_tone[4]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.306      ;
+; 1.039 ; cnt_tone[2]      ; cnt_tone[3]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.072      ; 1.306      ;
++-------+------------------+------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width: 'sys_clk'                                                 ;
++--------+--------------+----------------+------------------+---------+------------+------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock   ; Clock Edge ; Target           ;
++--------+--------------+----------------+------------------+---------+------------+------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate        ; sys_clk ; Rise       ; sys_clk          ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; beep_out~reg0    ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt[0]           ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt[10]          ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt[11]          ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt[12]          ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt[13]          ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt[14]          ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt[15]          ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt[16]          ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt[17]          ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt[18]          ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt[19]          ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt[1]           ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt[20]          ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt[21]          ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt[22]          ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt[23]          ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt[24]          ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt[2]           ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt[3]           ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt[4]           ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt[5]           ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt[6]           ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt[7]           ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt[8]           ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt[9]           ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_per500ms[0]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_per500ms[1]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_per500ms[2]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone[0]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone[10]     ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone[11]     ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone[12]     ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone[13]     ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone[14]     ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone[15]     ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone[16]     ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone[17]     ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone[1]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone[2]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone[3]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone[4]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone[5]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone[6]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone[7]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone[8]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone[9]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone_MAX[0]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone_MAX[10] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone_MAX[11] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone_MAX[12] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone_MAX[13] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone_MAX[14] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone_MAX[15] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone_MAX[16] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone_MAX[17] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone_MAX[1]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone_MAX[2]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone_MAX[3]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone_MAX[4]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone_MAX[6]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone_MAX[7]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone_MAX[8]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; sys_clk ; Rise       ; cnt_tone_MAX[9]  ;
+; 0.230  ; 0.446        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; cnt_tone[10]     ;
+; 0.230  ; 0.446        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; cnt_tone[15]     ;
+; 0.230  ; 0.446        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; cnt_tone[16]     ;
+; 0.230  ; 0.446        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; cnt_tone[17]     ;
+; 0.230  ; 0.446        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; cnt_tone[9]      ;
+; 0.231  ; 0.447        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; beep_out~reg0    ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; cnt[0]           ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; cnt[10]          ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; cnt[11]          ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; cnt[12]          ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; cnt[13]          ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; cnt[14]          ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; cnt[16]          ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; cnt[18]          ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; cnt[1]           ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; cnt[20]          ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; cnt[21]          ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; cnt[22]          ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; cnt[24]          ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; cnt[2]           ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; cnt[3]           ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; cnt[4]           ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; cnt[5]           ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; cnt[6]           ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; cnt[7]           ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; cnt[8]           ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; cnt_per500ms[0]  ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; cnt_per500ms[2]  ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; cnt_tone_MAX[10] ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; cnt_tone_MAX[11] ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; cnt_tone_MAX[12] ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; cnt_tone_MAX[14] ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; cnt_tone_MAX[15] ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; cnt_tone_MAX[16] ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; sys_clk ; Rise       ; cnt_tone_MAX[17] ;
++--------+--------------+----------------+------------------+---------+------------+------------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; beep_out  ; sys_clk    ; 6.920 ; 6.741 ; Rise       ; sys_clk         ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; beep_out  ; sys_clk    ; 6.656 ; 6.484 ; Rise       ; sys_clk         ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
+---------------------------------------------
+; Slow 1200mV 0C Model Metastability Report ;
+---------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------+
+; Fast 1200mV 0C Model Setup Summary ;
++---------+--------+-----------------+
+; Clock   ; Slack  ; End Point TNS   ;
++---------+--------+-----------------+
+; sys_clk ; -1.198 ; -32.860         ;
++---------+--------+-----------------+
+
+
++-----------------------------------+
+; Fast 1200mV 0C Model Hold Summary ;
++---------+-------+-----------------+
+; Clock   ; Slack ; End Point TNS   ;
++---------+-------+-----------------+
+; sys_clk ; 0.187 ; 0.000           ;
++---------+-------+-----------------+
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
++---------+--------+-------------------------------+
+; Clock   ; Slack  ; End Point TNS                 ;
++---------+--------+-------------------------------+
+; sys_clk ; -3.000 ; -71.326                       ;
++---------+--------+-------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'sys_clk'                                                                        ;
++--------+-----------------+-------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node       ; To Node     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------+-------------+--------------+-------------+--------------+------------+------------+
+; -1.198 ; cnt[1]          ; cnt_tone[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.149      ;
+; -1.198 ; cnt[1]          ; cnt_tone[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.149      ;
+; -1.198 ; cnt[1]          ; cnt_tone[2] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.149      ;
+; -1.198 ; cnt[1]          ; cnt_tone[3] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.149      ;
+; -1.198 ; cnt[1]          ; cnt_tone[4] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.149      ;
+; -1.198 ; cnt[1]          ; cnt_tone[5] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.149      ;
+; -1.198 ; cnt[1]          ; cnt_tone[6] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.149      ;
+; -1.198 ; cnt[1]          ; cnt_tone[7] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.149      ;
+; -1.198 ; cnt[1]          ; cnt_tone[8] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.149      ;
+; -1.197 ; cnt[4]          ; cnt_tone[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.148      ;
+; -1.197 ; cnt[4]          ; cnt_tone[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.148      ;
+; -1.197 ; cnt[4]          ; cnt_tone[2] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.148      ;
+; -1.197 ; cnt[4]          ; cnt_tone[3] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.148      ;
+; -1.197 ; cnt[4]          ; cnt_tone[4] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.148      ;
+; -1.197 ; cnt[4]          ; cnt_tone[5] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.148      ;
+; -1.197 ; cnt[4]          ; cnt_tone[6] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.148      ;
+; -1.197 ; cnt[4]          ; cnt_tone[7] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.148      ;
+; -1.197 ; cnt[4]          ; cnt_tone[8] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.148      ;
+; -1.193 ; cnt[8]          ; cnt_tone[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.144      ;
+; -1.193 ; cnt[8]          ; cnt_tone[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.144      ;
+; -1.193 ; cnt[8]          ; cnt_tone[2] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.144      ;
+; -1.193 ; cnt[8]          ; cnt_tone[3] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.144      ;
+; -1.193 ; cnt[8]          ; cnt_tone[4] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.144      ;
+; -1.193 ; cnt[8]          ; cnt_tone[5] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.144      ;
+; -1.193 ; cnt[8]          ; cnt_tone[6] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.144      ;
+; -1.193 ; cnt[8]          ; cnt_tone[7] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.144      ;
+; -1.193 ; cnt[8]          ; cnt_tone[8] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.144      ;
+; -1.175 ; cnt[19]         ; cnt_tone[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.035     ; 2.127      ;
+; -1.175 ; cnt[19]         ; cnt_tone[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.035     ; 2.127      ;
+; -1.175 ; cnt[19]         ; cnt_tone[2] ; sys_clk      ; sys_clk     ; 1.000        ; -0.035     ; 2.127      ;
+; -1.175 ; cnt[19]         ; cnt_tone[3] ; sys_clk      ; sys_clk     ; 1.000        ; -0.035     ; 2.127      ;
+; -1.175 ; cnt[19]         ; cnt_tone[4] ; sys_clk      ; sys_clk     ; 1.000        ; -0.035     ; 2.127      ;
+; -1.175 ; cnt[19]         ; cnt_tone[5] ; sys_clk      ; sys_clk     ; 1.000        ; -0.035     ; 2.127      ;
+; -1.175 ; cnt[19]         ; cnt_tone[6] ; sys_clk      ; sys_clk     ; 1.000        ; -0.035     ; 2.127      ;
+; -1.175 ; cnt[19]         ; cnt_tone[7] ; sys_clk      ; sys_clk     ; 1.000        ; -0.035     ; 2.127      ;
+; -1.175 ; cnt[19]         ; cnt_tone[8] ; sys_clk      ; sys_clk     ; 1.000        ; -0.035     ; 2.127      ;
+; -1.171 ; cnt[23]         ; cnt_tone[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.035     ; 2.123      ;
+; -1.171 ; cnt[23]         ; cnt_tone[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.035     ; 2.123      ;
+; -1.171 ; cnt[23]         ; cnt_tone[2] ; sys_clk      ; sys_clk     ; 1.000        ; -0.035     ; 2.123      ;
+; -1.171 ; cnt[23]         ; cnt_tone[3] ; sys_clk      ; sys_clk     ; 1.000        ; -0.035     ; 2.123      ;
+; -1.171 ; cnt[23]         ; cnt_tone[4] ; sys_clk      ; sys_clk     ; 1.000        ; -0.035     ; 2.123      ;
+; -1.171 ; cnt[23]         ; cnt_tone[5] ; sys_clk      ; sys_clk     ; 1.000        ; -0.035     ; 2.123      ;
+; -1.171 ; cnt[23]         ; cnt_tone[6] ; sys_clk      ; sys_clk     ; 1.000        ; -0.035     ; 2.123      ;
+; -1.171 ; cnt[23]         ; cnt_tone[7] ; sys_clk      ; sys_clk     ; 1.000        ; -0.035     ; 2.123      ;
+; -1.171 ; cnt[23]         ; cnt_tone[8] ; sys_clk      ; sys_clk     ; 1.000        ; -0.035     ; 2.123      ;
+; -1.170 ; cnt[7]          ; cnt_tone[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.121      ;
+; -1.170 ; cnt[7]          ; cnt_tone[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.121      ;
+; -1.170 ; cnt[7]          ; cnt_tone[2] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.121      ;
+; -1.170 ; cnt[7]          ; cnt_tone[3] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.121      ;
+; -1.170 ; cnt[7]          ; cnt_tone[4] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.121      ;
+; -1.170 ; cnt[7]          ; cnt_tone[5] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.121      ;
+; -1.170 ; cnt[7]          ; cnt_tone[6] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.121      ;
+; -1.170 ; cnt[7]          ; cnt_tone[7] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.121      ;
+; -1.170 ; cnt[7]          ; cnt_tone[8] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.121      ;
+; -1.169 ; cnt[6]          ; cnt_tone[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.120      ;
+; -1.169 ; cnt[6]          ; cnt_tone[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.120      ;
+; -1.169 ; cnt[6]          ; cnt_tone[2] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.120      ;
+; -1.169 ; cnt[6]          ; cnt_tone[3] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.120      ;
+; -1.169 ; cnt[6]          ; cnt_tone[4] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.120      ;
+; -1.169 ; cnt[6]          ; cnt_tone[5] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.120      ;
+; -1.169 ; cnt[6]          ; cnt_tone[6] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.120      ;
+; -1.169 ; cnt[6]          ; cnt_tone[7] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.120      ;
+; -1.169 ; cnt[6]          ; cnt_tone[8] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.120      ;
+; -1.133 ; cnt_tone_MAX[2] ; cnt_tone[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.084      ;
+; -1.133 ; cnt[3]          ; cnt_tone[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.084      ;
+; -1.133 ; cnt_tone_MAX[2] ; cnt_tone[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.084      ;
+; -1.133 ; cnt[3]          ; cnt_tone[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.084      ;
+; -1.133 ; cnt_tone_MAX[2] ; cnt_tone[2] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.084      ;
+; -1.133 ; cnt[3]          ; cnt_tone[2] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.084      ;
+; -1.133 ; cnt_tone_MAX[2] ; cnt_tone[3] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.084      ;
+; -1.133 ; cnt[3]          ; cnt_tone[3] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.084      ;
+; -1.133 ; cnt_tone_MAX[2] ; cnt_tone[4] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.084      ;
+; -1.133 ; cnt[3]          ; cnt_tone[4] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.084      ;
+; -1.133 ; cnt_tone_MAX[2] ; cnt_tone[5] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.084      ;
+; -1.133 ; cnt[3]          ; cnt_tone[5] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.084      ;
+; -1.133 ; cnt_tone_MAX[2] ; cnt_tone[6] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.084      ;
+; -1.133 ; cnt[3]          ; cnt_tone[6] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.084      ;
+; -1.133 ; cnt_tone_MAX[2] ; cnt_tone[7] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.084      ;
+; -1.133 ; cnt[3]          ; cnt_tone[7] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.084      ;
+; -1.133 ; cnt_tone_MAX[2] ; cnt_tone[8] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.084      ;
+; -1.133 ; cnt[3]          ; cnt_tone[8] ; sys_clk      ; sys_clk     ; 1.000        ; -0.036     ; 2.084      ;
+; -1.116 ; cnt[22]         ; cnt_tone[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.034     ; 2.069      ;
+; -1.116 ; cnt[22]         ; cnt_tone[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.034     ; 2.069      ;
+; -1.116 ; cnt[22]         ; cnt_tone[2] ; sys_clk      ; sys_clk     ; 1.000        ; -0.034     ; 2.069      ;
+; -1.116 ; cnt[22]         ; cnt_tone[3] ; sys_clk      ; sys_clk     ; 1.000        ; -0.034     ; 2.069      ;
+; -1.116 ; cnt[22]         ; cnt_tone[4] ; sys_clk      ; sys_clk     ; 1.000        ; -0.034     ; 2.069      ;
+; -1.116 ; cnt[22]         ; cnt_tone[5] ; sys_clk      ; sys_clk     ; 1.000        ; -0.034     ; 2.069      ;
+; -1.116 ; cnt[22]         ; cnt_tone[6] ; sys_clk      ; sys_clk     ; 1.000        ; -0.034     ; 2.069      ;
+; -1.116 ; cnt[22]         ; cnt_tone[7] ; sys_clk      ; sys_clk     ; 1.000        ; -0.034     ; 2.069      ;
+; -1.116 ; cnt[22]         ; cnt_tone[8] ; sys_clk      ; sys_clk     ; 1.000        ; -0.034     ; 2.069      ;
+; -1.115 ; cnt[21]         ; cnt_tone[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.034     ; 2.068      ;
+; -1.115 ; cnt[21]         ; cnt_tone[1] ; sys_clk      ; sys_clk     ; 1.000        ; -0.034     ; 2.068      ;
+; -1.115 ; cnt[21]         ; cnt_tone[2] ; sys_clk      ; sys_clk     ; 1.000        ; -0.034     ; 2.068      ;
+; -1.115 ; cnt[21]         ; cnt_tone[3] ; sys_clk      ; sys_clk     ; 1.000        ; -0.034     ; 2.068      ;
+; -1.115 ; cnt[21]         ; cnt_tone[4] ; sys_clk      ; sys_clk     ; 1.000        ; -0.034     ; 2.068      ;
+; -1.115 ; cnt[21]         ; cnt_tone[5] ; sys_clk      ; sys_clk     ; 1.000        ; -0.034     ; 2.068      ;
+; -1.115 ; cnt[21]         ; cnt_tone[6] ; sys_clk      ; sys_clk     ; 1.000        ; -0.034     ; 2.068      ;
+; -1.115 ; cnt[21]         ; cnt_tone[7] ; sys_clk      ; sys_clk     ; 1.000        ; -0.034     ; 2.068      ;
+; -1.115 ; cnt[21]         ; cnt_tone[8] ; sys_clk      ; sys_clk     ; 1.000        ; -0.034     ; 2.068      ;
+; -1.114 ; cnt[20]         ; cnt_tone[0] ; sys_clk      ; sys_clk     ; 1.000        ; -0.034     ; 2.067      ;
++--------+-----------------+-------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'sys_clk'                                                                              ;
++-------+------------------+------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node        ; To Node          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------+------------------+--------------+-------------+--------------+------------+------------+
+; 0.187 ; cnt_per500ms[0]  ; cnt_per500ms[0]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; cnt_per500ms[2]  ; cnt_per500ms[2]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; cnt_per500ms[1]  ; cnt_per500ms[1]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.307      ;
+; 0.197 ; cnt_tone[17]     ; cnt_tone[17]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.044      ; 0.325      ;
+; 0.263 ; cnt_tone[8]      ; cnt_tone[9]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.236      ; 0.583      ;
+; 0.266 ; cnt_tone[8]      ; cnt_tone[10]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.236      ; 0.586      ;
+; 0.268 ; cnt_tone[14]     ; cnt_tone[15]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.236      ; 0.588      ;
+; 0.271 ; cnt_tone[14]     ; cnt_tone[16]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.236      ; 0.591      ;
+; 0.292 ; cnt_per500ms[2]  ; cnt_per500ms[1]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.412      ;
+; 0.297 ; cnt[1]           ; cnt[1]           ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.418      ;
+; 0.297 ; cnt[2]           ; cnt[2]           ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.418      ;
+; 0.297 ; cnt[3]           ; cnt[3]           ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.418      ;
+; 0.297 ; cnt[5]           ; cnt[5]           ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.418      ;
+; 0.297 ; cnt[7]           ; cnt[7]           ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.418      ;
+; 0.299 ; cnt[4]           ; cnt[4]           ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.420      ;
+; 0.299 ; cnt_tone[16]     ; cnt_tone[16]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.044      ; 0.427      ;
+; 0.300 ; cnt_tone[9]      ; cnt_tone[9]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.044      ; 0.428      ;
+; 0.302 ; cnt_tone[15]     ; cnt_tone[15]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.044      ; 0.430      ;
+; 0.304 ; cnt[15]          ; cnt[15]          ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.425      ;
+; 0.304 ; cnt[17]          ; cnt[17]          ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.425      ;
+; 0.304 ; cnt[23]          ; cnt[23]          ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.425      ;
+; 0.305 ; cnt_tone[8]      ; cnt_tone[8]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.425      ;
+; 0.306 ; cnt[8]           ; cnt[8]           ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.427      ;
+; 0.306 ; cnt_tone[1]      ; cnt_tone[1]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.426      ;
+; 0.308 ; cnt_per500ms[1]  ; cnt_tone_MAX[14] ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.428      ;
+; 0.309 ; cnt_tone[6]      ; cnt_tone[6]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.429      ;
+; 0.309 ; cnt_tone[7]      ; cnt_tone[7]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.429      ;
+; 0.309 ; cnt_per500ms[1]  ; cnt_tone_MAX[9]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.429      ;
+; 0.310 ; cnt_tone[3]      ; cnt_tone[3]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.430      ;
+; 0.310 ; cnt_tone[4]      ; cnt_tone[4]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.430      ;
+; 0.310 ; cnt_tone[5]      ; cnt_tone[5]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.430      ;
+; 0.310 ; cnt_tone[11]     ; cnt_tone[11]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.430      ;
+; 0.310 ; cnt_tone[14]     ; cnt_tone[14]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.430      ;
+; 0.310 ; cnt_per500ms[1]  ; cnt_tone_MAX[8]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.430      ;
+; 0.310 ; cnt_per500ms[1]  ; cnt_tone_MAX[17] ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.430      ;
+; 0.311 ; cnt_tone[2]      ; cnt_tone[2]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.431      ;
+; 0.311 ; cnt_tone[12]     ; cnt_tone[12]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.431      ;
+; 0.311 ; cnt_tone[13]     ; cnt_tone[13]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.431      ;
+; 0.317 ; cnt[0]           ; cnt[0]           ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.438      ;
+; 0.318 ; cnt_tone[0]      ; cnt_tone[0]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.438      ;
+; 0.321 ; cnt_tone[7]      ; cnt_tone[9]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.236      ; 0.641      ;
+; 0.323 ; cnt_tone[13]     ; cnt_tone[15]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.236      ; 0.643      ;
+; 0.324 ; cnt_tone[7]      ; cnt_tone[10]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.236      ; 0.644      ;
+; 0.326 ; cnt_tone[13]     ; cnt_tone[16]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.236      ; 0.646      ;
+; 0.327 ; cnt_per500ms[2]  ; cnt_tone_MAX[14] ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.447      ;
+; 0.333 ; cnt_tone[6]      ; cnt_tone[9]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.236      ; 0.653      ;
+; 0.334 ; cnt_tone[14]     ; cnt_tone[17]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.236      ; 0.654      ;
+; 0.335 ; cnt_tone[12]     ; cnt_tone[15]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.236      ; 0.655      ;
+; 0.336 ; cnt_tone[6]      ; cnt_tone[10]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.236      ; 0.656      ;
+; 0.338 ; cnt_tone[12]     ; cnt_tone[16]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.236      ; 0.658      ;
+; 0.340 ; cnt_per500ms[2]  ; cnt_tone_MAX[9]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.460      ;
+; 0.341 ; cnt_per500ms[2]  ; cnt_tone_MAX[17] ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.461      ;
+; 0.345 ; cnt_tone_MAX[17] ; beep_out~reg0    ; sys_clk      ; sys_clk     ; 0.000        ; 0.237      ; 0.666      ;
+; 0.351 ; cnt_per500ms[2]  ; cnt_tone_MAX[8]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.471      ;
+; 0.372 ; cnt_tone[10]     ; cnt_tone[10]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.044      ; 0.500      ;
+; 0.388 ; cnt_tone[5]      ; cnt_tone[9]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.236      ; 0.708      ;
+; 0.388 ; cnt_tone[11]     ; cnt_tone[15]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.236      ; 0.708      ;
+; 0.389 ; cnt_tone[13]     ; cnt_tone[17]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.236      ; 0.709      ;
+; 0.391 ; cnt_tone[5]      ; cnt_tone[10]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.236      ; 0.711      ;
+; 0.391 ; cnt_tone[11]     ; cnt_tone[16]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.236      ; 0.711      ;
+; 0.400 ; cnt_tone[4]      ; cnt_tone[9]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.236      ; 0.720      ;
+; 0.401 ; cnt_tone[12]     ; cnt_tone[17]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.236      ; 0.721      ;
+; 0.403 ; cnt_tone[4]      ; cnt_tone[10]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.236      ; 0.723      ;
+; 0.414 ; cnt_per500ms[1]  ; cnt_tone_MAX[11] ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.534      ;
+; 0.416 ; cnt_per500ms[1]  ; cnt_tone_MAX[12] ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.536      ;
+; 0.416 ; cnt_per500ms[1]  ; cnt_per500ms[2]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.536      ;
+; 0.421 ; cnt_per500ms[1]  ; cnt_tone_MAX[13] ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.541      ;
+; 0.421 ; cnt_per500ms[1]  ; cnt_tone_MAX[4]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.541      ;
+; 0.421 ; cnt_per500ms[1]  ; cnt_tone_MAX[6]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.541      ;
+; 0.437 ; cnt_per500ms[1]  ; cnt_per500ms[0]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.557      ;
+; 0.446 ; cnt[1]           ; cnt[2]           ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.567      ;
+; 0.446 ; cnt[3]           ; cnt[4]           ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.567      ;
+; 0.446 ; cnt[7]           ; cnt[8]           ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.567      ;
+; 0.449 ; cnt_tone[9]      ; cnt_tone[10]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.044      ; 0.577      ;
+; 0.451 ; cnt_tone[15]     ; cnt_tone[16]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.044      ; 0.579      ;
+; 0.454 ; cnt_tone[3]      ; cnt_tone[9]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.236      ; 0.774      ;
+; 0.454 ; cnt_tone[11]     ; cnt_tone[17]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.236      ; 0.774      ;
+; 0.455 ; cnt[6]           ; cnt[6]           ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.576      ;
+; 0.455 ; cnt[2]           ; cnt[3]           ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.576      ;
+; 0.455 ; cnt_tone[1]      ; cnt_tone[2]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.575      ;
+; 0.457 ; cnt_per500ms[0]  ; cnt_per500ms[1]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.577      ;
+; 0.457 ; cnt[4]           ; cnt[5]           ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.578      ;
+; 0.457 ; cnt_per500ms[0]  ; cnt_tone_MAX[14] ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.577      ;
+; 0.457 ; cnt_tone[16]     ; cnt_tone[17]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.044      ; 0.585      ;
+; 0.457 ; cnt_tone[3]      ; cnt_tone[10]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.236      ; 0.777      ;
+; 0.458 ; cnt_tone[7]      ; cnt_tone[8]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.578      ;
+; 0.458 ; cnt[2]           ; cnt[4]           ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.579      ;
+; 0.459 ; cnt[6]           ; cnt[7]           ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.580      ;
+; 0.459 ; cnt_tone[5]      ; cnt_tone[6]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.579      ;
+; 0.459 ; cnt_tone[3]      ; cnt_tone[4]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.579      ;
+; 0.459 ; cnt_tone[11]     ; cnt_tone[12]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.579      ;
+; 0.460 ; cnt_tone[13]     ; cnt_tone[14]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.580      ;
+; 0.461 ; cnt_per500ms[0]  ; cnt_tone_MAX[9]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.581      ;
+; 0.461 ; cnt_tone[8]      ; cnt_tone[15]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.236      ; 0.781      ;
+; 0.462 ; cnt_per500ms[0]  ; cnt_tone_MAX[17] ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.582      ;
+; 0.462 ; cnt_per500ms[0]  ; cnt_tone_MAX[8]  ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.582      ;
+; 0.462 ; cnt[6]           ; cnt[8]           ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.583      ;
+; 0.464 ; cnt[0]           ; cnt[1]           ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.585      ;
+; 0.464 ; cnt_tone[8]      ; cnt_tone[16]     ; sys_clk      ; sys_clk     ; 0.000        ; 0.236      ; 0.784      ;
+; 0.465 ; cnt_tone[0]      ; cnt_tone[1]      ; sys_clk      ; sys_clk     ; 0.000        ; 0.036      ; 0.585      ;
++-------+------------------+------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width: 'sys_clk'                                                ;
++--------+--------------+----------------+-----------------+---------+------------+------------------+
+; Slack  ; Actual Width ; Required Width ; Type            ; Clock   ; Clock Edge ; Target           ;
++--------+--------------+----------------+-----------------+---------+------------+------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate       ; sys_clk ; Rise       ; sys_clk          ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; beep_out~reg0    ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; cnt[0]           ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; cnt[10]          ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; cnt[11]          ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; cnt[12]          ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; cnt[13]          ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; cnt[14]          ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; cnt[15]          ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; cnt[16]          ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; cnt[17]          ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; cnt[18]          ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; cnt[19]          ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; cnt[1]           ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; cnt[20]          ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; cnt[21]          ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; cnt[22]          ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; cnt[23]          ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; cnt[24]          ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; cnt[2]           ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; cnt[3]           ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; cnt[4]           ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; cnt[5]           ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; cnt[6]           ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; cnt[7]           ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; cnt[8]           ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; cnt[9]           ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; cnt_per500ms[0]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; cnt_per500ms[1]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; cnt_per500ms[2]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; cnt_tone[0]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; cnt_tone[10]     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; cnt_tone[11]     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; cnt_tone[12]     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; cnt_tone[13]     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; cnt_tone[14]     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; cnt_tone[15]     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; cnt_tone[16]     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; cnt_tone[17]     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; cnt_tone[1]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; cnt_tone[2]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; cnt_tone[3]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; cnt_tone[4]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; cnt_tone[5]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; cnt_tone[6]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; cnt_tone[7]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; cnt_tone[8]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; cnt_tone[9]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; cnt_tone_MAX[0]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; cnt_tone_MAX[10] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; cnt_tone_MAX[11] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; cnt_tone_MAX[12] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; cnt_tone_MAX[13] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; cnt_tone_MAX[14] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; cnt_tone_MAX[15] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; cnt_tone_MAX[16] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; cnt_tone_MAX[17] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; cnt_tone_MAX[1]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; cnt_tone_MAX[2]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; cnt_tone_MAX[3]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; cnt_tone_MAX[4]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; cnt_tone_MAX[6]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; cnt_tone_MAX[7]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; cnt_tone_MAX[8]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; sys_clk ; Rise       ; cnt_tone_MAX[9]  ;
+; -0.094 ; 0.090        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; beep_out~reg0    ;
+; -0.089 ; 0.095        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; cnt_tone[10]     ;
+; -0.089 ; 0.095        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; cnt_tone[15]     ;
+; -0.089 ; 0.095        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; cnt_tone[16]     ;
+; -0.089 ; 0.095        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; cnt_tone[17]     ;
+; -0.089 ; 0.095        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; cnt_tone[9]      ;
+; -0.066 ; 0.118        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; cnt_per500ms[1]  ;
+; -0.066 ; 0.118        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; cnt_tone[0]      ;
+; -0.066 ; 0.118        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; cnt_tone[11]     ;
+; -0.066 ; 0.118        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; cnt_tone[12]     ;
+; -0.066 ; 0.118        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; cnt_tone[13]     ;
+; -0.066 ; 0.118        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; cnt_tone[14]     ;
+; -0.066 ; 0.118        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; cnt_tone[1]      ;
+; -0.066 ; 0.118        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; cnt_tone[2]      ;
+; -0.066 ; 0.118        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; cnt_tone[3]      ;
+; -0.066 ; 0.118        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; cnt_tone[4]      ;
+; -0.066 ; 0.118        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; cnt_tone[5]      ;
+; -0.066 ; 0.118        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; cnt_tone[6]      ;
+; -0.066 ; 0.118        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; cnt_tone[7]      ;
+; -0.066 ; 0.118        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; cnt_tone[8]      ;
+; -0.066 ; 0.118        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; cnt_tone_MAX[0]  ;
+; -0.066 ; 0.118        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; cnt_tone_MAX[13] ;
+; -0.066 ; 0.118        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; cnt_tone_MAX[1]  ;
+; -0.066 ; 0.118        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; cnt_tone_MAX[2]  ;
+; -0.066 ; 0.118        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; cnt_tone_MAX[3]  ;
+; -0.066 ; 0.118        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; cnt_tone_MAX[4]  ;
+; -0.066 ; 0.118        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; cnt_tone_MAX[6]  ;
+; -0.066 ; 0.118        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; cnt_tone_MAX[7]  ;
+; -0.065 ; 0.119        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; cnt[0]           ;
+; -0.065 ; 0.119        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; cnt[10]          ;
+; -0.065 ; 0.119        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; cnt[11]          ;
+; -0.065 ; 0.119        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; cnt[12]          ;
+; -0.065 ; 0.119        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; cnt[13]          ;
+; -0.065 ; 0.119        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; cnt[14]          ;
+; -0.065 ; 0.119        ; 0.184          ; Low Pulse Width ; sys_clk ; Rise       ; cnt[16]          ;
++--------+--------------+----------------+-----------------+---------+------------+------------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; beep_out  ; sys_clk    ; 3.470 ; 3.546 ; Rise       ; sys_clk         ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; beep_out  ; sys_clk    ; 3.358 ; 3.431 ; Rise       ; sys_clk         ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
+---------------------------------------------
+; Fast 1200mV 0C Model Metastability Report ;
+---------------------------------------------
+No synchronizer chains to report.
+
+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++------------------+----------+-------+----------+---------+---------------------+
+; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+----------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -4.222   ; 0.187 ; N/A      ; N/A     ; -3.000              ;
+;  sys_clk         ; -4.222   ; 0.187 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; -154.173 ; 0.0   ; 0.0      ; 0.0     ; -98.168             ;
+;  sys_clk         ; -154.173 ; 0.000 ; N/A      ; N/A     ; -98.168             ;
++------------------+----------+-------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; beep_out  ; sys_clk    ; 7.565 ; 7.453 ; Rise       ; sys_clk         ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; beep_out  ; sys_clk    ; 3.358 ; 3.431 ; Rise       ; sys_clk         ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                    ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; beep_out      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; sys_clk                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; sys_rst_n               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; beep_out      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.07e-09 V                   ; 2.38 V              ; -0.0073 V           ; 0.097 V                              ; 0.018 V                              ; 4.24e-10 s                  ; 3.65e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.07e-09 V                  ; 2.38 V             ; -0.0073 V          ; 0.097 V                             ; 0.018 V                             ; 4.24e-10 s                 ; 3.65e-10 s                 ; No                        ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.74e-09 V                   ; 2.37 V              ; -0.0346 V           ; 0.198 V                              ; 0.094 V                              ; 3.14e-10 s                  ; 2.92e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.74e-09 V                  ; 2.37 V             ; -0.0346 V          ; 0.198 V                             ; 0.094 V                             ; 3.14e-10 s                 ; 2.92e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.57e-09 V                   ; 2.37 V              ; -0.00683 V          ; 0.171 V                              ; 0.018 V                              ; 4.97e-10 s                  ; 6.66e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.57e-09 V                  ; 2.37 V             ; -0.00683 V         ; 0.171 V                             ; 0.018 V                             ; 4.97e-10 s                 ; 6.66e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; beep_out      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.93e-07 V                   ; 2.35 V              ; -0.00834 V          ; 0.127 V                              ; 0.035 V                              ; 4.7e-10 s                   ; 4.64e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.93e-07 V                  ; 2.35 V             ; -0.00834 V         ; 0.127 V                             ; 0.035 V                             ; 4.7e-10 s                  ; 4.64e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.55e-07 V                   ; 2.35 V              ; -0.00221 V          ; 0.097 V                              ; 0.005 V                              ; 4.49e-10 s                  ; 3.85e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.55e-07 V                  ; 2.35 V             ; -0.00221 V         ; 0.097 V                             ; 0.005 V                             ; 4.49e-10 s                 ; 3.85e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.54e-07 V                   ; 2.34 V              ; -0.00774 V          ; 0.109 V                              ; 0.026 V                              ; 6.58e-10 s                  ; 8.24e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.54e-07 V                  ; 2.34 V             ; -0.00774 V         ; 0.109 V                             ; 0.026 V                             ; 6.58e-10 s                 ; 8.24e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; beep_out      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.73 V              ; -0.0384 V           ; 0.169 V                              ; 0.089 V                              ; 2.7e-10 s                   ; 2.62e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.73 V             ; -0.0384 V          ; 0.169 V                             ; 0.089 V                             ; 2.7e-10 s                  ; 2.62e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.22e-08 V                   ; 2.74 V              ; -0.06 V             ; 0.158 V                              ; 0.08 V                               ; 2.68e-10 s                  ; 2.19e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.22e-08 V                  ; 2.74 V             ; -0.06 V            ; 0.158 V                             ; 0.08 V                              ; 2.68e-10 s                 ; 2.19e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.54e-08 V                   ; 2.7 V               ; -0.00943 V          ; 0.276 V                              ; 0.035 V                              ; 3.19e-10 s                  ; 4.99e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.54e-08 V                  ; 2.7 V              ; -0.00943 V         ; 0.276 V                             ; 0.035 V                             ; 3.19e-10 s                 ; 4.99e-10 s                 ; No                        ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; sys_clk    ; sys_clk  ; 2098     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; sys_clk    ; sys_clk  ; 2098     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 1     ; 1    ;
+; Unconstrained Input Port Paths  ; 64    ; 64   ;
+; Unconstrained Output Ports      ; 1     ; 1    ;
+; Unconstrained Output Port Paths ; 1     ; 1    ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+    Info: Processing started: Fri Oct 04 00:41:08 2024
+Info: Command: quartus_sta beep -c beep
+Info: qsta_default_script.tcl version: #1
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (21077): Core supply voltage is 1.2V
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'beep.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name sys_clk sys_clk
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -4.222
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -4.222      -154.173 sys_clk 
+Info (332146): Worst-case hold slack is 0.454
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.454         0.000 sys_clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -3.000       -98.168 sys_clk 
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -3.958
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -3.958      -139.316 sys_clk 
+Info (332146): Worst-case hold slack is 0.402
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.402         0.000 sys_clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -3.000       -98.168 sys_clk 
+Info: Analyzing Fast 1200mV 0C Model
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -1.198
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.198       -32.860 sys_clk 
+Info (332146): Worst-case hold slack is 0.187
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.187         0.000 sys_clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -3.000       -71.326 sys_clk 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4710 megabytes
+    Info: Processing ended: Fri Oct 04 00:41:09 2024
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:02
+
+

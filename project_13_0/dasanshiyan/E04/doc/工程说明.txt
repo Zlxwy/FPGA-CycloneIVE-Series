@@ -1,0 +1,11 @@
+简介
+实验四：基于VerilogHDL语言的2位比较器
+
+连线：
+num1[1] ——
+num1[0] ——
+num2[1] ——
+num2[0] ——
+less    ——
+equal   ——
+greater ——

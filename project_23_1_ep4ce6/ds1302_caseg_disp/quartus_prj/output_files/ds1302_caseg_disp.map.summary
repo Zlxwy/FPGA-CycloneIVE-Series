@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Mon Apr  7 12:25:10 2025
+Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+Revision Name : ds1302_caseg_disp
+Top-level Entity Name : top_ds1302_test_1
+Family : Cyclone IV E
+Total logic elements : 637
+    Total combinational functions : 621
+    Dedicated logic registers : 323
+Total registers : 323
+Total pins : 23
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
